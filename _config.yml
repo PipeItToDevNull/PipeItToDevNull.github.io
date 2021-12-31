@@ -69,3 +69,5 @@ defaults:
       share: false
       related: false
       show_date: true
+      sidebar:
+        nav: "docs"
