@@ -2,7 +2,7 @@
 title:  "DNS Backups in PowerShell"
 tags: 
   - powershell
-  - "windows dns"
+  - windows_dns
 ---
 ## Overview
 DNS backups are a bit complicated, you need to backup each primary zone individually and restore them using a less than sensible command due to the lack of `Import-DnsServerZone` PowerShell cmdlet.

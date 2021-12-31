@@ -2,7 +2,7 @@
 title:  "AD Backups in PowerShell"
 tags:
   - powershell
-  - "active directory"
+  - active_directory
 ---
 ## Overview
 The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, if it works so well I guess we won't be reinventing the wheel.
@@ -31,3 +31,4 @@ Backup scripts, ideas, and details
 * https://bobcares.com/blog/backup-active-directory-domain-controller/
 Docs on WBAdmin
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+* https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
