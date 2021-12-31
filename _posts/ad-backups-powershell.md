@@ -11,18 +11,23 @@ The vast majority of sources I checked while trying to re-work our existing back
 ```Powershell
 Import-Module ServerManager
 $date = $(Get-Date -UFormat %Y-%m-%d)
-$path=”\\shares\backups\ad\”
+$path= '\\shares\backups\ad\'
 
-$dir=$path+$date+$env:COMPUTERNAME
+$dir=$path+$date+'-'+$env:COMPUTERNAME
 
-$TestTargetUNC= Test-Path -Path $TargetUNC
-if (!($TestTargetUNC)){
-New-Item -Path $TargetUNC -ItemType directory
+$test = Test-Path -Path $dir
+if (!($TestTargetUNC)) {
+    New-Item -Path $dir -ItemType directory
 }
-$WBadmin_cmd = "wbadmin.exe START BACKUP -backupTarget:$TargetUNC -systemState -noverify -vssCopy -quiet"
+$WBadmin_cmd = "wbadmin.exe START BACKUP -backupTarget:$dir -systemState -noverify -vssCopy -quiet"
 Invoke-Expression $WBadmin_cmd
 ```
 
+## Notes
+
 ## References
+Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
 * https://bobcares.com/blog/backup-active-directory-domain-controller/
+Docs on WBAdmin
+* https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
