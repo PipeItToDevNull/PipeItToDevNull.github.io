@@ -2,7 +2,6 @@
 title:  "Publishing to Github Pages with Obsidian"
 tags:
   - obsidian
-  - a
   - github
 ---
 ## Reasons
