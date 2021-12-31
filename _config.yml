@@ -20,7 +20,7 @@ url: https://pipeittodevnull.github.io
 baseurl: "/"
 repository: PipeItToDevNull/PipeItToDevNull.github.io
 
-logo: "/assets/0dev.png"
+logo: "/assets/images/0dev.png"
 date_format: "%Y-%m-%d"
 search: true
 
