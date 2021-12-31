@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 ## Why I Homelab
-I think homelabbing is just a great way to get into IT and a great way to keep skills sharp or develop new ones. I got started with homelabbing like many people do, a Minecraft server running off your own desktop as a kid. From that Minecraft server I moved onto a Raspberry Pi that ran OwnCloud and OpenVPN. 
+I think homelabbing is just a great way to get into IT and a great way to keep skills sharp or develop new ones. I got started with homelabbing like many people do, a Minecraft server running off my own desktop as a kid. From that Minecraft server I moved onto a Raspberry Pi that ran OwnCloud and OpenVPN. 
 
 When I interviewed for my first IT position, a Linux Admin position I was woefully underqualified for, I hit it off with their Security lead who happened to be standing up OpenVPN as a solution and we had a great conversation about the struggles of learning the tool. Needless to say I did not get that job but they did end up calling me back a couple months later for a helpdesk/junior admin position that I accepted. 
 
