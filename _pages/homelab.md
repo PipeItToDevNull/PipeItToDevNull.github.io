@@ -13,6 +13,7 @@ Homelabbing is what got me into the field and I encourage anyone who asks me abo
 
 ## The Environment
 ### Hardware
+
 | Hardware      | Purpose     |
 | ------------- | ----------- |
 | R220          | OPNSense    |
