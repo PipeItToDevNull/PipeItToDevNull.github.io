@@ -1,0 +1,71 @@
+# primary things
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+plugins:
+  - jekyll-include-cache
+include:
+  - "_pages"
+
+# minimal-mistakes
+## theme
+minimal_mistakes_skin: "dark"
+
+## site settings
+title: "Dev0"
+title_separator: "|"
+subtitle: "welcome to the grid"
+name: "PipeItToDevNull"
+description: "Ramblings and notes on IT and system administration"
+
+url: https://pipeittodevnull.github.io
+baseurl: "/"
+repository: PipeItToDevNull/PipeItToDevNull.github.io
+
+logo: "/assets/0dev.png"
+date_format: "%Y-%m-%d"
+search: true
+
+## author
+author:
+  name: "PipeItToDevNull"
+  bio: "A system administrator"
+links:
+  - label: "Discord"
+    icon: "fab fa-discord"
+    url: "https://discordapp.com/users/749310047368118273"
+  - label: "Github"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/PipeItToDevNull"
+
+## footer
+footer:
+  links:
+  - label: "Discord"
+    icon: "fab fa-discord"
+    url: "https://discordapp.com/users/749310047368118273"
+  - label: "Github"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/PipeItToDevNull"
+
+## frontmatter
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "docs"
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      show_date: true
