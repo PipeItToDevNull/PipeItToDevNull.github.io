@@ -3,7 +3,7 @@ title:  "Windows CA Backups in Powershell"
 ---
 # Windows CA Backups in Powershell
 ## Overview
-
+The CA is an incredibly important piece of infrastructure, especially once you start issuing your own certificates. We are pushing our code signing certs, smart card certs and certs for VPN Authentication. A loss of our CA would be a very bad day. 
 
 ## Code
 ```powershell
