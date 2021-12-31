@@ -1,5 +1,5 @@
 docs:
-  - title: Dev0
+  - title: Main Site
     children:
       - title: "- Home"
         url: /
