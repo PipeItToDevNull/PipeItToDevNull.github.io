@@ -7,5 +7,14 @@ author_profile: true
 ## Why I Homelab
 
 
-## List of Environments 
+## Environment
+### Hardware
+| N        | Purpose     |
+| ------------- | ----------- |
+| R220          | OPNSense    |
+| R320          | Backups NAS |
+| R620          | XCP-NG      |
+| R510          | Media NAS   |
+| Catalyst-4948 |             |
+|               |             |
 ### Service List
