@@ -1,5 +1,6 @@
 ---
 title:  "Publishing to Github Pages with Obsidian"
+tags: "obsidian", "github"
 ---
 ## Reasons
 I used to host a personal [Bookstack](https://www.bookstackapp.com/) and [still host one](https://rtech.support) for r/Techsupport but I realized that putting all of my notes into a public cloud was a waste of my time and resources. Bookstack is not plain text and I needlessly had to deal with permissions so I dropped it.
