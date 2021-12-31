@@ -2,18 +2,6 @@
 title:  "Windows CA Backups in Powershell"
 ---
 # Windows CA Backups in Powershell
-## References
-Official docs
-* https://docs.microsoft.com/en-us/powershell/module/adcsadministration/?view=windowsserver2022-ps
-    * https://docs.microsoft.com/en-us/powershell/module/adcsadministration/backup-caroleservice?view=windowsserver2022-ps
-    * https://docs.microsoft.com/en-us/powershell/module/adcsadministration/restore-caroleservice?view=windowsserver2022-ps
-* https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/ca-backup-and-restore-windows-powershell-cmdlets
-
-Backup ideas and tips
-* https://blog.ahasayen.com/certification-authority-backup/
-* https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/
-* https://redmondmag.com/Articles/2016/03/01/Securing-Windows-Enterprise-CAs.aspx
-
 ## Overview
 
 
@@ -32,3 +20,15 @@ Restore-CARoleService -Path <path>
 ## Notes
 * Take a backup of the CAPolicy.inf file if you have created one explicitly during the CA installation.
 * When restoring, stop the certsvc service and restart it when done.
+
+## References
+Official docs
+* https://docs.microsoft.com/en-us/powershell/module/adcsadministration/?view=windowsserver2022-ps
+    * https://docs.microsoft.com/en-us/powershell/module/adcsadministration/backup-caroleservice?view=windowsserver2022-ps
+    * https://docs.microsoft.com/en-us/powershell/module/adcsadministration/restore-caroleservice?view=windowsserver2022-ps
+* https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/ca-backup-and-restore-windows-powershell-cmdlets
+
+Backup ideas and tips
+* https://blog.ahasayen.com/certification-authority-backup/
+* https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/
+* https://redmondmag.com/Articles/2016/03/01/Securing-Windows-Enterprise-CAs.aspx
