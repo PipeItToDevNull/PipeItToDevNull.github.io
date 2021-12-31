@@ -1,6 +1,6 @@
 ---
 title:  "AD Backups in PowerShell"
 tags:
-  - obsidian
-  - github
+  - powershell
+  - "active directory"
 ---
