@@ -27,7 +27,7 @@ search: true
 ## author
 author:
   name: "PipeItToDevNull"
-  bio: "A system administrator"
+  bio: "I may not always know what I am doing, but it normally works"
 links:
   - label: "Discord"
     icon: "fab fa-discord"
