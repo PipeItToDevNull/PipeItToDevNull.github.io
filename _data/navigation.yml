@@ -5,6 +5,8 @@ docs:
         url: /
       - title: "- Posts"
         url: /years/
+      - title: "- Tags"
+        url: /tags/
   - title: Projects
     children: 
       - title: "- Get-Specs"
