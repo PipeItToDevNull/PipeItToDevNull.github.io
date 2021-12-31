@@ -9,5 +9,7 @@ docs:
         url: /tags/
   - title: Projects
     children: 
+      - title: "- Homelab"
+        url: /homelab/
       - title: "- Get-Specs"
         url: "https://github.com/PipeItToDevNull/Get-Specs"
