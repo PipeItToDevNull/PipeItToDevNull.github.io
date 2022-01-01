@@ -5,7 +5,7 @@ I want to migrate to Red Hat Enterprise Linux 8 for my homelab, I am currently o
 ## Setup
 To get started you need to have a developers account, this can be created in the [Red Hat Developer program portal](https://developers.redhat.com/register). Once registered you can verify that you have the Developer subscription on the [Subscriptions](Hunter@Kimbrough.io) page.
 
-
+* Red Hat Enterprise Linux [Download](https://developers.redhat.com/products/rhel/download)
 
 ## References
 Official developer docs
