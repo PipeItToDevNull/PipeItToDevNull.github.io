@@ -10,9 +10,9 @@ I was recently going through and cataloging all of my backups better, documentin
 
 ## Setup
 To get these emails enabled we need to look in two areas and change one or the other (or both if you want to change more).
-
+<br>
 The first is "System>Alert Services" or `/ui/system/alertservice`. Here "E-Mail" is set at the default level "WARNING" and mine at least was already enabled.
-
+<br>
 The second area is "System>Alert Settings" or `/ui/system/alertsettings`. Scroll down to the last category "Tasks", you will see that "Cloud Sync Task Failed" is already here with the level "ERROR" and frequency "IMMEDIATELY". 
-
+<br>
 You can choose to do like I did and lower the "E-Mail" setting to "ERROR" or change "Cloud Sync Task Failed" to "WARNING". I chose to lower the email threshold to see what kinds of other alerts I may get.
