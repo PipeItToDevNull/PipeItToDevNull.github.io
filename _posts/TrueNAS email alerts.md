@@ -1,1 +1,0 @@
-I use FreeNAS (now TrueNAS Core)
