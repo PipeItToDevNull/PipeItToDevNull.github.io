@@ -4,7 +4,6 @@ tags:
   - powershell
   - windows_dns
 ---
-## Overview
 DNS backups are a bit complicated, you need to backup each primary zone individually and restore them using a less than sensible command due to the lack of `Import-DnsServerZone` PowerShell cmdlet.
 
 The script we have below is designed to push our backups to a file share with a name based on the date, root zone, and server the backup is from. 

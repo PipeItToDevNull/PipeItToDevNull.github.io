@@ -4,7 +4,6 @@ tags:
   - powershell
   - windows_ca
 ---
-## Overview
 The CA is an incredibly important piece of infrastructure, especially once you start issuing your own certificates. We are pushing our code signing certs, smart card certs and certs for VPN Authentication. A loss of our CA would be a very bad day. 
 
 Backup and restoration appear to be simple, using just one cmdlet each. There is no Microsoft documentation saying "This is everything" so I will need to run a restoration onto new bare metal to test out this process (as you should be doing anyway).
