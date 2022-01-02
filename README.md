@@ -11,7 +11,3 @@ At home and during my free-time I assist in tech communities offering help to us
 --- 
 ### Purpose
 This blog is to serve as a pseudo-wiki replacement for any notes I think are useful enough to share and a place to post some of the things I already share with people and need to constantly re-write each time I want to explain. I am not a writer, I am not a programmer, I guarantee neither the English nor the code to be pretty but it all hopefully works.
-
---- 
-### Other Sites
-I also host and help maintain a wiki for r/Techsupport. It is full of more general user information but has helpful tutorials broken down with pictures for troubleshooting, basic desktop administrative tasks and Windows 10/11 installations. Check it out at [https://rtech.support](https://rtech.support). Contributions are locked behind Discord account federation and primary contributors are members of our Discord community. You can check out the Discord at [https://rtech.support/discord](https://rtech.support/discord)
