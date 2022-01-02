@@ -9,7 +9,8 @@ DNS backups are a bit complicated, you need to backup each primary zone individu
 
 The script we have below is designed to push our backups to a file share with a name based on the date, root zone, and server the backup is from. 
 
-## Script
+## Code
+### Backup
 ```powershell
 #user vars, change these
 $backupLocation = "\\shares\backup\dns\"
@@ -29,7 +30,7 @@ ForEach ($z in $primarys) {
 }
 ```
 
-## Recovery
+### Recovery
 Recovery does not appear to be done easily or simply with powershell but the traditional `dnsdcmd` tool will work fine.
 ```dos
 dnscmd <dns server name> /zoneadd "yourzone.com" /primary /file yourzone.com.dns /load

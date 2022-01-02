@@ -10,6 +10,7 @@ The CA is an incredibly important piece of infrastructure, especially once you s
 Backup and restoration appear to be simple, using just one cmdlet each. There is no Microsoft documentation saying "This is everything" so I will need to run a restoration onto new bare metal to test out this process (as you should be doing anyway).
 
 ## Code
+### Backup
 ```powershell
 $pass = ConvertTo-SecureString 'Password' -AsPlainText -Force
 $path = "\\shares\backup\ca\$env:COMPUTERNAME-$date"
@@ -17,6 +18,7 @@ $path = "\\shares\backup\ca\$env:COMPUTERNAME-$date"
 Backup-CARoleService -Path $path -Password $pass
 ```
 
+### Recovery
 ```powershell
 Restore-CARoleService -Path <path>
 ```
