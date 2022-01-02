@@ -14,4 +14,4 @@ This blog is to serve as a pseudo-wiki replacement for any notes I think are use
 
 --- 
 ### Other Sites
-I also host and help maintain a wiki for r/Techsupport. It is full of more general user information but has helpful tutorials broken down with pictures for troubleshooting, basic desktop administrative tasks and Windows 10/11 installations. Check it out at [https://rtech.support](https://rtech.support). Contributions are locked behind Discord account federation and primary contributors are members of our Discord community. You can check out the Discord at [https://rtech.support/discord](https://rtech.support/discord)
+I also host and help maintain a wiki for r/Techsupport. It is full of more general user information but has helpful tutorials broken down with pictures for troubleshooting, basic desktop administrative tasks and Windows 10/11 installations. Check it out at [https://rtech.support](https://rtech.support)git . Contributions are locked behind Discord account federation and primary contributors are members of our Discord community. You can check out the Discord at [https://rtech.support/discord](https://rtech.support/discord)
