@@ -161,9 +161,10 @@ body .gist .pl-mi {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* this changes the main body font for everything */
 body {
   margin: 20px;
-  font: 16px 'Open Sans', sans-serif;
+  font: .75 'Open Sans', sans-serif;
 }
 
 /* minimal mistakes */
