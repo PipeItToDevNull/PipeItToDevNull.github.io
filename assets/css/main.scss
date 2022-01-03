@@ -11,22 +11,24 @@ $body-color: #A3DEFE;
 $paragraph-indent: true;
 
 /* Nord code */
-$base00: #3b4252;
-$base01: #bf616a;
-$base02: #a3be8c;
-$base03: #ebcb8b;
-$base04: #81a1c1;
-$base05: #b48ead;
-$base06: #88c0d0;
-$base07: #e5e9f0;
-$base08: #5e81ac;
-$base09: #94545d;
-$base0a: #809575;
-$base0b: #b29e75;
-$base0c: #68809a;
-$base0d: #8c738c;
-$base0e: #6d96a5;
-$base0f: #aeb3bb;
+$base00: #3b4252; /* grey */
+$base01: #bf616a; /* red */
+$base02: #a3be8c; /* green */
+$base03: #ebcb8b; /* yellow */
+$base04: #81a1c1; /* middle blue */
+$base05: #b48ead; /* purple */
+$base06: #88c0d0; /* light blue */
+$base07: #e5e9f0; /* white */
+$base08: #5e81ac; /* blue */
+$base09: #94545d; /* dark red */
+$base0a: #809575; /* dark green */
+$base0b: #b29e75; /* dark yellow */
+$base0c: #68809a; /* dark blue */
+$base0d: #8c738c; /* dark purple */
+$base0e: #6d96a5; /* vim normal blue */
+$base0f: #aeb3bb; /* grey */
+$fg0: #d8dee9; /* white */
+$bg0: #2e3440; /* dark bg */
 
 /* gist themeing */
 /* https://codersblock.com/blog/customizing-github-gists/ */
@@ -39,7 +41,7 @@ body .gist .gist-file {
 body .gist .gist-data {
   border-bottom: none;
   border-radius: 0;
-  background-color: #2e3440;
+  background-color: $bg0;
 }
 
 body .gist .blob-wrapper {
@@ -57,6 +59,7 @@ body .gist .highlight td {
   line-height: 1;
   font-family: inherit;
   font-size: inherit;
+  color: $fg0
 }
 
 body .gist tr:first-child td {
@@ -68,8 +71,8 @@ body .gist tr:last-child td {
 }
 
 body .gist .blob-num {
-  color: #ebcb8b;
-  background-color: #3b4252;
+  color: $base03;
+  background-color: $base00;
   pointer-events: none;
 }
 /* hide the banner */
@@ -77,22 +80,21 @@ body .gist .gist-meta {
   display: none;
 }
 
-/* gist text theme */
 body .gist .pl-ent,
 body .gist .pl-v {
-     color: #ebcb8b;
+     color: $base03;
 }
 body .gist .pl-mh,
 body .gist .pl-mh .pl-en,
 body .gist .pl-sr .pl-cce {
-     color: #bf616a;
+     color: $base01;
 }
 body .gist .pl-pds,
 body .gist .pl-s,
 body .gist .pl-s1,
 body .gist .pl-s1 .pl-pse .pl-s2,
 body .gist .pl-s1 .pl-v {
-     color: #a3be8c;
+     color: $base02;
 }
 body .gist .pl-s1 .pl-s2,
 body .gist .pl-smi,
@@ -100,48 +102,48 @@ body .gist .pl-smp,
 body .gist .pl-stj,
 body .gist .pl-vo,
 body .gist .pl-vpf {
-     color: #ccc;
+     color: $base0e;
 }
 body .gist .pl-s3,
 body .gist .pl-sc {
-     color: #8fbcbb;
+     color: $base04;
 }
 body .gist .pl-sr,
 body .gist .pl-sr .pl-sra,
 body .gist .pl-sr .pl-sre,
 body .gist .pl-src {
-     color: #8fbcbb;
+     color: $base05;
 }
 body .gist .pl-mdht,
 body .gist .pl-mi1 {
-     color: #eceff4;
+     color: $base08;
      background: rgba(0, 64, 0, .5);
 }
 body .gist .pl-id,
 body .gist .pl-ii,
 body .gist .pl-md,
 body .gist .pl-mdhf {
-     color: #eceff4;
-     background: #800f00;
+     color: $base0f;
+     background: $base01;
 }
 body .gist .highlight-source-js .pl-st {
-     color: #81a1c1;
+     color: $base04;
 }
 body .gist .highlight-source-css .pl-s3 {
-     color: #5e81ac;
+     color: $base04;
 }
 body .gist .highlight-text-html-basic .pl-ent {
-     color: #9effff;
+     color: $base04;
 }
 body .gist .pl-c,
 body .gist .pl-c span,
 body .gist .pl-mq {
-     color: #5e81ac;
+     color: $base08;
 }
 body .gist .pl-c1,
 body .gist .pl-sv,
 body .gist .pl-mb {
-     color: #a3be8c;
+     color: $base02;
 }
 body .gist .pl-e,
 body .gist .pl-k,
