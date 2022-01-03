@@ -31,7 +31,7 @@ This is less than perfect and doesn't look the best but it gets the job done.
 
 Once I started adding larger blocks of code that actually took effort to write I thought I wanted them to be a bit independent of my post. I ended up finding [Github Gists](https://docs.github.com/en/github/writing-on-github/editing-and-sharing-content-with-gists/creating-gists). Gists are basically a pastebin server ran by Github that are quick to make, reference or share. Its a permanent, version controlled and can hold one or more files in each "gist". It is all around a great solution to random files or scripts that done deserve a repo.
 
-Adding a Gist into a page is pretty simple `{% gist <gist id> [filename.ps1] %}` but they appear as very blinding white blobs and that just will not do. 
+Adding a Gist into a page is pretty simple `{\% gist <gist id> [filename.ps1] \%}` but they appear as very blinding white blobs and that just will not do. 
 
 ![normalGist.png](/assets/images/normalGist.png)
 
