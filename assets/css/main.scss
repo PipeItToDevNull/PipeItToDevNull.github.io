@@ -28,6 +28,17 @@ $base0d: #8c738c;
 $base0e: #6d96a5;
 $base0f: #aeb3bb;
 
+/* https://github.com/lonekorean/gist-syntax-themes */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/cobalt.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  margin: 20px;
+  font: 16px 'Open Sans', sans-serif;
+}
+
+/* minimal mistakes */
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
