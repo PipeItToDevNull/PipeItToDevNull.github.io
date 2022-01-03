@@ -10,24 +10,7 @@ The script we have below is designed to push our backups to a file share with a 
 
 ## Code
 ### Backup
-```powershell
-#user vars, change these
-$backupLocation = "\\shares\backup\dns\"
-
-#system vars, you likely don't change these
-$dnsRoot = 'C:\Windows\System32\dns\'
-$primarys = Get-DnsServerZone | Where-Object { $_.ZoneType -eq 'Primary' }
-
-# Do our stuff 
-ForEach ($z in $primarys) {
-    $zone = $z.ZoneName
-    # Edit this to change the name of the backup file
-    $file = "$env:COMPUTERNAME-$zone-$(Get-Date -UFormat %Y-%m-%d).dns"
-    Export-DnsServerZone -Name $z.ZoneName -FileName $file
-    $backupFile = $dnsRoot + $file
-    Move-Item -Path $backupFile -Destination $backupLocation
-}
-```
+{% gist eab21304a4e584d1a96d715b5e392329 backup.ps1 %} 
 
 ### Recovery
 Recovery does not appear to be done easily or simply with powershell but the traditional `dnsdcmd` tool will work fine.
