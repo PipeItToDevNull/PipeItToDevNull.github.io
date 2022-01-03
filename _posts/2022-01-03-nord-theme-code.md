@@ -35,7 +35,9 @@ Adding a Gist into a page is pretty simple `{% gist <gist id> [filename.ps1] %}`
 
 ![normalGist.png](/assets/images/normalGist.png)
 
-I had to google around a bit but eventually found [another blog post](https://codersblock.com/blog/customizing-github-gists/) on how to get these gists looking better. 
+I had to google around a bit but eventually found [another blog post](https://codersblock.com/blog/customizing-github-gists/) on how to get these gists looking better. The main point to take away from this is that different parts of the code have non-sensical names like `.pl-mdt` or `.pl-s` and you just need to play around with the inspect tool to see what looks good. For what it is worth, I tried to match Vim colours where I could.
+
+Below you will find the end result of my tinkering.
 
 ```css
 /* gist themeing */
