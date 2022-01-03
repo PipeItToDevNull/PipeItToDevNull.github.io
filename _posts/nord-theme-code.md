@@ -5,7 +5,7 @@ tags:
 ---
 While the default code blocks are OK in this theme (Minimal Mistakes) I wanted something more "me" that blended better into the Dark skin. The [official docs](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/) have section on Style Sheets and that is where I started, but there is no Nord theme so I ended up putting together my own. 
 
-```
+```css
 /* Nord code */                
 $base00: #3b4252; /* grey */   
 $base01: #bf616a; /* red */    
@@ -36,3 +36,135 @@ Adding a Gist into a page is pretty simple `{% gist <gist id> [filename.ps1] %}`
 ![normalGist.png](/assets/images/normalGist.png)
 
 I had to google around a bit but eventually found [another blog post](https://codersblock.com/blog/customizing-github-gists/) on how to get these gists looking better. 
+
+```css
+/* gist themeing */
+/* https://codersblock.com/blog/customizing-github-gists/ */
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 4px;
+  background-color: $bg0;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+  color: $fg0
+}
+
+body .gist tr:first-child td {
+  padding-top: 15px !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 15px !important;
+}
+
+body .gist .blob-num {
+  color: $base03;
+  background-color: $base00;
+  pointer-events: none;
+}
+/* hide the banner */
+body .gist .gist-meta {
+  display: none;
+}
+
+body .gist .pl-ent,
+body .gist .pl-v {
+     color: $base03;
+}
+body .gist .pl-mh,
+body .gist .pl-mh .pl-en,
+body .gist .pl-sr .pl-cce {
+     color: $base01;
+}
+body .gist .pl-pds,
+body .gist .pl-s,
+body .gist .pl-s1,
+body .gist .pl-s1 .pl-pse .pl-s2,
+body .gist .pl-s1 .pl-v {
+     color: $base05;
+}
+body .gist .pl-s1 .pl-s2,
+body .gist .pl-smi,
+body .gist .pl-smp,
+body .gist .pl-stj,
+body .gist .pl-vo,
+body .gist .pl-vpf {
+     color: $base0e;
+}
+body .gist .pl-s3,
+body .gist .pl-sc {
+     color: $base07;
+}
+body .gist .pl-sr,
+body .gist .pl-sr .pl-sra,
+body .gist .pl-sr .pl-sre,
+body .gist .pl-src {
+     color: $base06;
+}
+body .gist .pl-mdht,
+body .gist .pl-mi1 {
+     color: $base08;
+     background: rgba(0, 64, 0, .5);
+}
+body .gist .pl-id,
+body .gist .pl-ii,
+body .gist .pl-md,
+body .gist .pl-mdhf {
+     color: $base0f;
+     background: $base01;
+}
+body .gist .highlight-source-js .pl-st {
+     color: $base04;
+}
+body .gist .highlight-source-css .pl-s3 {
+     color: $base04;
+}
+body .gist .highlight-text-html-basic .pl-ent {
+     color: $base04;
+}
+body .gist .pl-c,
+body .gist .pl-c span,
+body .gist .pl-mq {
+     color: $base08;
+}
+body .gist .pl-c1,
+body .gist .pl-sv,
+body .gist .pl-mb {
+     color: $base02;
+}
+body .gist .pl-e,
+body .gist .pl-k,
+body .gist .pl-mdh,
+body .gist .pl-mdr,
+body .gist .pl-ml,
+body .gist .pl-mm,
+body .gist .pl-mo,
+body .gist .pl-mp,
+body .gist .pl-mr,
+body .gist .pl-ms,
+body .gist .pl-st,
+body .gist .pl-mi {
+     color: #d08770;
+}
+```
