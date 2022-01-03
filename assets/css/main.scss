@@ -28,17 +28,18 @@ $base0d: #8c738c;
 $base0e: #6d96a5;
 $base0f: #aeb3bb;
 
-/* https://github.com/lonekorean/gist-syntax-themes */
+/* gist themeing */
+/* https://codersblock.com/blog/customizing-github-gists/ */
 body .gist .gist-file {
   margin-bottom: 0;
-  border: 1px dashed #adb5bd;
+  border: 1px #A3DEFE;
   border-radius: 0;
 }
 
 body .gist .gist-data {
   border-bottom: none;
   border-radius: 0;
-  background-color: #f1f3f5;
+  background-color: #3b4252;
 }
 
 body .gist .blob-wrapper {
