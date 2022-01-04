@@ -14,8 +14,8 @@ $path= '\\shares\backups\ad\'
 
 $dir=$path+$date+'-'+$env:COMPUTERNAME
 
-$test = Test-Path -Path $dir
-if (!($TestTargetUNC)) {
+$testPath = Test-Path -Path $dir
+if (!($testPath)) {
     New-Item -Path $dir -ItemType directory
 }
 $WBadmin_cmd = "wbadmin.exe START BACKUP -backupTarget:$dir -systemState -noverify -vssCopy -quiet"
