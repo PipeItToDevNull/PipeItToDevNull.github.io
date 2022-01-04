@@ -8,6 +8,8 @@ I have gotten tired of constantly writing out or pasting in the same block of co
 In my script I am setting some vars in the script and allowing others to be parameters. Things like the server and From will always be the same for me but I will change the Subject.
 
 ## Code
+<!--https://gist.github.com/PipeItToDevNull/39672ada0ac4013ac641902a1fc2a8e0 
+-->
 ```powershell
 param (
     [Parameter(Mandatory=$True)]
