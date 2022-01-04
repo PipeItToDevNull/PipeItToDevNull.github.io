@@ -5,6 +5,7 @@ tags:
 ---
 While the default code blocks are OK in this theme (Minimal Mistakes) I wanted something more "me" that blended better into the Dark skin. The [official docs](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/) have section on Style Sheets and that is where I started, but there is no Nord theme so I ended up putting together my own. 
 
+[comment]: # https://gist.github.com/PipeItToDevNull/02003efef6bfe1f81d13767b734224f1
 {% gist 02003efef6bfe1f81d13767b734224f1 nord-style.css %} 
 
 This is less than perfect and doesn't look the best but it gets the job done.
