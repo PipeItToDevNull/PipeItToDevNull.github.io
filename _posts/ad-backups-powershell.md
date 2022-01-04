@@ -41,11 +41,15 @@ if (!($testPath)) {
 
 # create our backup policy
 $policy = New-WBPolicy
-Add-WBSystemState $Policy
-
+Add-WBSystemState $policy
+Add-WBBareMetalRecovery $Policy
+Set-WBVssBackupOptions -Policy $policy -VssCopyBackup
+```
+Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
+Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
 
 # run it
-Start-WBBackup 
+Start-WBBackup -Policy $policy
 
 # Validate a success
 $summary = Get-WBSummary
