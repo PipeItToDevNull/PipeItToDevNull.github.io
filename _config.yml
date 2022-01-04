@@ -10,6 +10,13 @@ plugins:
 include:
   - "_pages"
 
+markdown: kramdown
+kramdown:
+    highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+
 # minimal-mistakes
 ## theme
 minimal_mistakes_skin: "dark"
