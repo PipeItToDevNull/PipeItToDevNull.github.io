@@ -11,25 +11,25 @@ In my script I am setting some vars in the script and allowing others to be para
 ```powershell
 param (
     [Parameter(Mandatory=$True)]
-    [Object]$smptTo,
+    [Object]$to,
     [Parameter(Mandatory=$True)]
-    [Object]$messageSubject,
+    [Object]$subject,
     [Parameter(Mandatory=$True)]
-    [Object]$messageBody,
+    [Object]$body,
     [Parameter(Mandatory=$False)]
-    [Object]$messageAttachment,
-    [Parameter(Mandatory=$False)]
-    [Object]$smptAttacheme,
+    [Object]$attachment
 )
 
 $smtpServer = ""
 $smtpPort = ""
-$smtpFrom = ""
+$from = ""
 $smtpPassword = ConvertTo-SecureString '' -AsPlainText -Force
 $smtpCredential = New-Object System.Management.Automation.PSCredential ($smtpFrom, $smtpPassword)
-$smtpTo = ""
-$smtpAttachment = ""
 
-Send-MailMessage -From $smtpFrom -To $smtpTo -Subject $messageSubject -Body $messageBody -Credential $smtpCredential -SmtpServer $smtpServer -Port $smtpPort -UseSsl
+If (Test-Path $attachement) {
+    Send-MailMessage -From $from -To $to -Subject $subject -Body $body -Credential $smtpCredential -SmtpServer $smtpServer -Port $smtpPort -UseSsl
+    } Else {
+    Send-MailMessage -From $from -To $to -Subject $subject -Body $body -Credential $smtpCredential -SmtpServer $smtpServer -Port $smtpPort -Attachments $attachment -UseSsl
+    }
 }
 ```
