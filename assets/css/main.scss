@@ -170,8 +170,7 @@ body {
 /* fix the lack of space between paragraphs */
 /* we are removing a default margin-top: -1.3em; */
 .page__content p+p {
-    margin-top: 0; !important
-
+    margin-top: 0 !important;
 }
 
 /* minimal mistakes */
