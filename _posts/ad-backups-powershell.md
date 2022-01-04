@@ -26,16 +26,25 @@ This script is heavily based off the [official docs for Start-WBBackup](https://
 ```powershell
 #Requires -RunAsAdministrator
 
- $date = $(Get-Date -UFormat %Y-%m-%d)
+# user vars
 $path= '\\shares\backups\ad\'
 
+# filename is made here
+$date = $(Get-Date -UFormat %Y-%m-%d)
 $dir=$path+$date+'-'+$env:COMPUTERNAME
 
+# check for the path we made above, make it if it doesn't exist.
 $testPath = Test-Path -Path $dir
 if (!($testPath)) {
     New-Item -Path $dir -ItemType directory
 }
 
+# create our backup policy
+$policy = New-WBPolicy
+Add-WBSystemState $Policy
+
+
+# run it
 Start-WBBackup 
 
 # Validate a success
@@ -51,5 +60,5 @@ Backup scripts, ideas, and details
 * https://bobcares.com/blog/backup-active-directory-domain-controller/
 Docs on WBAdmin.exe
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
-Docs on WindowsServerBackup Po
+Docs on WindowsServerBackup PowerShell module
 * https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
