@@ -4,7 +4,7 @@ tags:
   - powershell
   - active_directory
 ---
-The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, if it works so well I guess we won't be reinventing the wheel
+The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, but that isn't powershell and just won't do.
 
 ## Code
 ```Powershell
@@ -21,6 +21,7 @@ if (!($testPath)) {
 $WBadmin_cmd = "wbadmin.exe START BACKUP -backupTarget:$dir -systemState -noverify -vssCopy -quiet"
 Invoke-Expression $WBadmin_cmd
 ```
+This script is heavily based off the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps)
 
 ```powershell
 #Requires -RunAsAdministrator
@@ -35,6 +36,8 @@ if (!($testPath)) {
     New-Item -Path $dir -ItemType directory
 }
 
+Start-WBBackup 
+
 # Validate a success
 $summary = Get-WBSummary
 $lastSuc = $summary.LastSuccessfulBackupTime
@@ -46,6 +49,7 @@ $lastSuc = $summary.LastSuccessfulBackupTime
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
 * https://bobcares.com/blog/backup-active-directory-domain-controller/
-Docs on WBAdmin
+Docs on WBAdmin.exe
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+Docs on WindowsServerBackup Po
 * https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
