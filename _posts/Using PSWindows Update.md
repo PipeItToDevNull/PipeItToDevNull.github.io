@@ -8,6 +8,8 @@ For a year or so I have been using ManageEngine PatchEngine hosted on a Windows 
 
 My goal is to make a script that pulls all my hosts from an `.ini` file and first deploys the needed modules and then checks for and applies any updates that are available. I want to get an email report for documentation once this process is complete.
 
+I want this script to schedule random reboots
+
 ## Code
 ```powershell
 Install-Module PSWindowsUpdate
