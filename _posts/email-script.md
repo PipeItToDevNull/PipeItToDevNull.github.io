@@ -10,8 +10,14 @@ In my script I am setting some vars in the script and allowing others to be para
 ## Code
 ```powershell
 param (
+    [Parameter(Mandatory=$True)]
+    [Object]$smptTo,
+    [Parameter(Mandatory=$True)]
+    [Object]$messageSubject,
+    [Parameter(Mandatory=$True)]
+    [Object]$messageBody,
     [Parameter(Mandatory=$False)]
-    [Object]$smtp
+    [Object]$messageAttachment,
 )
 
 $smtpServer = ""
@@ -20,8 +26,6 @@ $smtpFrom = ""
 $smtpPassword = ConvertTo-SecureString '' -AsPlainText -Force
 $smtpCredential = New-Object System.Management.Automation.PSCredential ($smtpFrom, $smtpPassword)
 $smtpTo = ""
-$messageSubject = ""
-$messageBody = ""
 
 Send-MailMessage -From $smtpFrom -To $smtpTo -Subject $messageSubject -Body $messageBody -Credential $smtpCredential -SmtpServer $smtpServer -Port $smtpPort -UseSsl
 }
