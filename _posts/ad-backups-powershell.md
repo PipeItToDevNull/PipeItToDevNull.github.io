@@ -23,8 +23,9 @@ Invoke-Expression $WBadmin_cmd
 ```
 
 ```powershell
-Import-Module ServerManager
-$date = $(Get-Date -UFormat %Y-%m-%d)
+#Requires -RunAsAdministrator
+
+ $date = $(Get-Date -UFormat %Y-%m-%d)
 $path= '\\shares\backups\ad\'
 
 $dir=$path+$date+'-'+$env:COMPUTERNAME
@@ -33,6 +34,10 @@ $testPath = Test-Path -Path $dir
 if (!($testPath)) {
     New-Item -Path $dir -ItemType directory
 }
+
+# Validate a success
+$summary = Get-WBSummary
+$lastSuc = $summary.LastSuccessfulBackupTime
 ```
 
 ## Notes
