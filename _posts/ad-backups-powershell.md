@@ -29,23 +29,12 @@ This script is heavily based off the [official docs for Start-WBBackup](https://
 # user vars
 $path= '\\shares\backups\ad\'
 
-# filename is made here
-$date = $(Get-Date -UFormat %Y-%m-%d)
-$dir=$path+$date+'-'+$env:COMPUTERNAME
-
-# check for the path we made above, make it if it doesn't exist.
-$testPath = Test-Path -Path $dir
-if (!($testPath)) {
-    New-Item -Path $dir -ItemType directory
-}
-
 # create our backup policy
 $policy = New-WBPolicy
 Add-WBSystemState $policy
 Add-WBBareMetalRecovery $Policy
 Set-WBVssBackupOptions -Policy $policy -VssCopyBackup
-```
-Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
+$backupDir = New-WBBackupTarget -NetworkPath $path
 Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
 
 # run it
