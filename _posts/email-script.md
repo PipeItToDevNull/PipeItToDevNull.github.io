@@ -12,7 +12,9 @@ In my script I am setting some vars in the script and allowing others to be para
 -->
 {% gist 39672ada0ac4013ac641902a1fc2a8e0 send-mail.ps1 %}
 
-## Note
-Assuming this is a submodule in the root of a repo alonside the script you are running you can load (and throw if this is missing) with this short block.
 
-{% gist }
+
+## Note
+Assuming this is a submodule in the root of a repo alongside the script you are running you can load (and throw if this is missing) with this short block.
+
+{% gist 39672ada0ac4013ac641902a1fc2a8e0 load.ps1 %}
