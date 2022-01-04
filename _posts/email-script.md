@@ -18,6 +18,8 @@ param (
     [Object]$messageBody,
     [Parameter(Mandatory=$False)]
     [Object]$messageAttachment,
+    [Parameter(Mandatory=$False)]
+    [Object]$smptAttacheme,
 )
 
 $smtpServer = ""
@@ -26,6 +28,7 @@ $smtpFrom = ""
 $smtpPassword = ConvertTo-SecureString '' -AsPlainText -Force
 $smtpCredential = New-Object System.Management.Automation.PSCredential ($smtpFrom, $smtpPassword)
 $smtpTo = ""
+$smtpAttachment = ""
 
 Send-MailMessage -From $smtpFrom -To $smtpTo -Subject $messageSubject -Body $messageBody -Credential $smtpCredential -SmtpServer $smtpServer -Port $smtpPort -UseSsl
 }
