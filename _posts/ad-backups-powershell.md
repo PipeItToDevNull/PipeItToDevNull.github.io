@@ -4,24 +4,10 @@ tags:
   - powershell
   - active_directory
 ---
-The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, but that isn't powershell and just won't do.
+The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, but that isn't real powershell and just won't do.
 
 ## Code
-```Powershell
-Import-Module ServerManager
-$date = $(Get-Date -UFormat %Y-%m-%d)
-$path= '\\shares\backups\ad\'
-
-$dir=$path+$date+'-'+$env:COMPUTERNAME
-
-$testPath = Test-Path -Path $dir
-if (!($testPath)) {
-    New-Item -Path $dir -ItemType directory
-}
-$WBadmin_cmd = "wbadmin.exe START BACKUP -backupTarget:$dir -systemState -noverify -vssCopy -quiet"
-Invoke-Expression $WBadmin_cmd
-```
-This script is heavily based off the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps)
+ This script is heavily based off the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps)
 
 ```powershell
 #Requires -RunAsAdministrator
@@ -35,14 +21,14 @@ Add-WBSystemState $policy
 Add-WBBareMetalRecovery $Policy
 Set-WBVssBackupOptions -Policy $policy -VssCopyBackup
 $backupDir = New-WBBackupTarget -NetworkPath $path
-Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
+Add-WBBackupTarget -Policy $Policy -Target $backupDir
 
 # run it
 Start-WBBackup -Policy $policy
 
 # Validate a success
 $summary = Get-WBSummary
-$lastSuc = $summary.LastSuccessfulBackupTime
+$lastSuccess = $summary.LastSuccessfulBackupTime
 ```
 
 ## Notes
