@@ -10,4 +10,4 @@ At home and during my free-time I assist in tech communities offering help to us
 
 --- 
 ### Purpose
-This blog is to serve as a pseudo-wiki replacement for any notes I think are useful enough to share and a place to post some of the things I already share with people and need to constantly re-write each time I want to explain. I am not a writer, I am not a programmer, I guarantee neither the English nor the code to be pretty but it all hopefully works.
+This blog is to serve as a pseudo-wiki replacement for any notes I think are useful enough to share and a place to post some of the things I already share with people and need to constantly re-write each time I want to explain. I am not a writer, I am not a developer, I guarantee neither the English nor the code to be pretty but it all hopefully works.
