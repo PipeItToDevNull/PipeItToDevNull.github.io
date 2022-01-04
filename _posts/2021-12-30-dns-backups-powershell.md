@@ -10,7 +10,7 @@ The script we have below is designed to push our backups to a file share with a 
 
 ## Code
 ### Backup
-{% comment https://gist.github.com/PipeItToDevNull/02003efef6bfe1f81d13767b734224f1 %}
+[comment]: # https://gist.github.com/PipeItToDevNull/02003efef6bfe1f81d13767b734224f1
 {% gist eab21304a4e584d1a96d715b5e392329 backup.ps1 %} 
 
 ### Recovery
