@@ -15,7 +15,7 @@ The script we have below is designed to push our backups to a file share with a 
 
 ### Recovery
 Recovery does not appear to be done easily or simply with powershell but the traditional `dnsdcmd` tool will work fine.
-```dos
+```powershell
 dnscmd <dns server name> /zoneadd "yourzone.com" /primary /file yourzone.com.dns /load
 ```
 
