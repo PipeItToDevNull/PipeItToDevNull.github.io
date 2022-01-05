@@ -7,14 +7,24 @@ I have gotten tired of constantly writing out or pasting in the same block of co
 
 In my script I am setting some vars in the script and allowing others to be parameters. Things like the Server and From will always be the same for me but I will change the Subject.
 
-## Code
 <!--https://gist.github.com/PipeItToDevNull/39672ada0ac4013ac641902a1fc2a8e0 
 -->
 {% gist 39672ada0ac4013ac641902a1fc2a8e0 send-mail.ps1 %}
 
+Making a submodule is something you might not be familiar with, I certainly was not until I added [Get-SMART](https://github.com/PipeItToDevNull/Get-Smart) to my [Get-Specs](https://github.com/PipeItToDevNull/Get-Specs) project. From inside your main repository we will run the following where \<repo url\> is your "send-mail" repo. You will need to run a commit and push this up to your origin.
 
+```bash
+git submodule add <repo URL>
+git submodule init
+git submodule update
+```
 
-## Note
-Assuming this is a submodule in the root of a repo alongside the script you are running you can load (and throw if this is missing) with this short block.
+Once you have the "send-mail" submodule in place you can pull down updates into any main repositories with the following commands. (This is also how you pull down the submodules on a fresh clone of the main repo.)
+
+```bash
+git submodule update --recursive --remote
+```
+
+Any script in the main repository can source the `send-mail.ps1` and execute the function it contains, that may look like this. (I include the throw because I sometimes forget to clone the submodule)
 
 {% gist 39672ada0ac4013ac641902a1fc2a8e0 load.ps1 %}
