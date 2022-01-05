@@ -4,25 +4,22 @@ tags:
   - powershell
   - windows_dns
 ---
-DNS backups are a bit complicated, you need to backup each primary zone individually and restore them using a less than sensible command due to the lack of `Import-DnsServerZone` PowerShell cmdlet.
-
-The script we have below is designed to push our backups to a file share with a name based on the date, root zone, and server the backup is from. 
-
-> This script utilizes my [email script submodule](https://blog.dev0.sh/2022/01/04/email-script.html)
+DNS backups are a bit complicated, you need to backup and restore each zone individually with files that are in a static location in System32. Most sources I found used `dnscmd` which is too DOS for me, we need to PowerShell it up. I ended up finding that [Add-DnsServerPrimaryZone](https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverprimaryzone?view=windowsserver2022-ps) would work for my needs despite what [some sources](https://www.virtualizationhowto.com/2019/07/export-and-import-dns-zone-with-powershell-from-one-server-to-another/) said about there being no PowerShell way to do this.
 
 ## Code
 ### Backup
-[comment]: # https://gist.github.com/PipeItToDevNull/eab21304a4e584d1a96d715b5e392329
-{% gist eab21304a4e584d1a96d715b5e392329 backup.ps1 %} 
+<!--
+https://gist.github.com/PipeItToDevNull/f5668a05f1e19c801f2bd16ba6c89b3b
+-->
+{% gist f5668a05f1e19c801f2bd16ba6c89b3b backup.ps1 %} 
+
+> This script utilizes my [email script submodule](https://blog.dev0.sh/2022/01/04/email-script.html)
 
 ### Recovery
-Recovery does not appear to be done easily or simply with powershell but the traditional `dnsdcmd` tool will work fine.
-```powershell
-dnscmd <dns server name> /zoneadd "yourzone.com" /primary /file yourzone.com.dns /load
-```
+{% gist f5668a05f1e19c801f2bd16ba6c89b3b recovery.ps1 %}
 
 ## Notes
-* The `.dns` files are plaintext
+* The exported files are plaintext
 * When exporting you can only specify a file name not location. The files can **only** go to `C:\Windows\System32\dns` and must be moved from there.
 
 ## References
@@ -34,3 +31,9 @@ An overview on the cmdlets and commands
 
 Using PowerShell
 * https://rietveld-ict.nl/dns-zone-recovery-using-powershell/
+* https://stackoverflow.com/questions/65693302/how-do-you-create-a-new-microsoft-dns-zone-with-powershell-that-loads-from-a-dns
+
+Docs on  DNSServer Module
+* https://docs.microsoft.com/en-us/powershell/module/dnsserver/?view=windowsserver2022-ps
+    * https://docs.microsoft.com/en-us/powershell/module/dnsserver/export-dnsserverzone?view=windowsserver2022-ps
+    * https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverprimaryzone?view=windowsserver2022-ps
