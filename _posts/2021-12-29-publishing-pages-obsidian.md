@@ -14,9 +14,6 @@ Since dropping Bookstack I have been using [Obsidian](https://obsidian.md/) for 
 
 I use my [personal gitea](https://git.dev0.sh) instance to host my main Obsidian repo so I added my [GitHubPages](https://github.com/PipeItToDevNull/Dev0-Pages) repo a submodule (which is a supported configuration with the Git plugin) and started pushing documents.
 
-## Site Structure
-Once I had a site online I needed to figure out how navigating and actually building it works. GithubPages makes use of relative links to `[page](page.md)` like Obsidian and most other markdown based note solutions. Obsidian calls these "Markdown Style" instead of "Wiki Style" links which are the default.
-
 ## Issues
 ### Page links not working
 For some reason Jekyll was not replacing links to files with HTML properly, it was leaving `.md` links in place and offering to download that file rather than linking to the `.html` version. It *was* generating the HTML files though as we could navigate to them manually by replacing `.md` with `.html` in the page.
