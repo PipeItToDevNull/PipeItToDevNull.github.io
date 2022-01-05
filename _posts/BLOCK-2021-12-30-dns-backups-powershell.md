@@ -29,3 +29,6 @@ Another basic script
 
 An overview on the cmdlets and commands
 * https://www.virtualizationhowto.com/2019/07/export-and-import-dns-zone-with-powershell-from-one-server-to-another/
+
+Using PowerShell
+* https://rietveld-ict.nl/dns-zone-recovery-using-powershell/
