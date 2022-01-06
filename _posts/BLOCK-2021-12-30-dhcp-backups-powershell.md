@@ -4,21 +4,19 @@ tags:
   - powershell
   - windows_dhcp
 ---
-Backing up a DHCP server is simple using the cmdlets `Backup-DhcpServer` and `Restore-DhcpServer`. Make a directory based on the date and then read/write from/to it in the 2 commands. Add archiving if you want to be fancy.
+Backing up a DHCP server is simple using the cmdlets `Backup-DhcpServer` and `Restore-DhcpServer`. There are a couple gotchas and while it is not as directory specific as the [dns backups]() are I chose to use the same directories out of convenience,  
+* ACLs must be set to give "DHCP Server" full control over the restoration files otherwise the import fails. 
+* The service must be restarted prior to removing the restoration files, otherwise you get errors and no restoration occurs.
 
 ## Code
 ### Backup
-```powershell
-$date = $(Get-Date -UFormat %Y-%m-%d)
-$path = "\\shares\backup\dhcp\$env:COMPUTERNAME-$date"
-
-Backup-DhcpServer -Path $path
-```
+<!-- 
+https://gist.github.com/PipeItToDevNull/c7725371d0ecc3c62e75243e15ef6b7e
+--> 
+{% gist c7725371d0ecc3c62e75243e15ef6b7e backup.ps1 %}
 
 ### Recovery
-```powershell
-Restore-DhcpServer -Path <directory>
-```
+{% gist c7725371d0ecc3c62e75243e15ef6b7e recovery.ps1 %}
 
 ## Backup vs Export
 * There is minimal difference between the cmdlets `Export-DhcpServer` and `Backup-DhcpServer` so I just stick with Backup
