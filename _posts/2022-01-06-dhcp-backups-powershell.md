@@ -20,8 +20,8 @@ https://gist.github.com/PipeItToDevNull/c7725371d0ecc3c62e75243e15ef6b7e
 ### Recovery
 {% gist c7725371d0ecc3c62e75243e15ef6b7e recovery.ps1 %}
 
-
-> :pencil2: A DHCP server runs a backup of itself every 60 min by default, using probably `Backup-DHCPServer` cmdlet. This automatic backup is located, always by default in `%SystemRoot%\System32\DHCP\backup`
+### Notes
+A DHCP server runs a backup of itself every 60 min by default, using probably `Backup-DHCPServer` cmdlet. This automatic backup is located, always by default in `%SystemRoot%\System32\DHCP\backup`
 
 ## References
 Official docs
