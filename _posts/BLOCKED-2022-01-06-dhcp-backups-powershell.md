@@ -5,8 +5,10 @@ tags:
   - windows_dhcp
 ---
 Backing up a DHCP server is simple using the cmdlets `Backup-DhcpServer` and `Restore-DhcpServer`. There are a couple gotchas and while it is not as directory specific as the [dns backups]() are I chose to use the same directories out of convenience,  
-* ACLs must be set to give "DHCP Server" full control over the restoration files otherwise the import fails. 
-* The service must be restarted prior to removing the restoration files, otherwise you get errors and no restoration occurs.
+
+> :pencil2: ACLs must be set to give "DHCP Server" full control over the restoration files otherwise the import fails.
+
+> :pencil2: The service must be restarted prior to removing the restoration files, otherwise you get errors and no restoration occurs.
 
 ## Code
 ### Backup
@@ -18,11 +20,8 @@ https://gist.github.com/PipeItToDevNull/c7725371d0ecc3c62e75243e15ef6b7e
 ### Recovery
 {% gist c7725371d0ecc3c62e75243e15ef6b7e recovery.ps1 %}
 
-## Backup vs Export
-* There is minimal difference between the cmdlets `Export-DhcpServer` and `Backup-DhcpServer` so I just stick with Backup
 
-## Notes
-> A DHCP server runs a backup of itself every 60 min by default, using probably `Backup-DHCPServer` cmdlet. This automatic backup is located, always by default in `%SystemRoot%\System32\DHCP\backup`
+> :pencil2: A DHCP server runs a backup of itself every 60 min by default, using probably `Backup-DHCPServer` cmdlet. This automatic backup is located, always by default in `%SystemRoot%\System32\DHCP\backup`
 
 ## References
 Official docs
