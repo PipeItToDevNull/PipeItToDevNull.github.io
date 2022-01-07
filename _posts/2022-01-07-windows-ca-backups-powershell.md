@@ -12,6 +12,8 @@ Backup and restoration seem simple when first checking out the `Backup-CARoleSer
 
 > :exclamation: A critical thing I learned during testing the recovery is that Certificate Templates are **not** stored in the CA. They are stored in AD and then replicated to all DCs and CAs. The only thing stored of the CA itself is the list of "Templates to issue" which is not very critical and is basically just a text list.
 
+> :pencil: I hit some of the issues that are listed in [these microsoft docs](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn535774(v=ws.11)#issues) so I recommend reading and being familiar with them.
+
 I will need to run a restoration onto new bare metal to test out this process (as you should be doing anyway). I tested this in my [homelab](https://blog.dev0.sh/homelab/) to some degree but need to do it in a full DR.
 
 ## Code
