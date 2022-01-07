@@ -6,9 +6,9 @@ tags:
 ---
 The CA is an incredibly important piece of infrastructure, especially once you start issuing your own certificates. We are pushing our code signing certs, smart card certs and certs for VPN Authentication. A loss of our CA would be a very bad day. 
 
-Backup and restoration seem simple when first checking out the `Backup-CARoleService` docs but there is no Microsoft documentation saying "This is everything" and that led me down a hole to find that it is indeed not everything. We also care about the "CAPolicy.inf" which controls root cert expiration length and several other critical factors and our Templates to issue. 
+Backup and restoration seem simple when first checking out the `Backup-CARoleService` docs but there is no Microsoft documentation saying "This is everything" and that led me down a hole to find that it is indeed not everything. 
 
-I also threw in a registry backup which I read about in [this source](https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/) but it does contain hostnames and such so I would not restore it on bare principle and check to see if not having the restored registry is an issue.
+`C:\Windows\CAPolicy.inf` controls root cert expiration length and several other critical factors, I also threw in a registry backup which I read about in [this source](https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/) but it does contain hostnames and such so I would not restore it on bare principle and check to see if not having the restored registry is an issue.
 
 A critical thing I learned during testing the recovery is that Certificate Templates are **not** stored in the CA. They are stored in AD and then replicated to all DCs and CAs. The only thing stored of the CA itself is the list of "Templates to issue" which in itself is not very critical and is basically just a text list.
 
