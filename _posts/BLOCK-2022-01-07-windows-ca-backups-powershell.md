@@ -6,7 +6,11 @@ tags:
 ---
 The CA is an incredibly important piece of infrastructure, especially once you start issuing your own certificates. We are pushing our code signing certs, smart card certs and certs for VPN Authentication. A loss of our CA would be a very bad day. 
 
-Backup and restoration is rather simple, using just one cmdlet each. There is no Microsoft documentation saying "This is everything" so I will need to run a restoration onto new bare metal to test out this process (as you should be doing anyway). I tested this in my [homelab](https://blog.dev0.sh/homelab/) by removing certs from the store and then conducting a restore, it went off without a hitch.
+Backup and restoration seem simple when first checking out the `Backup-CARoleService` docs but there is no Microsoft documentation saying "This is everything" and that led me down a hole to find that it is indeed not everything. We also care about the "CAPolicy.inf" which controls root cert expiration length and several other critical factors and our Templates to issue. 
+
+I also threw in a registry backup which I read about in [this source](https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/) but it does contain hostnames and such so I would not restore it on bare principle and check to see if not having the restored registry is an issue.
+
+I will need to run a restoration onto new bare metal to test out this process (as you should be doing anyway). I tested this in my [homelab](https://blog.dev0.sh/homelab/) by removing certs from the store and then conducting a restore, it went off without a hitch.
 
 ## Code
 ### Backup
