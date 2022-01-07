@@ -10,21 +10,13 @@ Backup and restoration is rather simple, using just one cmdlet each. There is no
 
 ## Code
 ### Backup
-```powershell
-$pass = ConvertTo-SecureString 'Password' -AsPlainText -Force
-$path = "\\shares\backup\ca\$env:COMPUTERNAME-$date"
-
-Backup-CARoleService -Path $path -Password $pass
-```
+<!---
+https://gist.github.com/PipeItToDevNull/f4c87abda4f86a00aab4a656a76bc264
+-->
+{% gist f4c87abda4f86a00aab4a656a76bc264 backup.ps1 %}
 
 ### Recovery
-```powershell
-Restore-CARoleService -Path <path>
-```
-
-## Notes
-* Take a backup of the CAPolicy.inf file if you have created one explicitly during the CA installation.
-* When restoring, stop the certsvc service and restart it when done.
+{% gist f4c87abda4f86a00aab4a656a76bc264 recovery.ps1 %}
 
 ## References
 Official docs
@@ -37,3 +29,7 @@ Backup ideas and tips
 * https://blog.ahasayen.com/certification-authority-backup/
 * https://dimitri.janczak.net/2016/10/08/backup-of-a-windows-ca-configuration/
 * https://redmondmag.com/Articles/2016/03/01/Securing-Windows-Enterprise-CAs.aspx
+
+Cert Templates are stored in AD
+* https://social.technet.microsoft.com/wiki/contents/articles/8464.certificate-templates-and-their-storage-within-active-directory.aspx
+* https://social.technet.microsoft.com/Forums/windowsserver/en-US/ffcce3ee-1965-4821-bbdb-eb5cfc68083b/backup-up-a-ca-templates-list?forum=winserversecurity
