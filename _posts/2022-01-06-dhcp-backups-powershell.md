@@ -6,9 +6,9 @@ tags:
 ---
 Backing up a DHCP server is simple using the cmdlets `Backup-DhcpServer` and `Restore-DhcpServer`. There are a couple gotchas and while it is not as directory specific as the [dns backups]() are I chose to use the same directories out of convenience,  
 
-> :pencil2: ACLs must be set to give "DHCP Server" full control over the restoration files otherwise the import fails.
+> :pencil: ACLs must be set to give "DHCP Server" full control over the restoration files otherwise the import fails.
 
-> :pencil2: The service must be restarted prior to removing the restoration files, otherwise you get errors and no restoration occurs.
+> :pencil: The service must be restarted prior to removing the restoration files, otherwise you get errors and no restoration occurs.
 
 ## Code
 ### Backup
