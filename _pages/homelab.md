@@ -23,3 +23,32 @@ Homelabbing is what got me into the field and I encourage anyone who asks me abo
 | Catalyst-4948 |             |
 
 ### Service List
+* Active Directory
+    * For central authentication for all services and GPO
+* Windows DNS
+* Windows DHCP
+* Windows Enterprise CA
+    * Testing ideas and the ability to sign local scripts
+* Nextcloud
+    * Docker
+* Gita
+    * Docker
+* TheLounge
+    * Docker
+* HTTPD
+    * Basic homepage for https://dev0.sh
+    * Docker
+* Linx
+    * For personal code sharing/file uploads
+    * Docker
+* Ansible
+    * CFM on Linux hosts mostly
+* 3CX
+    * I run a "work line" over this since we all went WFH and I didn't want to give out my cell
+    * voip.ms is my DID provider
+* Homebridge
+    * My smart home is based around Apple and Siri
+* TrueNas
+    * I run 2 hosts, one for media and the other for backups/shares (the cost worked out better to have 2 hosts)
+* OpenWrt
+    * My Cisco WRT series router runs this as my main AP
