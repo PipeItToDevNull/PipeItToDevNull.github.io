@@ -31,7 +31,7 @@ Homelabbing is what got me into the field and I encourage anyone who asks me abo
     * Testing ideas and the ability to sign local scripts
 * Nextcloud
     * Docker
-* Gita
+* Gitea
     * Docker
 * TheLounge
     * Docker
