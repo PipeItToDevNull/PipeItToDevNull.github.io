@@ -30,3 +30,5 @@ Docs on WBAdmin.exe
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
 Docs on WindowsServerBackup PowerShell module
 * https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
+Docs on restoration/recovery
+* https://askme4tech.com/how-restore-windows-image-backup-different-windows-server
