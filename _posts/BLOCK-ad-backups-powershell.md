@@ -18,7 +18,9 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 > :grey_exclamation: : Restoration of these backups would be done with [Microsoft's documenation](https://docs.microsoft.com/en-us/windows-server-essentials/manage/restore-or-repair-your-server-running-windows-server-essentials#BKMK_Restore_1).
 
 ## Recovery onto bare metal
-
+> :pencil: you can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
+> 
+> To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM.
 
 ## References
 Backup scripts, ideas, and details
