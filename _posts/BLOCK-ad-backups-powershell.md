@@ -22,6 +22,9 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 > 
 > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM.
 
+> ❗ Error 8007001f
+> 
+
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
@@ -32,3 +35,4 @@ Docs on WindowsServerBackup PowerShell module
 * https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
 Docs on restoration/recovery
 * https://askme4tech.com/how-restore-windows-image-backup-different-windows-server
+* https://community.spiceworks.com/topic/2201127-recover-windows-system-image-from-network-error-0x8007001f
