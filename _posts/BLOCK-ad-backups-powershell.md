@@ -9,12 +9,13 @@ The vast majority of sources I checked while trying to re-work our existing back
 ## Code
  This script is heavily based off the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps)
 
-%% https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a %% 
+%% 
+https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a 
+%% 
 
 {% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
-## Notes
-Restoration of these backups would be done with [Microsoft's documenation](https://docs.microsoft.com/en-us/windows-server-essentials/manage/restore-or-repair-your-server-running-windows-server-essentials#BKMK_Restore_1).
+> :grey_exclamation: : Restoration of these backups would be done with [Microsoft's documenation](https://docs.microsoft.com/en-us/windows-server-essentials/manage/restore-or-repair-your-server-running-windows-server-essentials#BKMK_Restore_1).
 
 ## References
 Backup scripts, ideas, and details
