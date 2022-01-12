@@ -14,7 +14,7 @@ The vast majority of sources I checked while trying to re-work our existing back
 {% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Notes
-Restoration of this 
+Restoration of this
 
 ## References
 Backup scripts, ideas, and details
