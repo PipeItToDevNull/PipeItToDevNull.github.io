@@ -56,8 +56,10 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
 > 📝 Assigning a static IP
     > If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
-3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_name>\<share_name>`
+3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_name>\<share_name>`. You will be prompted for credentials (if required).
 ![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
+> 📝The username here must be in the "DOMAIN\user" format
+4. 
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
