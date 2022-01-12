@@ -23,6 +23,7 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 
 > ⚠ Error 8007001f
 > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
+
 #### Using GUI
 1. Boot up your install media and choose "Next"
 ![ServerBackupRecovery0.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
@@ -32,15 +33,31 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 ![ServerBackupRecovery2.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
 ![ServerBackupRecovery3.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
 4. On the next screen you will get a notice about having now backups, hit "Cancel" then "Next"
+![ServerBackupRecovery4.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery4.PNG)
+![ServerBackupRecovery5.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery5.PNG)
 > 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this.
 5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
+![ServerBackupRecovery6.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery6.PNG)
 6. Choose "Search for a system image on the network" and hit "yes" to initialize the network.
+![ServerBackupRecovery7.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery7.PNG)
+![ServerBackupRecovery8.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery8.PNG)
 7. You should see a prompt for a network path, the installer has no DNS so we will use the IP of your NAS or Share server and the path to the directory holding the "WindowsImageBackup". 
+![ServerBackupRecovery9.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery9.PNG)
 > 📝 The path should not include "WindowsImageBackup", it should be one directory higher and will be the directory on line 17 of our backup script above.
 8. From this point on I had errors. You can continue to follow [these docs](https://askme4tech.com/how-restore-windows-image-backup-different-windows-server) if you are lucky enough not to have them.
+![ServerBackupRecovery10.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery10.PNG)
 
-#### Using CLI
+#### Using CLI^[https://community.spiceworks.com/topic/2201127-recover-windows-system-image-from-network-error-0x8007001f]
+I used CLI for my test recoveries, which is probably better to test anyway, due to errors talked about above. 
+1. Follow steps 1 and 2 above but instead of choose "System Image Recovery" in Step 3 choose "Command Prompt"
+2. Initialize your network with `start /w wpeinit` and then check for a valid IP with `ipconfig`
+> ❗ No IP
+> If you have no IP you may need to look into side-loading drivers into your image. I have never done it so you will need to google that.
 
+> 📝 Assigning a static IP
+    > If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
+3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_name>\<share_name>`
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
