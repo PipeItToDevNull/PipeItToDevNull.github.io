@@ -9,29 +9,12 @@ The vast majority of sources I checked while trying to re-work our existing back
 ## Code
  This script is heavily based off the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps)
 
-```powershell
-#Requires -RunAsAdministrator
+%% https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a %% 
 
-# user vars
-$path= '\\shares\backups\ad\'
-
-# create our backup policy
-$policy = New-WBPolicy
-Add-WBSystemState $policy
-Add-WBBareMetalRecovery $Policy
-Set-WBVssBackupOptions -Policy $policy -VssCopyBackup
-$backupDir = New-WBBackupTarget -NetworkPath $path
-Add-WBBackupTarget -Policy $Policy -Target $backupDir
-
-# run it
-Start-WBBackup -Policy $policy
-
-# Validate a success
-$summary = Get-WBSummary
-$lastSuccess = $summary.LastSuccessfulBackupTime
-```
+{% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Notes
+Restoration of this 
 
 ## References
 Backup scripts, ideas, and details
