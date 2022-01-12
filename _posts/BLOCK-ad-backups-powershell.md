@@ -16,16 +16,30 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 {% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Recovery
-### With Windows install media on a new VM or baremetal
+### With Windows install media on a new VM or bare-metal
 > 📝 You can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
 > 
 > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
 
 > ⚠ Error 8007001f
 > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
+#### Using GUI
+1. Boot up your install media and choose "Next"
+![ServerBackupRecovery0.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
+2. Do not choose "Install now", choose "Repair your computer" in the lower left
+![ServerBackupRecovery1.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery1.PNG)
+3. Choose "Troubleshoot" then "System Image Recovery"
+![ServerBackupRecovery2.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
+![ServerBackupRecovery3.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
+4. On the next screen you will get a notice about having now backups, hit "Cancel" then "Next"
+> 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this.
+5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
+6. Choose "Search for a system image on the network" and hit "yes" to initialize the network.
+7. You should see a prompt for a network path, the installer has no DNS so we will use the IP of your NAS or Share server and the path to the directory holding the "WindowsImageBackup". 
+> 📝 The path should not include "WindowsImageBackup", it should be one directory higher and will be the directory on line 17 of our backup script above.
+8. From this point on I had errors. You can continue to follow [these docs](https://askme4tech.com/how-restore-windows-image-backup-different-windows-server) if you are lucky enough not to have them.
 
-Boot up your install media and choose 
-
+#### Using CLI
 
 ## References
 Backup scripts, ideas, and details
