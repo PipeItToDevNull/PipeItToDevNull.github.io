@@ -17,6 +17,9 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 
 > :grey_exclamation: : Restoration of these backups would be done with [Microsoft's documenation](https://docs.microsoft.com/en-us/windows-server-essentials/manage/restore-or-repair-your-server-running-windows-server-essentials#BKMK_Restore_1).
 
+## Recovery onto bare metal
+
+
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
