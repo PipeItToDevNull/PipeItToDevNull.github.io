@@ -14,7 +14,7 @@ The vast majority of sources I checked while trying to re-work our existing back
 {% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Notes
-Restoration of this
+Restoration of these backups would be done with [Microsoft's documenation](https://docs.microsoft.com/en-us/windows-server-essentials/manage/restore-or-repair-your-server-running-windows-server-essentials#BKMK_Restore_1).
 
 ## References
 Backup scripts, ideas, and details
