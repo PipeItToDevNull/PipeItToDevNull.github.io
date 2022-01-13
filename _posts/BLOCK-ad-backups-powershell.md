@@ -106,7 +106,7 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
 ![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery15.PNG)
 
-6. When it is done you can reboot the host and get back into Windows.
+6. When it is done you will get a summary of what is restored, then you can reboot the host and get back into Windows.
 
 ![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery16.PNG)
 
