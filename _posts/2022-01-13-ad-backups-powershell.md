@@ -39,14 +39,12 @@ I added a timer into my script because this tends to take a while and if you see
 ![ServerBackupRecovery2.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
 ![ServerBackupRecovery3.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
 
-\4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
+4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
  
 > 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this document.
 
 ![ServerBackupRecovery4.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery4.PNG)
 ![ServerBackupRecovery5.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery5.PNG)
-
-> 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this
 
 5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
 
@@ -67,7 +65,7 @@ I added a timer into my script because this tends to take a while and if you see
 
 ![ServerBackupRecovery10.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery10.PNG)
 
-#### Using CLI^[https://community.spiceworks.com/topic/2201127-recover-windows-system-image-from-network-error-0x8007001f]
+#### Using CLI
 I used CLI for my test recoveries, which is probably better to test anyway, due to errors listed above. 
 1. Follow steps 1 and 2 above but instead of "System Image Recovery" in Step 3 choose "Command Prompt"
 2. Initialize your network with `start /w wpeinit` and then check for a valid IP with `ipconfig`
