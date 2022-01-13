@@ -38,6 +38,7 @@ I added a timer into my script because this tends to take a while and if you see
 3. Choose "Troubleshoot" then "System Image Recovery"
 
     ![ServerBackupRecovery2.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
+   
     ![ServerBackupRecovery3.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
 
 4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
