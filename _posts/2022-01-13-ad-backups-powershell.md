@@ -46,6 +46,7 @@ I added a timer into my script because this tends to take a while and if you see
     > 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this document.
 
     ![ServerBackupRecovery4.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery4.PNG)
+    
     ![ServerBackupRecovery5.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery5.PNG)
 
 5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
@@ -55,6 +56,7 @@ I added a timer into my script because this tends to take a while and if you see
 6. Choose "Search for a system image on the network" and hit "yes" to initialize the network.
 
     ![ServerBackupRecovery7.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery7.PNG)
+    
     ![ServerBackupRecovery8.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery8.PNG)
 
 7. You should see a prompt for a network path, the installer has no DNS so we will use the IP of your NAS or Share server and the path to the directory holding the "WindowsImageBackup". 
@@ -83,6 +85,7 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
     > 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
 
     ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
+    
     ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery12.PNG)
 
 4. If you have more than one server returned we need to add `-machine:<server name>` onto our previous command.
