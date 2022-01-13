@@ -6,15 +6,13 @@ tags:
 ---
 The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, but that isn't real powershell and just won't do. I more or less copied my code from the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps). 
 
-%% check this online %%
+[comment]: # this online 
 > 📝 This is a universal solution for any Windows Server, not just AD. I also use this to backup my CA (In addition to my [file based backup script](./2022-01-07-windows-ca-backups-powershell)
 
 I added a timer into my script because this tends to take a while and if you see a large variation in the time you may be alerted to other issues you have in your infrastructure which is nice.
 
 ## Code 
-%% 
-https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
-%% 
+[comment]: # https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 {% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Recovery
