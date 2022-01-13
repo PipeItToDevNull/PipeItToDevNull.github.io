@@ -21,13 +21,13 @@ I added a timer into my script because this tends to take a while and if you see
 > 
 > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
 
-> ⚠ Error 8007001F
+> 🔺 Error 8007001F
 > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
 
 #### Using GUI
 1. Boot up your install media and choose "Next"
 
-![ServerBackupRecovery0.PNG|400](/assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
+![ServerBackupRecovery0.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
 
 2. Do not choose "Install now", choose "Repair your computer" in the lower left
 
