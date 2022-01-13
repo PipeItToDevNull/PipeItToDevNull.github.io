@@ -70,15 +70,15 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 1. Follow steps 1 and 2 above but instead of "System Image Recovery" in Step 3 choose "Command Prompt"
 2. Initialize your network with `start /w wpeinit` and then check for a valid IP with `ipconfig`
 
-> ❗ If you have no IP you may need to look into side-loading drivers into your image. I have never done it so you will need to google that.
+    > ❗ If you have no IP you may need to look into side-loading drivers into your image. I have never done it so you will need to google that.
 
-> 📝If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
+    > 📝If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
 
 3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_IP>\<share_name>`. You will be prompted for credentials (if required, the username must be in the "DOMAIN\user" format). 
 
-> ❗ There may be no DNS in your install environment, I recommend just using an IP for the server address.
+    > ❗ There may be no DNS in your install environment, I recommend just using an IP for the server address.
 
-> 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
+    > 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
 
 ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
 ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery12.PNG)
