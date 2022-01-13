@@ -13,7 +13,7 @@ I added a timer into my script because this tends to take a while and if you see
 
 ## Code 
 [comment]: # https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
-{% gist https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
+{% gist 99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
 ## Recovery
 ### With Windows install media on a new VM or bare-metal
