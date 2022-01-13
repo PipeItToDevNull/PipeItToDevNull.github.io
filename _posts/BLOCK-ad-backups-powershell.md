@@ -98,7 +98,7 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
 > ❗ The -recreateDisks flag destroys all data on your local disks and replaces it with out backup. If you want to do another type of recovery please see the [sysrecovery documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin-start-sysrecovery).
 
-
+> ❗ You can not restore to dissimilar firmware types i.e. (BIOS to UEFI) or vice versa.
 
 ## References
 Backup scripts, ideas, and details
