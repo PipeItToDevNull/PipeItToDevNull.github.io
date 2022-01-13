@@ -114,10 +114,13 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
 * https://bobcares.com/blog/backup-active-directory-domain-controller/
+
 Docs on WBAdmin.exe
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+
 Docs on WindowsServerBackup PowerShell module
 * https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/?view=windowsserver2022-ps
+
 Docs on restoration/recovery
 * https://askme4tech.com/how-restore-windows-image-backup-different-windows-server
 * https://community.spiceworks.com/topic/2201127-recover-windows-system-image-from-network-error-0x8007001f
