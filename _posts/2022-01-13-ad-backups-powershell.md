@@ -22,6 +22,7 @@ I added a timer into my script because this tends to take a while and if you see
 > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
 
 > 🔺 Error 8007001F
+> 
 > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
 
 #### Using GUI
@@ -71,11 +72,9 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 1. Follow steps 1 and 2 above but instead of "System Image Recovery" in Step 3 choose "Command Prompt"
 2. Initialize your network with `start /w wpeinit` and then check for a valid IP with `ipconfig`
 
-> ❗ No IP
-> If you have no IP you may need to look into side-loading drivers into your image. I have never done it so you will need to google that.
+> ❗ If you have no IP you may need to look into side-loading drivers into your image. I have never done it so you will need to google that.
 
-> 📝 Assigning a static IP
-    > If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
+> 📝If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
 
 3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_IP>\<share_name>`. You will be prompted for credentials (if required, the username must be in the "DOMAIN\user" format). 
 
