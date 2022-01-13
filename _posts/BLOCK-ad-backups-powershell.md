@@ -106,6 +106,10 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
 ![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery15.PNG)
 
+6. When it is done you can reboot the host and get back into Windows.
+
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery16.PNG)
+
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
