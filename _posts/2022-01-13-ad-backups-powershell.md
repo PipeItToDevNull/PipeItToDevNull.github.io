@@ -27,7 +27,7 @@ I added a timer into my script because this tends to take a while and if you see
 #### Using GUI
 1. Boot up your install media and choose "Next"
 
-![ServerBackupRecovery0.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
+![ServerBackupRecovery0.PNG|400](/assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
 
 2. Do not choose "Install now", choose "Repair your computer" in the lower left
 
