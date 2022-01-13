@@ -39,7 +39,7 @@ I added a timer into my script because this tends to take a while and if you see
 ![ServerBackupRecovery2.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
 ![ServerBackupRecovery3.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
 
-4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
+\4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
  
 > 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this document.
 
