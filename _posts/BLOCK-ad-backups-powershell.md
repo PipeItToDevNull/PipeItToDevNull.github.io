@@ -28,34 +28,44 @@ https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 
 #### Using GUI
 1. Boot up your install media and choose "Next"
+
 ![ServerBackupRecovery0.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
 
 2. Do not choose "Install now", choose "Repair your computer" in the lower left
+
 ![ServerBackupRecovery1.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery1.PNG)
 
 3. Choose "Troubleshoot" then "System Image Recovery"
+
 ![ServerBackupRecovery2.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
 ![ServerBackupRecovery3.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
 
 4. On the next screen you will get a notice about having now backups, hit "Cancel" then "Next"
+ 
+> 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this document.
+
 ![ServerBackupRecovery4.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery4.PNG)
 ![ServerBackupRecovery5.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery5.PNG)
 
-> 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this.
+> 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this
 
 5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
+
 ![ServerBackupRecovery6.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery6.PNG)
+
 6. Choose "Search for a system image on the network" and hit "yes" to initialize the network.
+
 ![ServerBackupRecovery7.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery7.PNG)
 ![ServerBackupRecovery8.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery8.PNG)
 
 7. You should see a prompt for a network path, the installer has no DNS so we will use the IP of your NAS or Share server and the path to the directory holding the "WindowsImageBackup". 
+ 
+> 📝 The path should not include "WindowsImageBackup", it should be one directory higher and will be the directory on line 17 of our backup script above.
+
 ![ServerBackupRecovery9.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery9.PNG)
 
-> 📝 The path should not include "WindowsImageBackup", it should be one directory higher and will be the directory on line 17 of our backup script above. 
-
 > ❗ From this point on I had errors. You can continue to follow [these docs](https://askme4tech.com/how-restore-windows-image-backup-different-windows-server) if you are lucky enough not to have them.
-* Error below, not a step.
+
 ![ServerBackupRecovery10.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery10.PNG)
 
 #### Using CLI^[https://community.spiceworks.com/topic/2201127-recover-windows-system-image-from-network-error-0x8007001f]
@@ -69,14 +79,27 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 > 📝 Assigning a static IP
     > If you need a static IP you can assign one with `netsh interface ip set address "Interface Name" static <ipaddress> <subnet mask> <gateway>`
 
-3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_name>\<share_name>`. You will be prompted for credentials (if required).
+3. You can check for backups on your share with `wbadmin get versions -backuptarget:\\<server_IP>\<share_name>`. You will be prompted for credentials (if required, the username must be in the "DOMAIN\user" format). 
+
+> ❗ There may be no DNS in your install environment, I recommend just using an IP for the server address.
+
+> 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
+
 ![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery12.PNG)
 
-> 📝 The username here must be in the "DOMAIN\user" format
+4. If you have more than one server returned we need to add `-machine:<server name>` onto our previous command.
 
-> 📝 You will only see a machine name here if your directory contains backups from more than one host. If you do have more than one host and see now names, try to work it out based on date.
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery13.PNG)
 
-4. 
+5. Now to do the actual recovery, you will need the "Version identifier:" from your CMD window and we will use the following command, `wbadmin start sysrecovery -machine:<server name> -version:<version> -backuptarget:\\<server_IP>\<share_name> -recreateDisks`
+
+> 📝 If you did not need -machine to get your list of backups you do not need it in the command above either.
+
+> ❗ The -recreateDisks flag destroys all data on your local disks and replaces it with out backup. If you want to do another type of recovery please see the [sysrecovery documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin-start-sysrecovery).
+
+
+
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
