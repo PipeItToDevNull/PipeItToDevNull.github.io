@@ -100,6 +100,12 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
 > ❗ You can not restore to dissimilar firmware types i.e. (BIOS to UEFI) or vice versa.
 
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery14.PNG)
+
+> 📝 The restoration will run for a while and print its status out periodically.
+
+![ServerBackupRecovery11.PNG|400](../assets/images/windowsImageRecovery/ServerBackupRecovery15.PNG)
+
 ## References
 Backup scripts, ideas, and details
 * http://woshub.com/backup-active-directory-domain-controller/
