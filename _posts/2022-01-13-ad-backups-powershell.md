@@ -8,7 +8,7 @@ The vast majority of sources I checked while trying to re-work our existing back
 
 [comment]: # this online 
     
-    > 📝 This is a universal solution for any Windows Server, not just AD. I also use this to backup my CA (In addition to my [file based backup script]({% post_url 2022-01-07-windows-ca-backups-powershell%}))
+   > 📝 This is a universal solution for any Windows Server, not just AD. I also use this to backup my CA (In addition to my [file based backup script]({% post_url 2022-01-07-windows-ca-backups-powershell%}))
 
 I added a timer into my script because this tends to take a while and if you see a large variation in the time you may be alerted to other issues you have in your infrastructure which is nice.
 
@@ -18,13 +18,13 @@ I added a timer into my script because this tends to take a while and if you see
 
 ## Recovery
 ### With Windows install media on a new VM or bare-metal
-    > 📝 You can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
+   > 📝 You can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
 
-    > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
+   > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
 
-    > 🔺 Error 8007001F
-    > 
-    > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
+   > 🔺 Error 8007001F
+   > 
+   I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
 
 #### Using GUI
 1. Boot up your install media and choose "Next"
