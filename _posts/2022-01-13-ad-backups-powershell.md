@@ -21,7 +21,7 @@ I added a timer into my script because this tends to take a while and if you see
 ## Recovery
 ### With Windows install media on a new VM or bare-metal
    > 📝 You can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
-
+   > 
    > To get files onto a VM mount a disk in a working VM to copy files then mount that disk into the recovering VM. You should put the `WindowsImageBackup` directory into the root of the disk you want to use for this.
 
    > 🔺 Error 8007001F
