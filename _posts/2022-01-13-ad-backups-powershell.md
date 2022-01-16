@@ -16,6 +16,8 @@ I added a timer into my script because this tends to take a while and if you see
 [comment]: # https://gist.github.com/PipeItToDevNull/99e6ccccc772684b66175bc6a987ee7a
 {% gist 99e6ccccc772684b66175bc6a987ee7a backup.ps1 %}
 
+> :pencil: This script utilizes my [email script submodule](https://blog.dev0.sh/2022/01/04/email-script.html)
+
 ## Recovery
 ### With Windows install media on a new VM or bare-metal
    > 📝 You can do this recovery via a network share (easiest) or from files on a disk. If you have various network issues related to drivers or virtualization you will want to try it from files on a disk. 
