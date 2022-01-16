@@ -26,7 +26,7 @@ I added a timer into my script because this tends to take a while and if you see
 
    > 🔺 Error 8007001F
    > 
-   I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
+   > I had this error when trying to do a network restore on my VMs. I tried VBox, Hyper-V and XCP-NG with the same error. Regardless of path, name vs IP and networking method. I fell back to the CLI method listed here because of it.
 
 #### Using GUI
 1. Boot up your install media and choose "Next"
