@@ -24,7 +24,7 @@
   "newFileFolderPath": "unsorted",
   "legacyEditor": false,
   "livePreview": true,
-  "useMarkdownLinks": false,
-  "newLinkFormat": "shortest",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute",
   "readableLineLength": false
 }

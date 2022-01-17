@@ -4,36 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a3355ed626a72156",
+        "id": "65764c0a813a7053",
         "type": "leaf",
-        "dimension": 25.34854245880861,
-        "pinned": true,
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "10 Life/10 Meta/Home-Board.md"
-          },
-          "pinned": true
-        }
-      },
-      {
-        "id": "fcc4a56a5812e724",
-        "type": "leaf",
-        "dimension": 37.325728770595695,
-        "pinned": true,
-        "state": {
-          "type": "empty",
-          "state": {},
-          "pinned": true
-        }
-      },
-      {
-        "id": "7d8c07fe2a5e2c27",
-        "type": "leaf",
-        "dimension": 37.325728770595695,
-        "state": {
-          "type": "empty",
-          "state": {}
+            "file": "_posts/2022-01-16-TEST.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -44,32 +24,8 @@
     "type": "split",
     "children": [
       {
-        "id": "147298be1a0b69db",
-        "type": "tabs",
-        "dimension": 42.640364188163886,
-        "children": [
-          {
-            "id": "58ff97f626d0c586",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "09252147499b8c74",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          }
-        ]
-      },
-      {
         "id": "f8dce9c997c34c9a",
         "type": "tabs",
-        "dimension": 57.35963581183612,
         "children": [
           {
             "id": "c3f74bcc14844b86",
@@ -96,6 +52,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_posts/2022-01-16-TEST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,9 +69,18 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_posts/2022-01-16-TEST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
+            }
+          },
+          {
+            "id": "09252147499b8c74",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
             }
           }
         ]
@@ -145,25 +111,34 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "8cea29a911e0cb91",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "7d8c07fe2a5e2c27",
+  "active": "65764c0a813a7053",
   "lastOpenFiles": [
+    "_posts/2022-01-16-TEST.md",
+    "_posts/RHEL Developer Setup.md",
+    "_posts/Using PSWindows Update.md",
+    "_posts/2022-01-13-ad-backups-powershell.md",
     "GithubPages/_posts/2022-01-16 TEST/BLOCK-2022-01-16-TEST.md",
     "GithubPages/_posts/2021-12-29-publishing-pages-obsidian.md",
     "GithubPages/_posts/2022-01-16 TEST/PastedImage.png",
     "GithubPages/_posts/2022-01-13-ad-backups-powershell.md",
     "GithubPages/_posts/2022-01-01-truenas-alert-cloudtask.md",
-    "GithubPages/_posts/2022-01-04-email-script.md",
-    "GithubPages/_posts/2022-01-05-dns-backups-powershell.md",
-    "GithubPages/_posts/2022-01-06-dhcp-backups-powershell.md",
-    "GithubPages/_posts/2022-01-07-windows-ca-backups-powershell.md",
-    "00 Meta/01 Periodics/Daily/2022-01-16.md"
+    "GithubPages/_posts/2022-01-04-email-script.md"
   ]
 }
