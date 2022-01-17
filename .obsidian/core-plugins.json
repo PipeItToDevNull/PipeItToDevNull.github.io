@@ -2,13 +2,11 @@
   "file-explorer",
   "global-search",
   "switcher",
-  "graph",
   "backlink",
   "outgoing-link",
   "tag-pane",
   "templates",
   "command-palette",
-  "starred",
   "word-count",
   "file-recovery"
 ]
