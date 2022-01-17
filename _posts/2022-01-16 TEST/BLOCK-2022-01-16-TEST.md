@@ -1,7 +1,6 @@
 ---
 title:  "TEST"
 ---
-{% include_relative PastedImage.png %}
 TEST BODY
 
 ![Pasted image 20220116215749.png](./PastedImage.png)
