@@ -8,7 +8,7 @@
   "trashOption": "local",
   "newFileLocation": "folder",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "./attachments",
+  "attachmentFolderPath": "assets/images",
   "autoPairBrackets": true,
   "autoPairMarkdown": false,
   "defaultViewMode": "source",

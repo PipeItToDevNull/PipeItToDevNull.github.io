@@ -32,45 +32,45 @@ I added a timer into my script because this tends to take a while and if you see
 #### Using GUI
 1. Boot up your install media and choose "Next"
 
-    ![ServerBackupRecovery0.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery0.PNG)
+    ![ServerBackupRecovery0.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery0.PNG)
 
 2. Do not choose "Install now", choose "Repair your computer" in the lower left
 
-    ![ServerBackupRecovery1.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery1.PNG)
+    ![ServerBackupRecovery1.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery1.PNG)
 
 3. Choose "Troubleshoot" then "System Image Recovery"
 
-    ![ServerBackupRecovery2.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery2.PNG)
+    ![ServerBackupRecovery2.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery2.PNG)
    
-    ![ServerBackupRecovery3.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery3.PNG)
+    ![ServerBackupRecovery3.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery3.PNG)
 
 4. On the next screen you will get a notice about having no backups, hit "Cancel" then "Next"
  
     > 📝 If you do not get a notice then you likely have backups on a mounted disk. You can attempt to restore them and skip the rest of this document.
 
-    ![ServerBackupRecovery4.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery4.PNG)
+    ![ServerBackupRecovery4.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery4.PNG)
     
-    ![ServerBackupRecovery5.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery5.PNG)
+    ![ServerBackupRecovery5.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery5.PNG)
 
 5. Assuming we got the prompt in step 4 then we will see a grid with no entries, choose "Advanced"
 
-    ![ServerBackupRecovery6.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery6.PNG)
+    ![ServerBackupRecovery6.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery6.PNG)
 
 6. Choose "Search for a system image on the network" and hit "yes" to initialize the network.
 
-    ![ServerBackupRecovery7.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery7.PNG)
+    ![ServerBackupRecovery7.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery7.PNG)
     
-    ![ServerBackupRecovery8.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery8.PNG)
+    ![ServerBackupRecovery8.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery8.PNG)
 
 7. You should see a prompt for a network path, the installer has no DNS so we will use the IP of your NAS or Share server and the path to the directory holding the "WindowsImageBackup". 
  
     > 📝 The path should not include "WindowsImageBackup", it should be one directory higher and will be the directory on line 17 of our backup script above.
 
-    ![ServerBackupRecovery9.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery9.PNG)
+    ![ServerBackupRecovery9.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery9.PNG)
 
     > ❗ From this point on I had errors. You can continue to follow [these docs](https://askme4tech.com/how-restore-windows-image-backup-different-windows-server) if you are lucky enough not to have them.
 
-    ![ServerBackupRecovery10.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery10.PNG)
+    ![ServerBackupRecovery10.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery10.PNG)
 
 #### Using CLI
 I used CLI for my test recoveries, which is probably better to test anyway, due to errors listed above. 
@@ -87,13 +87,13 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
     > 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
 
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery11.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery11.PNG)
     
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery12.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery12.PNG)
 
 4. If you have more than one server returned we need to add `-machine:<server name>` onto our previous command.
 
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery13.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery13.PNG)
 
 5. Now to do the actual recovery, you will need the "Version identifier:" from your CMD window and we will use the following command, `wbadmin start sysrecovery -machine:<server name> -version:<version> -backuptarget:\\<server_IP>\<share_name> -recreateDisks`
 
@@ -103,15 +103,15 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
     > ❗ You can not restore to dissimilar firmware types i.e. (BIOS to UEFI) or vice versa.
 
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery14.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery14.PNG)
 
     > 📝 The restoration will run for a while and print its status out periodically.
 
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery15.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery15.PNG)
 
 6. When it is done you will get a summary of what is restored, then you can reboot the host and get back into Windows.
 
-    ![ServerBackupRecovery11.PNG](/assets/images/windowsImageRecovery/ServerBackupRecovery16.PNG)
+    ![ServerBackupRecovery11.PNG](assets/images/2022-01-13-ad-backups/ServerBackupRecovery16.PNG)
 
 ## References
 Backup scripts, ideas, and details
