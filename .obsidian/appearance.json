@@ -1,0 +1,20 @@
+{
+  "baseFontSize": 12,
+  "translucency": false,
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "minimalFixes",
+    "codeLine",
+    "minimalColourOverride",
+    "minimalEdits",
+    "livePreviewForceMonospace",
+    "folderColours",
+    "nordCalendar",
+    "minimalTitleFix",
+    "redUnresolvedLinks",
+    "highlighter",
+    "fadedEmojisInTasks",
+    "nordCode"
+  ]
+}

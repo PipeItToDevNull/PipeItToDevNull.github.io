@@ -1,0 +1,79 @@
+{
+  "collapse-filter": true,
+  "search": "-path:\"00 Meta/02 Templates\" -path:\"10 Life/12 Money\"",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:\"00 Meta/02 Templates\" OR file:\"000\" OR file:\"Board\"",
+      "color": {
+        "a": 1,
+        "rgb": 12542314
+      }
+    },
+    {
+      "query": "path:\"10 Life\"",
+      "color": {
+        "a": 1,
+        "rgb": 13666160
+      }
+    },
+    {
+      "query": "path:\"20 IT\"",
+      "color": {
+        "a": 1,
+        "rgb": 15453067
+      }
+    },
+    {
+      "query": "path:\"30 Hobbies\"",
+      "color": {
+        "a": 1,
+        "rgb": 10731148
+      }
+    },
+    {
+      "query": "path:\"40 Objects\"",
+      "color": {
+        "a": 1,
+        "rgb": 11833005
+      }
+    },
+    {
+      "query": "path:\"50 Company\"",
+      "color": {
+        "a": 1,
+        "rgb": 8962256
+      }
+    },
+    {
+      "query": "path:GithubPages",
+      "color": {
+        "a": 1,
+        "rgb": 8495553
+      }
+    },
+    {
+      "query": "path:\"00 Meta/01 Periodics\"",
+      "color": {
+        "a": 1,
+        "rgb": 9419963
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 0.988461538461538,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.5,
+  "repelStrength": 13.8775510204082,
+  "linkStrength": 1,
+  "linkDistance": 30,
+  "scale": 0.05254798274665724,
+  "close": true
+}

@@ -1,0 +1,9 @@
+{
+  "userIllegalSymbols": [],
+  "ignoredFiles": {
+    "Work/Grok Pattern File.md": null,
+    "Personal/Grok Pattern File.md": null,
+    "GithubPages/README.md": null
+  },
+  "ignoreRegex": "(.*Meta/.*)|(GithubPages.*)"
+}

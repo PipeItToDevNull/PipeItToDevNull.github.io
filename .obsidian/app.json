@@ -1,0 +1,30 @@
+{
+  "spellcheck": true,
+  "promptDelete": true,
+  "foldIndent": false,
+  "showLineNumber": true,
+  "useTab": false,
+  "vimMode": true,
+  "trashOption": "local",
+  "newFileLocation": "folder",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./attachments",
+  "autoPairBrackets": true,
+  "autoPairMarkdown": false,
+  "defaultViewMode": "source",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "foldHeading": false,
+  "fileSortOrder": "alphabetical",
+  "newFileFolderPath": "unsorted",
+  "legacyEditor": false,
+  "livePreview": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "readableLineLength": false
+}

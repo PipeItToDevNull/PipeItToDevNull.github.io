@@ -1,0 +1,12 @@
+/* This makes code blocks a better color, red is default */
+.cm-s-obsidian .HyperMD-codeblock  {
+    color: #8fbcbb;
+}   
+
+.cm-s-obsidian span.cm-inline-code  {
+    color: #8fbcbb;
+}
+
+.markdown-preview-view code {
+    color: #8fbcbb;
+}

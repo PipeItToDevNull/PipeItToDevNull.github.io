@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "b3b8ffe07bc2d136",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3355ed626a72156",
+        "type": "leaf",
+        "dimension": 25.34854245880861,
+        "pinned": true,
+        "state": {
+          "type": "kanban",
+          "state": {
+            "file": "10 Life/10 Meta/Home-Board.md"
+          },
+          "pinned": true
+        }
+      },
+      {
+        "id": "fcc4a56a5812e724",
+        "type": "leaf",
+        "dimension": 37.325728770595695,
+        "pinned": true,
+        "state": {
+          "type": "empty",
+          "state": {},
+          "pinned": true
+        }
+      },
+      {
+        "id": "7d8c07fe2a5e2c27",
+        "type": "leaf",
+        "dimension": 37.325728770595695,
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "787effda90279e0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "147298be1a0b69db",
+        "type": "tabs",
+        "dimension": 42.640364188163886,
+        "children": [
+          {
+            "id": "58ff97f626d0c586",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "09252147499b8c74",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "f8dce9c997c34c9a",
+        "type": "tabs",
+        "dimension": 57.35963581183612,
+        "children": [
+          {
+            "id": "c3f74bcc14844b86",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2afee0d373f180aa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "be0b7f6b1cbcba2d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9569b8025d17fbfc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "f87a4acb7daf02b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "729f282c2d97d835",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4962a2584310a93",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "exists powershell",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "7d8c07fe2a5e2c27",
+  "lastOpenFiles": [
+    "GithubPages/_posts/2022-01-16 TEST/BLOCK-2022-01-16-TEST.md",
+    "GithubPages/_posts/2021-12-29-publishing-pages-obsidian.md",
+    "GithubPages/_posts/2022-01-16 TEST/PastedImage.png",
+    "GithubPages/_posts/2022-01-13-ad-backups-powershell.md",
+    "GithubPages/_posts/2022-01-01-truenas-alert-cloudtask.md",
+    "GithubPages/_posts/2022-01-04-email-script.md",
+    "GithubPages/_posts/2022-01-05-dns-backups-powershell.md",
+    "GithubPages/_posts/2022-01-06-dhcp-backups-powershell.md",
+    "GithubPages/_posts/2022-01-07-windows-ca-backups-powershell.md",
+    "00 Meta/01 Periodics/Daily/2022-01-16.md"
+  ]
+}

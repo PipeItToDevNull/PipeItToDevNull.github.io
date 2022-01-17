@@ -1,0 +1,10 @@
+{
+  "show-checkboxes": true,
+  "show-board-settings": true,
+  "show-add-list": true,
+  "show-archive-all": true,
+  "show-view-as-markdown": false,
+  "new-note-template": "Core/Templates/Kanban Card.md",
+  "prepend-archive-date": true,
+  "new-note-folder": "unsorted"
+}

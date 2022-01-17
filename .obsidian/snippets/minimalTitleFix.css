@@ -1,0 +1,9 @@
+.view-header-title {
+  color: var(--text-faint) !important;
+  font-weight: var(--weight-normal);
+}
+
+.view-header-title-container {
+  padding-left: 1em;
+  margin: 0;
+}
