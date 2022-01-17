@@ -17,7 +17,7 @@ https://gist.github.com/PipeItToDevNull/c7725371d0ecc3c62e75243e15ef6b7e
 --> 
 {% gist c7725371d0ecc3c62e75243e15ef6b7e backup.ps1 %}
 
-> :pencil: This script utilizes my [email script submodule](https://blog.dev0.sh/2022/01/04/email-script.html)
+> :pencil: This script utilizes my [email script submodule.]({% post_url 2022-01-04-email-script%})
 
 ### Recovery
 {% gist c7725371d0ecc3c62e75243e15ef6b7e recovery.ps1 %}
