@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jemoji
+  - jekyll-relative-links
 include:
   - "_pages"
 
