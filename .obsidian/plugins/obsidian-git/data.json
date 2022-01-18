@@ -2,8 +2,8 @@
   "commitMessage": "{{date}} Changed: {{numFiles}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 0,
-  "autoPullInterval": 15,
-  "autoPullOnBoot": true,
+  "autoPullInterval": 0,
+  "autoPullOnBoot": false,
   "disablePush": false,
   "pullBeforePush": true,
   "disablePopups": false,
@@ -12,7 +12,7 @@
   "updateSubmodules": false,
   "gitPath": "",
   "customMessageOnAutoBackup": true,
-  "autoBackupAfterFileChange": true,
+  "autoBackupAfterFileChange": false,
   "mergeOnPull": true,
   "treeStructure": false
 }
