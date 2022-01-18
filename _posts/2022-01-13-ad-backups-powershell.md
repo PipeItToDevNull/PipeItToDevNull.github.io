@@ -84,7 +84,7 @@ I used CLI for my test recoveries, which is probably better to test anyway, due 
 
     > ❗ There may be no DNS in your install environment, I recommend just using an IP for the server address.
 
-    > 📝 If you have more than 1 server backed up to this directory you will be give a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
+    > 📝 If you have more than 1 server backed up to this directory you will be given a list of server names that are present. If you only have one server backed up to this location you will not see this screen and can skip to step 5.
 
     ![ServerBackupRecovery11.PNG](/assets/images/2022-01-13-ad-backups/ServerBackupRecovery11.PNG)
     
