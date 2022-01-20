@@ -11,3 +11,5 @@ I consider the command line critical for any good admin, and even helpdesk. It i
 * [Tabby](https://github.com/Eugeny/tabby)
 * [MRemoteNG](https://mremoteng.org/)
 * [Obsidian](https://obsidian.md/)
+* [Espanso](https://espanso.org/)
+* 
