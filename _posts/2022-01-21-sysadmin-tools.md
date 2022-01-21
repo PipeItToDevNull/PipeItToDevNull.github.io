@@ -84,3 +84,4 @@ Text-Expanders, a concept I didn't know about a year ago but has forever changed
 
 ### Hardware
 #### YubiKey
+Hardware tokens are a pretty niche utility, but I think having a [YubiKey](https://www.yubico.com/) to at least play around with is a good idea. I have used mine to hole MFA tokens (TOTP Seeds read from an app), SmartCard certificates (for login to workstations/servers), but now I am only using it to hold my GPG keys for signing. Check out the [list of sites that work with Yubi](https://www.yubico.com/works-with-yubikey/catalog/?sort=popular) to know what you can add a Yubi to in order to further secure your logins.
