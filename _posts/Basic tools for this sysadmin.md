@@ -63,7 +63,9 @@ This is the latest terminal I have settled on, I have also played with [ConEmu](
 Tabby can maintain a list of SSH connections with passwords (stored in your credential manger) and when initiated can handle SFTP in a graphical drop down, super handy.
 
 #### [MRemoteNG](https://mremoteng.org/)
+We use RDP, some of us use RDP all day, some of us RDP to multiple servers at the same time. Putting all these sessions into one tabbed window is a God send, I prefer this over the Windows 10 Remote Desktop UWP app (I dislike most of UWP).
 
+This can also do SSH, Telnet, VNC, and even HTTPS windows while maintaining all your hosts in a nice tree view.
 
 #### [Obsidian](https://obsidian.md/)
 
