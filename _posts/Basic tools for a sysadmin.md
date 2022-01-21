@@ -29,8 +29,8 @@ Git allows you to exercise version control and history against any plain text fi
 * Various application configurations
     * I push these out from GPO or other such methods, but I gain that control over changes and tracking for audit purposes.
 
-#### [pgp/gnupg](https://www.fortinet.com/resources/cyberglossary/pgp-encryption)
-We all remember PKI from our IT courses, if you do not then say "Hi" to [Alice and Bob](https://www.ibm.com/blogs/blockchain/wp-content/uploads/2018/06/di-pki.png). I most actively use GPG (GNU PGP) to sign my Git commits, but I also have this in place on my personal email mostly just for signing. When it comes to simple, cross platform and quick file encryption for storing or sharing though, it does not get much better. There is certainly a learning curve to this but I think learning the basics are worth it.
+#### [PGP/GNUPG](https://www.fortinet.com/resources/cyberglossary/pgp-encryption)
+We all remember PKI from our IT courses, if you do not then say "Hi" to [Alice and Bob](https://www.ibm.com/blogs/blockchain/wp-content/uploads/2018/06/di-pki.png). I most actively use GPG (GNU implementation of PGP) to sign my Git commits, but I also have this in place on my personal email mostly just for signing. When it comes to simple, cross platform and quick file encryption for storing or sharing though, it does not get much better. There is certainly a learning curve to this but I think learning the basics are worth it.
 
 I store my key on my [YubiKey](#YubiKey), for extra nerd points (and so I use a PIN instead of a passphrase when signing)
 
@@ -50,7 +50,7 @@ But why is a fancy shell prompt useful?
 #### [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/)
 This is actually a PowerShell module, but it is critical to my terminal centric life. PSReadLine brings many QOL (quality of life) improvements to PowerShell and gets you some familiar functions from BASH/ZSH/FSH that Linux vets may be missing.
 
-In my [PowerShell profile](https://git.dev0.sh/piper/powershell_profile/src/branch/master/personal_profile.ps1) I enable several functions from this module, you can read about them all [here](https://docs.microsoft.com/en-us/powershell/module/psreadline/set-psreadlineoption?view=powershell-7.2) and see what I configure in [my PowerShell profile](https://git.dev0.sh/piper/powershell_profile/src/branch/master/personal_profile.ps1). The highlights of my changes are Vi navigation and tab-completion for modules and total line completion from your `history`.
+In my PowerShell profile I enable several functions from this module, you can read about them all [here](https://docs.microsoft.com/en-us/powershell/module/psreadline/set-psreadlineoption?view=powershell-7.2) and see what I configure in [my PowerShell profile](https://git.dev0.sh/piper/powershell_profile/src/branch/master/personal_profile.ps1). The highlights of my changes are Vi navigation and tab-completion for modules and total line completion from your `history`.
 
 ### GUI
 #### [Tabby](https://github.com/Eugeny/tabby)
