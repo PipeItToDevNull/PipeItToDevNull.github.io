@@ -68,7 +68,9 @@ We use RDP, some of us use RDP all day, some of us RDP to multiple servers at th
 This can also do SSH, Telnet, VNC, and even HTTPS windows while maintaining all your hosts in a nice tree view.
 
 #### [Obsidian](https://obsidian.md/)
+Keeping notes, documenting, and just having a personal knowledge base is something I have struggled with. Obsidian is the latest iteration of that effort. It is markdown based to preserve the independence of your data from the solution as well as to make it easy to interact with in other apps, scripts, or version control systems. 
 
+I use git to sync my "vault" to my server and other devices. I also take advantage of the markdown and git integration to publish this blog directly out of its pages, see my [brief first post]({% post_url 2021-12-29-publishing-pages-obsidian %}) about how I do that.
 
 #### [Espanso](https://espanso.org/)
 
