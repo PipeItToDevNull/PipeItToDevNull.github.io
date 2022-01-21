@@ -1,3 +1,7 @@
+---
+title:  "Basic Tools for This Sysadmin"
+---
+## References
 Every techy you talk to will have their own list of "must-haves" and "best tools" to use, this is mine. You can replace half of these with something that does the job just as well, or maybe better, but for right now these work for me.
 
 ## EDC
