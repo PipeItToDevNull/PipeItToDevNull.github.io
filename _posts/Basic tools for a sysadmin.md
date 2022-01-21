@@ -54,7 +54,9 @@ In my PowerShell profile I enable several functions from this module, you can re
 
 ### GUI
 #### [Tabby](https://github.com/Eugeny/tabby)
+This is the latest terminal I have settled on, I have also played with [ConEmu](https://conemu.github.io/), [Hyper](https://github.com/vercel/hyper), and likely several others. It of course has tabs like any other proper offering in the last decade but it is also cross platform. Tabby also features some basic plugins that really just give base functionality of any modern terminal.
 
+Tabby can maintain a list of SSH connections with passwords (stored in your credential manger) and when initiated via this manner can handle SFTP in a graphical drop down, super handy.
 
 #### [MRemoteNG](https://mremoteng.org/)
 
