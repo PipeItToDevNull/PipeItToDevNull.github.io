@@ -51,7 +51,7 @@ body .gist .blob-wrapper {
 body .gist .highlight {
   background-color: transparent;
   font-family: 'Droid Sans Mono', monospace;
-  font-size: inherit;
+  font-size: .75em !important;
 }
 
 body .gist .highlight td {
