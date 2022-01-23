@@ -10,7 +10,7 @@ I consider the command line critical for any good admin, and even helpdesk. It i
 While mainly a Windows focused shell, I do use this on Linux as well just to keep my profile the same across all platforms (why use or force two shells to act the same). If you work on Windows or anything in the Microsoft Cloud you must know at least some basic [PowerShell](https://vignette.wikia.nocookie.net/mario/images/b/b0/MKWii_Blue_Shell.png/revision/latest?cb=20171019083814).
 
 #### Scoop
-Anyone who has spent time in the Linux realm knows the power of a package manager. [Scoop](https://scoop.sh/) is a Windows package manager. It may not be the first, or the most popular but it is quick and runs as a user without admin just fine dropping all its files in a single directory making use simple and clean. 
+Anyone who has spent time in the Linux realm knows the power of a package manager. [Scoop](https://scoop.sh/) is a Windows package manager. It may not be the first, or the most popular but it is quick, CLI only, and runs as a user without admin just fine. Scoop and all of its applications are put in a single directory making use simple and clean. 
 
 I install my entire environment using this tool and a [messy script](https://git.dev0.sh/piper/scoop_install/src/branch/master/scoop_install.ps1).
 
