@@ -4,7 +4,7 @@ You need the `rclone` binary installed, I get mine from my "scoop.sh" package ma
 Run `rclone config` to open our configuration menu.
 
 1. Press "n" to add a new remote
-2. Choose a name for your remote
+2. Choose a name for your remote (this name is used later)
 3. A large list pops up of known storage solutions, choose "5" for Backblaze B2
 4. Enter your Account ID or Application Key ID (these are how you pushed data into B2)
 5. Enter your Application Key 
