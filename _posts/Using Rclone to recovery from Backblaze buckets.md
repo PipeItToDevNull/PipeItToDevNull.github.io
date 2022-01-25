@@ -10,10 +10,14 @@ Run `rclone config` to open our configuration menu.
 5. Enter your Application Key 
 6. You are asked if you want to "hard delete" or "hide files" when they are deleted from this remote. We want to use "false" to prevent stupid accidents.
 7. We do not want to edit the advanced config, hit "n"
+    > ❗ If you are using encryption, choose "y" and skip down to "Remote with encryption" below.
 8. You are presented with the completed config now, you can accept it with "y"
 9. Press "q" to end or "n" to make another remote
 
 > 📝To find where your rclone config is being written to, run `rclone config file`
+
+### Remote with encryption
+If you are using a remote with encryption the setup will require a few more steps.
 
 ## Explore the remote
 To list your buckets in the remote:
