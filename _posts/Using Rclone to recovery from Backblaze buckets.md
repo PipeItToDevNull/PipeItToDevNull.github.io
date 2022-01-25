@@ -16,10 +16,19 @@ Run `rclone config` to open our configuration menu.
 > 📝To find where your rclone config is being written to, run `rclone config file`
 
 ## Explore the remote
-To list your buckets in the remote run `rclone lsd <remoteName>:`
+To list your buckets in the remote:
+```powershell
+> rclone lsd b2:
 
-To list the contents of a bucket run `rclone lsd <remoteName>:<buketName>
+-1 2022-01-25 13:55:05 -1 backuptest384595
+```
 
+To list the contents of a bucket run 
+```powershell
+> rclone ls b2:backuptest384595
+
+64083579 WindowsTH-KB2693643-x64.msu
+```
 ## References
 Official docs
 * https://rclone.org/b2/
