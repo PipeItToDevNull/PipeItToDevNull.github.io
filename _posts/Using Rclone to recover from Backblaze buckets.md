@@ -22,7 +22,7 @@ Run `rclone config` to open our configuration menu.
 8. You are presented with the completed config now, you can accept it with "y"
 9. Press "q" to end or "n" to make another remote
 
-    > 📝To find where your rclone config is being written to, run `rclone config file`
+> 📝To find where your rclone config is being written to, run `rclone config file`
 
 ### Remote with encryption
 Setting up an encrypted remote will build upon an existing remote from the step above. You cannot setup an encrypted remote from scratch. To setup our encrypted remote we need to know both the remote name as well as the specific bucket we want. Run `rclone lsd {remote}:` to get the list of available buckets and make not of it.
@@ -31,7 +31,28 @@ Setting up an encrypted remote will build upon an existing remote from the step 
 2. Press "n" to add a new remote
 3. Choose a name for this remote ("existingRemote-crypt" is what I use)
 4. Press "12" to start the encrypted remote setup
-5. 
+5. Input the remote and bucket that is encrypted tin the format "remote:bucket"
+6. Choose to encrypt names, obfuscate them or do nothing. 
+7. Choose to encrypt directory names or do nothing
+    > ❗ This must match what you set previously, I do not do file name encryption on TrueNAS so I select "off/false" on both of these.
+8. Press "Y" then enter the password used for your remote.
+9. Choose to enter the salt or not, in TrueNAS this seems to be required.
+10. We do not want to edit the advanced config, hit "n"
+11. You are presented with the completed config, you can accept it with "y"
+12. Press "q" to end or "n" to add another remote.
+
+> 📝 When mounting an encrypted bucket in this manner you do not have any buckets to list with `rclone lsd` you will only use `rclone ls` to explore the remote
+
+### Viewing an encrypted bucket in plaintext and cipher-text
+```powershell
+> rclone ls b2:backuptest384595
+       74 FooestOfRoos.txt.bin
+```
+
+```powershell
+> rclone ls b2-crypt:
+       26 FooestOfRoos.txt
+```
 
 ## Basics
 List remotes
@@ -53,15 +74,13 @@ rclone ls {remote}:{bucket}
 To list your buckets in the remote:
 ```powershell
 > rclone lsd b2:
-
--1 2022-01-25 13:55:05 -1 backuptest384595
+          -1 2022-01-28 11:09:39        -1 backuptest384595
 ```
 
 To list the contents of a bucket run 
 ```powershell
 > rclone ls b2:backuptest384595
-
-64083579 WindowsTH-KB2693643-x64.msu
+       74 FooestOfRoos.txt.bin
 ```
 
 > 📝 If you list the contents of a remote and see `.bin` extensions on file where you do not expect, this designates the file and encrypted. See how to setup an encrypted rclone mount above.
