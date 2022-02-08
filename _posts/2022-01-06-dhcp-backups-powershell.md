@@ -3,6 +3,7 @@ title:  "DHCP Backups in PowerShell"
 tags: 
   - powershell
   - windows_dhcp
+  - backups
 ---
 Backing up a DHCP server is simple using the cmdlets `Backup-DhcpServer` and `Restore-DhcpServer`. There are a couple gotchas and while it is not as directory specific as the [dns backups]() are I chose to use the same directories out of convenience,  
 

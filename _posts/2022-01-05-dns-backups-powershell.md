@@ -3,6 +3,7 @@ title:  "DNS Backups in PowerShell"
 tags: 
   - powershell
   - windows_dns
+  - backups
 ---
 DNS backups are a bit complicated, you need to backup and restore each zone individually with files that are in a static location in System32. Most sources I found used `dnscmd` which is too DOS for me, we need to PowerShell it up. I ended up finding that [Add-DnsServerPrimaryZone](https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverprimaryzone?view=windowsserver2022-ps) would work for my needs despite what [some sources](https://www.virtualizationhowto.com/2019/07/export-and-import-dns-zone-with-powershell-from-one-server-to-another/) said about there being no PowerShell way to do this.
 
