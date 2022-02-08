@@ -3,6 +3,8 @@ title:  "Using an email script in a submodule to simplify your life"
 tags:
   - powershell
 ---
+Updated on 2022-02-08 for [Send-MailMessage issue]({% post_url 2022-02-08-send-mail-2016 %})
+
 I have gotten tired of constantly writing out or pasting in the same block of code to send email in my environment's powershell scripts. I had the idea to make a single script that accepts basic parameters and is in its own repo to resolve this. The script will be added as a submodule where required then just called with arguments for subject, body, attachments etc. Hopefully, updating accounts and passwords will be much easier if I can just pull down the changes instead of making them in 20 different scripts.
 
 In my script I am setting some vars in the and allowing others to be parameters. Things like the Server and From will always be the same for me but I will change the Subject.
