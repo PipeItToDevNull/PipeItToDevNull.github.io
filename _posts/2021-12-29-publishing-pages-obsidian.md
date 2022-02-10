@@ -16,6 +16,8 @@ I use my [personal gitea](https://git.dev0.sh) instance to host my main Obsidian
 
 ## Issues
 ### Page links not working
+** 2022-02-10 As I have learned more, these links are a bad method and using [post URLS](https://mademistakes.com/mastering-jekyll/how-to-link/) is a much better method**
+
 For some reason Jekyll was not replacing links to files with HTML properly, it was leaving `.md` links in place and offering to download that file rather than linking to the `.html` version. It *was* generating the HTML files though as we could navigate to them manually by replacing `.md` with `.html` in the page.
 
 This was due to links using `%20` for spaces instead of a literal whitespace.  My resolution is to omit spaces from all page names and to change from using WikiLinks to Markdown links. Using Markdown links and relative paths for everything is likely best anyway since it will be more "universal" and prevent issues if I ever leave Obsidian.
