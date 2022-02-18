@@ -42,12 +42,11 @@ If you did it all correctly you can close then reopen Group Policy Editor on you
 > 📝 You can put these on any workstation as well, for the policies to appear in local group policy editor by using the directory `C:\Windows\PolicyDefinitions\` and the `en-US` subdir.
  
 ### Registry
-> Edit the registry
-> a. Go to HKLM\SOFTWARE\Policies\Microsoft\OneDrive
-> b. Right-click > New > String Value.
-> c. Name: SyncAdminReports
-> d. Type: REG_SZ
-> e. Data: Paste your Tenant Association Key.
+1. Go to HKLM\SOFTWARE\Policies\Microsoft\OneDrive
+2. Right-click > New > String Value.
+3. Name: SyncAdminReports
+4. Type: REG_SZ
+5. Data: Paste your Tenant Association Key.
 
 ### CMD
 ```dos
