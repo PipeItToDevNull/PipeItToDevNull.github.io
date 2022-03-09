@@ -2,7 +2,7 @@
 title:  "Making a Hard Link Between On-Prem and Azure-AD Users"
 tags:
   - azure
-  - 365
+  - O365
 ---
 When moving from on-prem to 365 you may be left with a `.local` TLD in addition to a proper public `.com` or whatever domain. When making a new user in AD you will be able to choose between these two. 
 
