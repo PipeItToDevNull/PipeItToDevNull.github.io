@@ -18,12 +18,19 @@ I opened a ticket with Microsoft, the long and short of which is that since a so
     2. Double click the User: Under Attributes, there will be SourceAnchor (same as Immutable ID)
     3. Write the above down, you cannot copy it from the table.
 2. Check Azure for an ID
-    `Get-MsolUser -UserPrincipalName <email> | select ImmutableID`
+```powershell
+Get-MsolUser -UserPrincipalName <email> | select ImmutableID
+```
 
 #### If you have an ID in AD but not Azure
-1. `Set-MsolUser -UserPrincipalName <email> -ImmutableId QQ00ApTUDEiiEm5kX==`
+1. Check for an ImmutableID on the user
+```powershell
+Set-MsolUser -UserPrincipalName <email> -ImmutableId QQ00ApTUDEiiEm5kX==
+```
 2. Do a Delta Sync on your Connect server
-    `Start-ADSyncSyncCycle -PolicyType Delta`
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
 
 #### If you have an ID in Azure but not AD
 1. We need to get a Hex value for our immutable ID, we cannot use the ID directly. Run the following replacing the QQ00 ID with our own.
@@ -33,5 +40,7 @@ I opened a ticket with Microsoft, the long and short of which is that since a so
  ```
 
 2. In the AD Attribute editor update `on-premises ms-ds-consistency-guid` value to match Hex we got above
-3. Do a Delta Sync on your Connect server
-    ` Start-ADSyncSyncCycle -PolicyType Delta`
+3. Do a Delta Sync on your Connect server 
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
