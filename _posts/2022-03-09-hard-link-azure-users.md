@@ -23,7 +23,7 @@ Get-MsolUser -UserPrincipalName <email> | select ImmutableID
 ```
 
 #### If you have an ID in AD but not Azure
-1. Check for an ImmutableID on the user
+1. Set the ImmutableID on the Azure user
 ```powershell
 Set-MsolUser -UserPrincipalName <email> -ImmutableId QQ00ApTUDEiiEm5kX==
 ```
