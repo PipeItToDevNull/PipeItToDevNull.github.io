@@ -34,7 +34,6 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 #### If you have an ID in Azure but not AD
 1. We need to get a Hex value for our immutable ID, we cannot use the ID directly. Run the following replacing the QQ00 ID with our own.
-
 ```powershell
 [system.convert]::FromBase64String("QQ00ApTUDEiiEm5kX==") | %{$a += [System.String]::Format("{0:X}", $_) + " "};$result = $null;$result = $a.trimend();$result
  ```
