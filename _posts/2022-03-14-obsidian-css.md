@@ -12,7 +12,7 @@ To use snippets in Obsidian write a file called `<name>.css` to `.obsidian/snipp
 ### Folder Colours
 This is an intensive but pretty edit. You need to make a section at the bottom for every folder by name. 
 
-![folders.png](assets/images/2022-03-14-obsidian-css/folders.png)
+![folders.png](/assets/images/2022-03-14-obsidian-css/folders.png)
 
 ```css
 .theme-dark {
@@ -198,7 +198,7 @@ body .external-link {
 ### Highlighter 
 I expanded this [existing snippet](https://github.com/deathau/obsidian-snippets/blob/main/realistic-highlight.css) to add additional colours.
 
-![highlighter.png](assets/images/2022-03-14-obsidian-css/highlighter.png)
+![highlighter.png](/assets/images/2022-03-14-obsidian-css/highlighter.png)
 
 To use the highlighter functions see below:
 ```
@@ -308,7 +308,7 @@ I wanted to have more than just check marks possible in my checkboxes and after 
 
 Sadly with Minimal 5.1.8 Kepano added his own check marks that make these render incorrectly. These are now for historical reference and inspiration of other tweakers.
 
-![checkboxes](assets/images/2022-03-14-obsidian-css/checkboxes.png)
+![checkboxes](/assets/images/2022-03-14-obsidian-css/checkboxes.png)
 
 ```css
 /* nord colors from another snippet
@@ -544,7 +544,7 @@ I like this, it removes underlining from internal links and leaves just the colo
 ### Nord calendar
 These are some minor colour edits to the Calendar plugin.
 
-![calendar.png](assets/images/2022-03-14-obsidian-css/calendar.png)
+![calendar.png](/assets/images/2022-03-14-obsidian-css/calendar.png)
 
 ```css
 /* obsidian-calendar-plugin */

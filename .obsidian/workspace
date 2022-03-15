@@ -132,14 +132,14 @@
   "active": "65764c0a813a7053",
   "lastOpenFiles": [
     "_posts/2022-03-14-obsidian-css.md",
-    "_posts/2022-03-09-hard-link-azure-users.md",
-    "assets/images/2022-03-14-obsidian-css/highlighter.png",
-    "assets/images/2022-03-14-obsidian-css/folders.png",
-    "_posts/2022-02-18-onedrive-monitoring.md",
-    "_posts/2022-02-08-send-mail-2016.md",
+    "_posts/RHEL Developer Setup.md",
     "_posts/2022-01-13-ad-backups-powershell.md",
-    "_posts/2022-01-05-dns-backups-powershell.md",
-    "_posts/2022-01-06-dhcp-backups-powershell.md",
-    "_posts/2022-01-07-windows-ca-backups-powershell.md"
+    "_posts/2022-01-21-sysadmin-tools.md",
+    "_posts/2022-01-28-rclone-backblaze.md",
+    "_posts/2022-01-30-wmp-xencenter.md",
+    "_posts/2022-02-08-send-mail-2016.md",
+    "_posts/2022-02-18-onedrive-monitoring.md",
+    "_posts/2022-03-09-hard-link-azure-users.md",
+    "assets/images/2022-03-14-obsidian-css/highlighter.png"
   ]
 }
