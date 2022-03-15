@@ -9,6 +9,10 @@ Obsidian uses "snippets" of css to compliment/overwrite the various larger theme
 
 To use snippets in Obsidian write a file called `<name>.css` to `.obsidian/snippets` then go to the "Appearance" section and refresh then select the file that appears with the toggle.
 
+## Snippets
+* TOC 
+{:toc}
+
 ### Folder Colours
 This is an intensive but pretty edit. You need to make a section at the bottom for every folder by name. 
 
