@@ -304,9 +304,9 @@ I did not want to fully hide scrollbars with a plugin like [Hider](https://githu
 ```
 
 ### Minimal Checkboxes
-I wanted to have more than just check marks possible in my checkboxes and after much struggling I arrived at this nice solution that works for Live Preview and Read view in Minimal theme (only).
+I wanted to have more than just checkmarks possible in my checkboxes and after much struggling I arrived at this nice solution that works for Live Preview and Read view in Minimal theme (only).
 
-Sadly with Minimal 5.1.8 Kepano added his own check marks that make these render incorrectly. These are now for historical reference and inspiration of other tweakers.
+Sadly with Minimal 5.1.8 Kepano added his own checkmarks that make these render incorrectly. These are now for historical reference and inspiration of other tweakers.
 
 ![checkboxes](/assets/images/2022-03-14-obsidian-css/checkboxes.png)
 
