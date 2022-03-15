@@ -8,7 +8,7 @@
   "trashOption": "local",
   "newFileLocation": "folder",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "assets/images",
+  "attachmentFolderPath": "assets/images/obsidian-css",
   "autoPairBrackets": true,
   "autoPairMarkdown": false,
   "defaultViewMode": "source",

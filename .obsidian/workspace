@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2022-02-18-onedrive-monitoring.md",
+            "file": "_posts/2022-03-14-obsidian-css.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -41,7 +41,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2022-02-18-onedrive-monitoring.md",
+                "file": "_posts/2022-03-14-obsidian-css.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2022-02-18-onedrive-monitoring.md",
+                "file": "_posts/2022-03-14-obsidian-css.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,26 +111,35 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "5e72480bede0b860",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2022-03-14-obsidian-css.md"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 235.5
   },
   "active": "65764c0a813a7053",
   "lastOpenFiles": [
+    "_posts/2022-03-14-obsidian-css.md",
+    "_posts/2022-03-09-hard-link-azure-users.md",
+    "assets/images/2022-03-14-obsidian-css/highlighter.png",
+    "assets/images/2022-03-14-obsidian-css/folders.png",
     "_posts/2022-02-18-onedrive-monitoring.md",
     "_posts/2022-02-08-send-mail-2016.md",
     "_posts/2022-01-13-ad-backups-powershell.md",
     "_posts/2022-01-05-dns-backups-powershell.md",
     "_posts/2022-01-06-dhcp-backups-powershell.md",
-    "_posts/2022-01-07-windows-ca-backups-powershell.md",
-    "_posts/2022-01-16-TEST.md",
-    "_posts/RHEL Developer Setup.md",
-    "_posts/Using PSWindows Update.md",
-    "GithubPages/_posts/2022-01-16 TEST/BLOCK-2022-01-16-TEST.md"
+    "_posts/2022-01-07-windows-ca-backups-powershell.md"
   ]
 }
