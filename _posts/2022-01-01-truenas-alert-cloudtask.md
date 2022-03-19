@@ -3,6 +3,7 @@ title:  "TrueNAS alert on Cloud Task Failure"
 tags:
   - truenas
   - homelab
+last_modified_at: '2022-01-02'
 ---
 I use FreeNAS (now TrueNAS Core)  as my backup destination for everything in my lab, I push these backups offsite to Backblaze on a schedule using Cloud Sync Tasks. This has worked pretty well for years but it was always annoying when I would check in on my backups and see failures on these tasks. Despite how basic the idea is, TrueNAS has never had a method to send an email on one of these failures. 
 

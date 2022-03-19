@@ -4,6 +4,7 @@ tags:
   - powershell
   - active_directory
   - backups
+last_modified_at: '2022-02-08'
 ---
 The vast majority of sources I checked while trying to re-work our existing backups use the same basic script that invoke `wbadmin.exe` to initiate an image of the server, but that isn't real powershell and just won't do. I more or less copied my code from the [official docs for Start-WBBackup](https://docs.microsoft.com/en-us/powershell/module/windowsserverbackup/start-wbbackup?view=windowsserver2022-ps). 
     

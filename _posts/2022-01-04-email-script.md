@@ -2,6 +2,7 @@
 title:  "Using an email script in a submodule to simplify your life"
 tags:
   - powershell
+last_modified_at: '2022-02-08'
 ---
 Updated on 2022-02-08 for [Send-MailMessage issue]({% post_url 2022-02-08-send-mail-2016 %})
 

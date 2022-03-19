@@ -2,6 +2,7 @@
 title:  "Windows Media Player randomly opening (in XenCenter console)"
 tags:
   - xencenter
+last_modified_at: '2022-01-30'
 ---
 I was troubleshooting a server that was not liking RDP, so I was interacting with it via the XenCenter console. For some reason this server (Server 2016) kept opening Windows Media Player every few minutes. I googled the issue of course and a top hit is malware, I doubted that was my issue so I kept digging. 
 

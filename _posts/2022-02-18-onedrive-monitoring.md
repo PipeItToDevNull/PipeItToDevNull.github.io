@@ -2,6 +2,7 @@
 title:  "Proactive OneDrive Monitoring"
 tags:
   - onedrive
+last_modified_at: '2022-02-18'
 ---
 Microsoft is very keen on pushing OneDrive, anyone who has stood up a Windows 10/11 workstation recently knows that. 
 

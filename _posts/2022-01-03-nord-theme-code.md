@@ -2,6 +2,7 @@
 title:  "Theming my code and Gist blocks in Jekyll"
 tags:
   - jekyll
+last_modified_at: '2022-01-03'
 ---
 While the default code blocks are OK in this theme (Minimal Mistakes) I wanted something more "me" that blended better into the Dark skin. The [official docs](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/) have section on Style Sheets and that is where I started, but there is no Nord theme so I ended up putting together my own. 
 

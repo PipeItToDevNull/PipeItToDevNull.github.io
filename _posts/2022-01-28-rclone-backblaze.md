@@ -5,6 +5,7 @@ tags:
   - rclone
   - truenas
   - freenas
+last_modified_at: '2022-01-18'
 ---
 I use Cloud Sync Tasks in TrueNAS to push data offsite into Backblaze, through TrueNAS you can push or pull data as needed but in a DR scenario you may not have your TrueNAS instance available. I wanted to know how to recover from just a laptop and these notes are what I put together to reference should that time ever come.
 

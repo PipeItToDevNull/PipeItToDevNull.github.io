@@ -1,5 +1,6 @@
 ---
 title:  "Basic Tools for This Sysadmin"
+last_modified_at: '2022-01-23'
 ---
 Every techy you talk to will have their own list of "must-haves" and "best tools" to use, this is mine. You can replace half of these with something that does the job just as well, or maybe better, but for right now these work for me. I put a high value on solutions being cross-platform, I want to maintain one config to do the same task on every computer I interact with. All the solutions noted here are cross platform to Mac, Linux, and Windows except MRemoteNG and Scoop.
 
