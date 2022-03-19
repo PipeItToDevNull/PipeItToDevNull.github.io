@@ -683,7 +683,7 @@ Hides H1 headers in Embeds, something that bugs me when I embed notes.
 ```
 
 ### Hide Comments in Live Preview
-```
+```css
 .is-live-preview .cm-comment {
     display: none;
 }
