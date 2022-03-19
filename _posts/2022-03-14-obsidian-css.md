@@ -2,7 +2,7 @@
 title:  "Obsidian CSS Snippets"
 tags:
   - obsidian
-last_modified: '2022-03-18'
+last_modified_at: '2022-03-18'
 ---
 I have not written a full post on how I use [Obsidian](https://obsidian.md/) yet but I talked about it in the [first post]({% post_url 2021-12-29-publishing-pages-obsidian%}) here. I plan to write more in the future but for the mean time I just wanted to put my main edits online for others who may care enough to find them.
 
