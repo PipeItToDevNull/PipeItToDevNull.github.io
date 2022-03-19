@@ -1,5 +1,5 @@
 ---
-title:  "Theming my code and Gist blocks in Jekyll"
+title: "Theming my code and Gist blocks in Jekyll"
 tags:
   - jekyll
 last_modified_at: '2022-01-03'

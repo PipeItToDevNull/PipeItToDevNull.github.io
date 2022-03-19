@@ -1,5 +1,5 @@
 ---
-title:  "Proactive OneDrive Monitoring"
+title: "Proactive OneDrive Monitoring"
 tags:
   - onedrive
 last_modified_at: '2022-02-18'

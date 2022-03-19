@@ -1,5 +1,5 @@
 ---
-title:  "Using rclone to recover data from Backblaze buckets"
+title: "Using rclone to recover data from Backblaze buckets"
 tags:
   - backblaze
   - rclone

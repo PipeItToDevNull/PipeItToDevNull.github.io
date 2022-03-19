@@ -1,5 +1,5 @@
 ---
-title:  "Obsidian CSS Snippets"
+title: "Obsidian CSS Snippets"
 tags:
   - obsidian
 last_modified_at: '2022-03-18'

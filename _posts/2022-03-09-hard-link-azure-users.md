@@ -1,5 +1,5 @@
 ---
-title:  "Making a Hard Link Between On-Prem and Azure-AD Users"
+title: "Making a Hard Link Between On-Prem and Azure-AD Users"
 tags:
   - azure
   - O365

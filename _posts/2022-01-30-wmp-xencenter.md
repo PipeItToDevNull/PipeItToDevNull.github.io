@@ -1,5 +1,5 @@
 ---
-title:  "Windows Media Player randomly opening (in XenCenter console)"
+title: "Windows Media Player randomly opening (in XenCenter console)"
 tags:
   - xencenter
 last_modified_at: '2022-01-30'

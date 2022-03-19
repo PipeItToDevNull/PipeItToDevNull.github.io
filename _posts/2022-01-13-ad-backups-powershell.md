@@ -1,5 +1,5 @@
 ---
-title:  "AD Backups in PowerShell"
+title: "AD Backups in PowerShell"
 tags:
   - powershell
   - active_directory

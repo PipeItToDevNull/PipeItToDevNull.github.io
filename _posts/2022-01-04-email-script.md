@@ -1,5 +1,5 @@
 ---
-title:  "Using an email script in a submodule to simplify your life"
+title: "Using an email script in a submodule to simplify your life"
 tags:
   - powershell
 last_modified_at: '2022-02-08'

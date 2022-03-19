@@ -1,5 +1,5 @@
 ---
-title:  "Windows CA Backups in Powershell"
+title: "Windows CA Backups in Powershell"
 tags:
   - powershell
   - windows_ca

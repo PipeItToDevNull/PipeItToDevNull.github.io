@@ -1,5 +1,5 @@
 ---
-title:  "TrueNAS alert on Cloud Task Failure"
+title: "TrueNAS alert on Cloud Task Failure"
 tags:
   - truenas
   - homelab

@@ -1,5 +1,5 @@
 ---
-title:  "Publishing to Github Pages with Obsidian"
+title: "Publishing to Github Pages with Obsidian"
 tags:
   - obsidian
   - github
