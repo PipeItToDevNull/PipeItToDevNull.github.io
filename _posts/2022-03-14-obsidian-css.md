@@ -2,7 +2,7 @@
 title: "Obsidian CSS Snippets"
 tags:
   - obsidian
-last_modified_at: '2022-03-18'
+last_modified_at: '2022-03-21'
 ---
 I have not written a full post on how I use [Obsidian](https://obsidian.md/) yet but I talked about it in the [first post]({% post_url 2021-12-29-publishing-pages-obsidian%}) here. I plan to write more in the future but for the mean time I just wanted to put my main edits online for others who may care enough to find them.
 
@@ -529,7 +529,7 @@ I made this for someone else and kept it around for reference. It removes the co
   opacity: 100;
 }
 :root {
-h1:text-decoration: none;
+  h1:text-decoration: none;
 }
 ```
 
