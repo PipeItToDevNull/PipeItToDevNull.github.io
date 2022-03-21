@@ -6,7 +6,7 @@ last_modified_at: '2022-03-21'
 ---
 
 ## References
-While using [Solus]() I found some apps that were not in the repos like [Obisidian]() and [Tabby](). I stumbled upon [this post](https://discuss.getsol.us/d/7609-how-to-install-microsoft-edge-on-solus-budgie) on the Solus forums that talked about using `binutils` to run Edge from the official .deb package.
+While using [Solus](https://getsol.us/home/) I found some apps that were not in the repos like [Obisidian](https://obsidian.md) and [Tabby](https://tabby.sh). I stumbled upon [this post](https://discuss.getsol.us/d/7609-how-to-install-microsoft-edge-on-solus-budgie) on the Solus forums that talked about using `binutils` to run Edge from the official .deb package.
 
 From this post I discovered the same process worked for any .deb package I could find (as long as your dependencies are satisfied).
 
