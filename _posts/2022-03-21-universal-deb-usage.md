@@ -13,8 +13,6 @@ From this post I discovered the same process worked for any .deb package I could
 1. Install the `binutils` package and download the target .deb package.
 2. Run `ar xv` against your .deb file
 
-1. Install the `binutils` package and download the target .deb package.
-
     ```bash
     > ar xv ./edge.deb                    
     x - debian-binary
