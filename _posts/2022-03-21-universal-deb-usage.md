@@ -16,7 +16,7 @@ From this post I discovered the same process worked for any .deb package I could
 1. Install the `binutils` package and download the target .deb package.
 
     ```bash
-     ar xv ./edge.deb                    
+    > ar xv ./edge.deb                    
     x - debian-binary
     x - control.tar.xz
     x - data.tar.xz
@@ -27,7 +27,7 @@ From this post I discovered the same process worked for any .deb package I could
 
 3. Extract the `data.tar.xz` 
     ```bash
-     tar -xvf ./data.tar.xz
+    > tar -xvf ./data.tar.xz
     ./
     ./etc/
     ./etc/cron.daily/
@@ -42,7 +42,7 @@ From this post I discovered the same process worked for any .deb package I could
 
 4. You are left with a file structure that will look familiar
     ```bash
-     ls 
+    > ls 
     etc  opt  usr
     ```
 
