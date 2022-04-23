@@ -24,6 +24,8 @@ https://gist.github.com/PipeItToDevNull/f5668a05f1e19c801f2bd16ba6c89b3b
 * The exported files are plaintext
 * When exporting you can only specify a file name not location. The files can **only** go to `C:\Windows\System32\dns` and must be moved from there.
 
+**Updates:** 2022-04-22: Added a check for `arpa` specifically as it was an issue on my home DNS server.
+
 ## References
 Another basic script
 * https://thesisadmin.blogspot.com/2016/08/windows-powershell-dns-backup-script.html
@@ -39,6 +41,3 @@ Docs on  DNSServer Module
 * https://docs.microsoft.com/en-us/powershell/module/dnsserver/?view=windowsserver2022-ps
     * https://docs.microsoft.com/en-us/powershell/module/dnsserver/export-dnsserverzone?view=windowsserver2022-ps
     * https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverprimaryzone?view=windowsserver2022-ps
-
-**Updates:**
-2022-04-22: Added a check for `arpa` specifically as it was an issue on my home DNS server.
