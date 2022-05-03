@@ -4,7 +4,6 @@ tags:
   - RHEL
 last_modified_at: '2022-05-03'
 ---
-# RHEL-Kickstart
 RedHat and its derivatives can utilize special configuration files called "Kickstart files" to make installation automated and repeatable. I wanted to explore this for my [RHEL Migration]() project where I am moving from CentOS 7 to RHEL 8.
 
 ## Obtaining a basic configuration
