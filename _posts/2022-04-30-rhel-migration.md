@@ -9,7 +9,7 @@ My current project is moving off CentOS 7 to RHEL 8. I am doing this partly due 
 
 I wont expand on things too much here, but plan to make subsequent posts for the major steps and things that I learn along the way.
 
-> 📝 I am using RHEL Developer licesing that I setup in my [RHEL Developer]({% post_url 2022-01-02-rhel-developer%}) post
+> 📝 I am using RHEL Developer licensing that I setup in my [RHEL Developer]({% post_url 2022-01-02-rhel-developer%}) post
 
 ## Goals
 1. Move to RHEL 8 from CentOS 7
