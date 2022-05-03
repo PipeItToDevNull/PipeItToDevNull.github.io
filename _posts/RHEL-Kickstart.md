@@ -59,7 +59,7 @@ network  --bootproto=dhcp --device=eth0 --noipv6 --activate
 
 #### Static
 ```
-network --bootproto=static --ip=10.0.2.15 --netmask=255.255.255.0 --gateway=10.0.2.254 --nameserver=10.0.2.1,10.0.2.2 --noipv6 --activate
+network --bootproto=static --device=eth0 --ip=10.0.2.15 --netmask=255.255.255.0 --gateway=10.0.2.254 --nameserver=10.0.2.1,10.0.2.2 --noipv6 --activate
 network --hostname=rhel8.dev0.sh
 ```
 
