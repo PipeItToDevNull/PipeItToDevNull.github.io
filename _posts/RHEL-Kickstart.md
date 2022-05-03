@@ -50,5 +50,27 @@ cockpit
 > 📝You can read more about package selection [in the official docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#sect-kickstart-packages)
 
 ### Network configuration
+Network configurations can be simple. I would specify each NIC with its own line and the hostname on its own as well. You can do various actions such as disabling v6, setting nameservers, etc.
+
+#### DHCP
+```
+network  --bootproto=dhcp --device=eth0 --noipv6 --activate
+```
+
+#### Static
+```
+network  --bootproto=static --device=eth0 --noipv6 --activate
+```
+
+> 📝You can read more about network configurations [in the official docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#sect-kickstart-commands)
 
 ### Register with RedHat automatically
+Setting up your subscription (necessary to pull updates from the RH repos) is done via a "post install script" and it placed in a `%post%` block. Your username and password are required, they are saved in plain text in this file.
+
+```shell
+%post --log=/root/ks-post.log
+subscription-manager register --username=<username> --password=<password> --auto-attach
+%end
+```
+
+> 📝 You can read more about how to use post install scripts [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#sect-kickstart-postinstall) and more on the subscription manager [here](https://access.redhat.com/solutions/748313)
