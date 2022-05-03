@@ -60,6 +60,7 @@ network  --bootproto=dhcp --device=eth0 --noipv6 --activate
 #### Static
 ```
 network --bootproto=static --ip=10.0.2.15 --netmask=255.255.255.0 --gateway=10.0.2.254 --nameserver=10.0.2.1,10.0.2.2 --noipv6 --activate
+network --hostname=rhel8.dev0.sh
 ```
 
 > 📝You can read more about network configurations [in the official docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#sect-kickstart-commands)
