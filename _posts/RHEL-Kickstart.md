@@ -26,24 +26,7 @@ The simplest way to get a basic Kickstart file is to install your distro like yo
 ### Package management
 In the `%packages` block you will see any packages you have already chosen to install. For me this is "@^minimal-environment". In this case "@^" marks a meta-group of packages. 
 
-You can add more packages below `%packages` header, for me these are:
-
-```
-%packages
-@^minimal-environment
-# realm packages
-realmd
-sssd
-oddjob
-oddjob-mkhomedir
-adcli
-samba-common-tools
-# other packages
-vim
-iptables-services
-```
-
-You can also remove packages from the selection. I do not like Firewalld but this is added in the "@^minimal-environment" meta-package. To remove a package use a `-`. My entire package selection is as follows:
+You can add more packages below `%packages` header as well as remove packages from the selection. I do not like Firewalld but this is added in the "@^minimal-environment" meta-package. To remove a package use a `-`. My entire package selection is as follows:
 
 ```
 %packages
