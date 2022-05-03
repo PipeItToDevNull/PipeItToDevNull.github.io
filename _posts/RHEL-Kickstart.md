@@ -28,7 +28,7 @@ In the `%packages` block you will see any packages you have already chosen to in
 
 You can add more packages below `%packages` header as well as remove packages from the selection. I do not like Firewalld but this is added in the "@^minimal-environment" meta-package. To remove a package use a `-`. My entire package selection is as follows:
 
-```
+```shell
 %packages
 @^minimal-environment
 # realm packages
