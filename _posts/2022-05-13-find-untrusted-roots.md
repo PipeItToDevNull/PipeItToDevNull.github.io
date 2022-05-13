@@ -19,5 +19,5 @@ Function Get-UntrustedRoots {
     }
     Return $badCerts
 }
-Get-UntrustedRoots | Select Thumbprint,Subject,Issuer,EnhancedKeyUsageList,PSParentPath | fl
+Get-UntrustedRoots | Select Subject,Issuer,EnhancedKeyUsageList,Thumbprint,PSParentPath | fl
 ```
