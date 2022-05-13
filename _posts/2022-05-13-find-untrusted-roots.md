@@ -4,7 +4,7 @@ tags:
   - powershell
 last_modified_at: '2022-05-13'
 ---
-I had a need to find all of the self-signed certificates on my machine so I whipped up a tiny function to do it. The largest caveat is the inability to distinguish between a truly self-signed certificate and one that only has an untrusted root cert from someome else.
+I needed to find all of the self-signed certificates on my machine so I whipped up a tiny function to do it. The largest caveat is the inability to distinguish between a truly self-signed certificate and one that only has an untrusted root cert from someome else.
 
 ```powershell
 Function Get-UntrustedRoots {
