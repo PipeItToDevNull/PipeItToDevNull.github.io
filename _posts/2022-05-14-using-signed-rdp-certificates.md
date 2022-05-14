@@ -25,7 +25,7 @@ Windows server by default uses self signed certificates to secure RDP, this make
 
 ### In your CA
 1. Open the **Certificate Authority** management console, Right-Clicking on **Certificate Templates** and selecting **Manage**
-    ![[Pasted image 20220514114101.png]]
+    ![Pasted image 20220514114101.png](/assets/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114101.png)
 2. Select **Computer** template and Right-Click on it selecting **Duplicate Template**
     ![[Pasted image 20220514114219.png]]
 3. \[In the compatibility settings I chose Server 2019 and Windows 10\] so as to make sure my connection uses stronger encryption algorithms and ciphers. This will vary depending on your network if you are forced to keep end of life versions of Windows or not.
