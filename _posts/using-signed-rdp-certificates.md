@@ -8,10 +8,11 @@ One of the most ubiquitous actions a sysadmin does is accepting the untrusted ce
 
 There are two solutions available, the first is to trust all of the self-signed certificates from each server at a domain level. If you have 2 or 3 servers that may work but it does not scale well and is not an automated solution. Your second option is to issue certificates from your internal CA through GPO and that is the option we are going to explore.
 
-I found numeruous sources and hit a couple of issues but the docs below should be a solid baseline for anyone else to explore the idea of issuing out signed RDP certificates to all of their servers.
+I found numerous sources and hit a couple of issues but the docs below should be a solid baseline for anyone else to explore the idea of issuing out signed RDP certificates to all of their servers.
 
 * TOC 
 {:toc}
 
 ## Default Configuration
-Windows server by default uses self signed certificates to secure RDP, this makes sense. The settings that control the issuance are 
+Windows server by default uses self signed certificates to secure RDP, this makes sense. The settings that control the issuance are located at `HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server`. The most relevant key on the server is `HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\SelfSignedCertStore`
+
