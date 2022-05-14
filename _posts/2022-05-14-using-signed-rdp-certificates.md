@@ -1,5 +1,5 @@
 ---
-title: "Finding certs that are self-signed or have an untrusted-root"
+title: "Using Signed RDP Certificates"
 tags:
   - windows_server
   - windows_ca
