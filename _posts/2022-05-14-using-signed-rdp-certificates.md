@@ -97,6 +97,7 @@ Windows will generate a self-signed certificate at every boot, and every time Te
 3. Select "SYSTEM" and tick "Deny" on Full Control
     ![[Pasted image 20220514123209.png]]
 4. Delete the certificate from `Cert:\LocalMachine\Remote Desktop\` and restart the "TermService"
+
 ## References
 * [RDP TLS Certificate Deployment Using GPO (darkoperator.com)](https://www.darkoperator.com/blog/2015/3/26/rdp-tls-certificate-deployment-using-gpo)
 * [Securing RDP Connections with Trusted SSL/TLS Certificates | Windows OS Hub (woshub.com)](http://woshub.com/securing-rdp-connections-trusted-ssl-tls-certificates/)
