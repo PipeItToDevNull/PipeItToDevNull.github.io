@@ -12,6 +12,7 @@ There are two solutions available, the first is to trust all of the self-signed 
 
 I found numerous sources and hit a couple of issues but the docs below should be a solid baseline for anyone else to explore the idea of issuing out signed RDP certificates to all of their servers.
 
+## Documentation
 * TOC 
 {:toc}
 
