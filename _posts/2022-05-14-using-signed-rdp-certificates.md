@@ -100,7 +100,7 @@ Windows will generate a self-signed certificate at every boot, and every time Te
 
 ## References
 * [RDP TLS Certificate Deployment Using GPO (darkoperator.com)](https://www.darkoperator.com/blog/2015/3/26/rdp-tls-certificate-deployment-using-gpo)
-* [Securing RDP Connections with Trusted SSL/TLS Certificates | Windows OS Hub (woshub.com)](http://woshub.com/securing-rdp-connections-trusted-ssl-tls-certificates/)
+* [Securing RDP Connections with Trusted SSL/TLS Certificates](http://woshub.com/securing-rdp-connections-trusted-ssl-tls-certificates/)
 * [The Requested Template is not Supported by this CA (Error 0x80094800) - PKI Solutions Inc.](https://www.pkisolutions.com/the-requested-template-is-not-supported-by-this-ca-error-0x80094800/)
 * [Prevent remote desktop from generating a self-signed certificate - Microsoft Q&A](https://docs.microsoft.com/en-us/answers/questions/204015/prevent-remote-desktop-from-generating-a-self-sign.html)
 * [(67) Force Remote Desktop to use an established certificet - NOT a self-signed : sysadmin (reddit.com)](https://www.reddit.com/r/sysadmin/comments/izoyyy/force_remote_desktop_to_use_an_established/)
