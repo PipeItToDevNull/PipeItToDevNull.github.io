@@ -25,6 +25,7 @@ Windows server by default uses self signed certificates to secure RDP, this make
 
 ### In your CA
 1. Open the **Certificate Authority** management console, Right-Clicking on **Certificate Templates** and selecting **Manage**
+
     ![CA image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114101.png)
 
 2. Select **Computer** template and Right-Click on it selecting **Duplicate Template**
@@ -39,32 +40,54 @@ Windows server by default uses self signed certificates to secure RDP, this make
 
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114522.png)
 
-5. On the **Extensions** tab we click on **Edit** to modify the extensions for the certificate that will be issued.
+5. On the **Extensions** tab we click on **Edit** to modify the extensions for the certificate that will be issued.   
+   
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114545.png)
+
 6. We now select **Client Authentication** and click **Remove**. Many tutorial I see out there follow blindly the recommendations on others to also remove Server Authentication, this will break compatibility on none Windows platforms using the Microsoft Remote Desktop Client.
+   
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114619.png)
+
 7. After removing the Client Authentication policy we now click on **Add** and in the window that appears we click on **New** to create a new policy specific for use of RDP TLS.
+
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114722.png)
+
 8. We provide the policy a name, in the example I give it a name of **Remote Desktop Authentication** and provide a **Object Identifier** of **1.3.6.1.4.1.311.54.1.2** this will identify the certificate as one that can be used to authenticate a RDP server.
-    ![[Pasted image 20220514114738.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114738.png)
+
 9. Under the **Security** tab we need to identify those systems that can enroll using this template. Domain Computers is already present and with the **Enroll** permission but if you also plan to enable RDP on Domain Controllers add the Domain Controllers group and ensure the Enroll permission is selected. \[Do not remove Authenticated users from this or any other certificate template. I found this generates [cryptic errors](https://www.pkisolutions.com/the-requested-template-is-not-supported-by-this-ca-error-0x80094800/) when trying to enroll in the certificate\]
-    ![[Pasted image 20220514114836.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114836.png)
+
 10. If you have computers that are not able to enroll using the certificate template a quick way to identify it is a permission issue is to look in the **Event Viewer** and look under the **System Windows Log** for events with ID **1064** from the source **TerminaServices-RemoteConnectionManager**.
-    ![[Pasted image 20220514114909.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114909.png)
+
 11. Go in to the Certificate Authority management console and select under the CA  C**ertificate Template**, **right click** and select **New -> Certificate Template to Issue**
-    ![[Pasted image 20220514114931.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114931.png)
+
 12. Select the certificate template you just created and click **OK**
-    ![[Pasted image 20220514114951.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114951.png)
 
 ### In GPO
 1. Create or select an existing GPO and editing it. In the Group Policy Object Select **Computer Configuration -> Policies -> Administrative Template -> Windows Components -> Remote Desktop Services -> Remote Desktop Session Host -> Security** and select  **Server authentication certificate template.**
-    ![[Pasted image 20220514115623.png]]
-    ![[Pasted image 20220514115632.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514115623.png)
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514115632.png)
+
 2. Click on E**nable** and under **Certificate Template Name** we enter the name of the certificate template we made available for enrollment and click on **OK**.
-    ![[Pasted image 20220514115705.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514115705.png)
+
 3. To have the server use TLS 1.0 (I know TLS 1.0 is not the most secure) we select **Require use of specific layer for remote (RDP) connection** 
+
     > ❗ If you have TLS 1.2 configured this setting will enforce TLS 1.2 not SSL 1.0 [source](https://docs.microsoft.com/en-US/troubleshoot/windows-server/remote/incorrect-tls-use-rdp-with-ssl-encryption)
-    ![[Pasted image 20220514115951.png]]
+
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514115951.png)
 
 ### Optional GPO Settings
 While under security settings I would also recommend enabling NLA since this and TLS will break most public RDP brute forcing tools. Select **Require user authentication for remote connections by using Network Level Authentication** and double click on it. On the properties screen select **Enable** and click on **OK.**
@@ -73,7 +96,7 @@ Also since we do not want users to simply accept and always trust connections si
 
 If Remote Desktop is not enabled on another GPO you will need to go in to **Connections** under **Remote Desktop Session Host** and enable **Allow users to connect remotely by using Remote Desktop Service**.
 
-![[Pasted image 20220514120047.png]]
+![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514120047.png)
 
 ## Applying the Policy
 Now that GPO is configured you can run `gpupdate /force` on a server, it should pull the certificate into its personal store at `Cert:\LocalMachine\My\`. To start using the newly requested certificate you must reboot the server or run `Restart-Service -Name TermService -Force`.
