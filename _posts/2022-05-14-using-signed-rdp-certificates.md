@@ -26,12 +26,19 @@ Windows server by default uses self signed certificates to secure RDP, this make
 ### In your CA
 1. Open the **Certificate Authority** management console, Right-Clicking on **Certificate Templates** and selecting **Manage**
     ![CA image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114101.png)
+
 2. Select **Computer** template and Right-Click on it selecting **Duplicate Template**
+
     ![CA image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114219.png)
+
 3. \[In the compatibility settings I chose Server 2019 and Windows 10\] so as to make sure my connection uses stronger encryption algorithms and ciphers. This will vary depending on your network if you are forced to keep end of life versions of Windows or not.
+
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114336.png)
+
 4. Navigate to the **General** Tab and set a **Display Name** and **Template Name.** I recommend using the same and with no spaces. Had once a weird bug where on Windows 2008 it would enroll a new certificate again and again if a space was in the display name.
+
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114522.png)
+
 5. On the **Extensions** tab we click on **Edit** to modify the extensions for the certificate that will be issued.
     ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114545.png)
 6. We now select **Client Authentication** and click **Remove**. Many tutorial I see out there follow blindly the recommendations on others to also remove Server Authentication, this will break compatibility on none Windows platforms using the Microsoft Remote Desktop Client.
