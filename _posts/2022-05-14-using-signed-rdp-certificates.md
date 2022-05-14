@@ -22,7 +22,7 @@ Windows server by default uses self signed certificates to secure RDP, this make
 ## Creating a RDP Certificate Template
 *The following images and most of the content is from [this source](https://www.darkoperator.com/blog/2015/3/26/rdp-tls-certificate-deployment-using-gpo) I am copying it for the sake of preservation and my personal notes. Review his work instead if you prefer. His notes are from 2015 but they still seem relevant and worked for me on Server 2019 and Windows 10.*
 
-*Any deviation is marked in \[Brackets\]. My work picks back up at [Applying the Policy](applying-the-policy)*
+*Any deviation is marked in \[Brackets\]. My work picks back up at [Applying the Policy](#applying-the-policy)*
 
 ### In your CA
 1. Open the **Certificate Authority** management console, Right-Clicking on **Certificate Templates** and selecting **Manage**
