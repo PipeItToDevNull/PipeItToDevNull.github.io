@@ -4,7 +4,7 @@ tags:
   - windows_server
   - windows_ca
   - powershell
-last_modified_at: '2022-05-13'
+last_modified_at: '2022-05-14'
 ---
 One of the most ubiquitous actions a sysadmin does is accepting the untrusted certificates we are presented with daily when opening RDP to a server. I believe training this behaviour is a horrible practice that Microsoft should discourage more forcefully. I decided to see what I could do about it in my lab.
 
