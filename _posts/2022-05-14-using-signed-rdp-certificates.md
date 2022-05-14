@@ -29,15 +29,15 @@ Windows server by default uses self signed certificates to secure RDP, this make
 2. Select **Computer** template and Right-Click on it selecting **Duplicate Template**
     ![CA image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114219.png)
 3. \[In the compatibility settings I chose Server 2019 and Windows 10\] so as to make sure my connection uses stronger encryption algorithms and ciphers. This will vary depending on your network if you are forced to keep end of life versions of Windows or not.
-    ![[Pasted image 20220514114336.png]]
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114336.png)
 4. Navigate to the **General** Tab and set a **Display Name** and **Template Name.** I recommend using the same and with no spaces. Had once a weird bug where on Windows 2008 it would enroll a new certificate again and again if a space was in the display name.
-    ![[Pasted image 20220514114522.png]]
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114522.png)
 5. On the **Extensions** tab we click on **Edit** to modify the extensions for the certificate that will be issued.
-    ![[Pasted image 20220514114545.png]]
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114545.png)
 6. We now select **Client Authentication** and click **Remove**. Many tutorial I see out there follow blindly the recommendations on others to also remove Server Authentication, this will break compatibility on none Windows platforms using the Microsoft Remote Desktop Client.
-    ![[Pasted image 20220514114619.png]]
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114619.png)
 7. After removing the Client Authentication policy we now click on **Add** and in the window that appears we click on **New** to create a new policy specific for use of RDP TLS.
-    ![[Pasted image 20220514114722.png]]
+    ![CA Image](/assets/images/2022-05-14-using-signed-rdp-certificates/Pasted image 20220514114722.png)
 8. We provide the policy a name, in the example I give it a name of **Remote Desktop Authentication** and provide a **Object Identifier** of **1.3.6.1.4.1.311.54.1.2** this will identify the certificate as one that can be used to authenticate a RDP server.
     ![[Pasted image 20220514114738.png]]
 9. Under the **Security** tab we need to identify those systems that can enroll using this template. Domain Computers is already present and with the **Enroll** permission but if you also plan to enable RDP on Domain Controllers add the Domain Controllers group and ensure the Enroll permission is selected. \[Do not remove Authenticated users from this or any other certificate template. I found this generates [cryptic errors](https://www.pkisolutions.com/the-requested-template-is-not-supported-by-this-ca-error-0x80094800/) when trying to enroll in the certificate\]
