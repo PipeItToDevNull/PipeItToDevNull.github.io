@@ -4,7 +4,7 @@ tags:
   - windows_server
   - windows_ca
   - powershell
-last_modified_at: '2022-05-14'
+last_modified_at: '2022-05-16'
 ---
 One of the most ubiquitous actions a sysadmin does is accepting the untrusted certificates we are presented with daily when opening RDP to a server. I believe training this behaviour is a horrible practice that Microsoft should discourage more forcefully. I decided to see what I could do about it in my lab.
 
@@ -129,6 +129,14 @@ Windows will generate a self-signed certificate at every boot, and every time Te
     ![[Pasted image 20220514123209.png]]
 4. Delete the certificate from `Cert:\LocalMachine\Remote Desktop\` and restart the "TermService"
 
+## Updates
+I found that the "Remote Desktop Authentication" Extended Key Usage is only required when using GPO. The "Server Authentication" attribute also works but you must manually set the certificate to be used by thumbprint on the host.
+
+> The "Enhanced Key Usage" extension has a value of either "Server Authentication" or "Remote Desktop Authentication" (1.3.6.1.4.1.311.54.1.2). Certificates with no "Enhanced Key Usage" extension can be used as well. [source](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/configuring-remote-desktop-certificates/ba-p/247007)
+
+The command for this would be `wmic /namespace:\\root\CIMV2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
+`, the source above has a much messier implementation but according [this redddit post](https://www.reddit.com/r/sysadmin/comments/izoyyy/force_remote_desktop_to_use_an_established/) and a couple other sources I saw this command is all you need.
+
 ## References
 * [RDP TLS Certificate Deployment Using GPO (darkoperator.com)](https://www.darkoperator.com/blog/2015/3/26/rdp-tls-certificate-deployment-using-gpo)
 * [Securing RDP Connections with Trusted SSL/TLS Certificates](http://woshub.com/securing-rdp-connections-trusted-ssl-tls-certificates/)
@@ -136,3 +144,4 @@ Windows will generate a self-signed certificate at every boot, and every time Te
 * [Prevent remote desktop from generating a self-signed certificate - Microsoft Q&A](https://docs.microsoft.com/en-us/answers/questions/204015/prevent-remote-desktop-from-generating-a-self-sign.html)
 * [(67) Force Remote Desktop to use an established certificet - NOT a self-signed : sysadmin (reddit.com)](https://www.reddit.com/r/sysadmin/comments/izoyyy/force_remote_desktop_to_use_an_established/)
 * [What are the steps to stop Windows 10 systems from generating/regenerating a RDP self-signed certificate? (microsoft.com)](https://social.technet.microsoft.com/Forums/security/en-US/bb8ece84-7592-4ed3-b133-b45ab850e5de/what-are-the-steps-to-stop-windows-10-systems-from-generatingregenerating-a-rdp-selfsigned?forum=winserversecurity)
+* [Configuring Remote Desktop certificates](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/configuring-remote-desktop-certificates/ba-p/247007)
