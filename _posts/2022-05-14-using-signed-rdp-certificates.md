@@ -130,12 +130,18 @@ Windows will generate a self-signed certificate at every boot, and every time Te
 4. Delete the certificate from `Cert:\LocalMachine\Remote Desktop\` and restart the "TermService"
 
 ## Updates
+### Using Tradition "Server Authentication" Certificates
 I found that the "Remote Desktop Authentication" Extended Key Usage is only required when using GPO. The "Server Authentication" attribute also works but you must manually set the certificate to be used by thumbprint on the host.
 
 > The "Enhanced Key Usage" extension has a value of either "Server Authentication" or "Remote Desktop Authentication" (1.3.6.1.4.1.311.54.1.2). Certificates with no "Enhanced Key Usage" extension can be used as well. [source](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/configuring-remote-desktop-certificates/ba-p/247007)
 
 The command for this would be `wmic /namespace:\\root\CIMV2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
 `, the source above has a much messier implementation but according [this redddit post](https://www.reddit.com/r/sysadmin/comments/izoyyy/force_remote_desktop_to_use_an_established/) and a couple other sources I saw this command is all you need.
+
+### Verifying Certificates in Use
+You can query a server with OpenSSL to see what cert is truly in use.
+
+`openssl.exe s_client -showcerts -connect localhost:3389`
 
 ## References
 * [RDP TLS Certificate Deployment Using GPO (darkoperator.com)](https://www.darkoperator.com/blog/2015/3/26/rdp-tls-certificate-deployment-using-gpo)
