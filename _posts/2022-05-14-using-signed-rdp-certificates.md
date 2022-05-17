@@ -131,7 +131,7 @@ Windows will generate a self-signed certificate at every boot, and every time Te
 
 ## Updates
 ### Using Traditional "Server Authentication" Certificates
-I found that the "Remote Desktop Authentication" Extended Key Usage is only required when using GPO. The "Server Authentication" attribute also works but you must manually set the certificate to be used by thumbprint on the host.
+~~I found that the "Remote Desktop Authentication" Extended Key Usage is only required when using GPO.~~ (Even this needs further clarification) The "Server Authentication" attribute also works but you must manually set the certificate to be used by thumbprint on the host.
 
 > The "Enhanced Key Usage" extension has a value of either "Server Authentication" or "Remote Desktop Authentication" (1.3.6.1.4.1.311.54.1.2). Certificates with no "Enhanced Key Usage" extension can be used as well. [source](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/configuring-remote-desktop-certificates/ba-p/247007)
 
