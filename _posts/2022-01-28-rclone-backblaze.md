@@ -5,7 +5,7 @@ tags:
   - rclone
   - truenas
   - freenas
-last_modified_at: '2022-01-18'
+last_modified_at: '2022-05-18'
 ---
 I use Cloud Sync Tasks in TrueNAS to push data offsite into Backblaze, through TrueNAS you can push or pull data as needed but in a DR scenario you may not have your TrueNAS instance available. I wanted to know how to recover from just a laptop and these notes are what I put together to reference should that time ever come.
 
@@ -18,7 +18,7 @@ Run `rclone config` to open our configuration menu.
 
 1. Press "n" to add a new remote
 2. Choose a name for your remote (this name is used later)
-3. A large list pops up of known storage solutions, choose "5" for Backblaze B2
+3. A large list pops up of known storage solutions, choose "3" for Backblaze B2
 4. Enter your Account ID or Application Key ID (these are how you pushed data into B2)
 5. Enter your Application Key 
 6. You are asked if you want to "hard delete" or "hide files" when they are deleted from this remote. We want to use "false" to prevent stupid accidents.
