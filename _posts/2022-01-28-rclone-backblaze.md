@@ -13,6 +13,9 @@ You need the `rclone` binary installed, I get mine from my "scoop.sh" package ma
 
 > ❗ There are important notes on interacting with Backblaze via Rclone in the [official docs](https://rclone.org/b2/). Read them.
 
+* TOC 
+{:toc}
+
 ## Configure your remote
 Run `rclone config` to open our configuration menu.
 
@@ -59,7 +62,7 @@ Setting up an encrypted remote will build upon an existing remote from the step 
        26 FooestOfRoos.txt
 ```
 
-## Basics
+## Rclone Usage Basics
 List remotes
 ```powershell
 rclone listremotes
