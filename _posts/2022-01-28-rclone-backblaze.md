@@ -91,7 +91,7 @@ To list the contents of a bucket run
        64083579 WindowsTH-KB2693643-x64.msu
 ```
 
-> 📝 If you list the contents of a remote and see `.bin` extensions on file where you do not expect, this designates the file and encrypted. See how to setup an encrypted rclone mount above.
+> 📝 If you list the contents of a remote and see `.bin` extensions on file where you do not expect, this designates the file are encrypted. See how to setup an encrypted rclone mount above.
 
 ## Pull from the remote
 You should read over the page on [how copy works](https://rclone.org/commands/rclone_copy/) to understand the basics such as `--dry-run` and how rclone appends a trailing `/` automatically. The basics are `rclone copy --progress {remote}:{bucket}\file C:\Dest` when copying data out of Backblaze.
