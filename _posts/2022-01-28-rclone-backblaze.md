@@ -78,7 +78,7 @@ List files in a bucket
 rclone ls {remote}:{bucket}
 ```
 
-## Explore the remote
+### Explore the remote
 To list your buckets in the remote:
 ```powershell
 > rclone lsd b2:
@@ -93,7 +93,7 @@ To list the contents of a bucket run
 
 > 📝 If you list the contents of a remote and see `.bin` extensions on file where you do not expect, this designates the file are encrypted. See how to setup an encrypted rclone mount above.
 
-## Pull from the remote
+### Pull from the remote
 You should read over the page on [how copy works](https://rclone.org/commands/rclone_copy/) to understand the basics such as `--dry-run` and how rclone appends a trailing `/` automatically. The basics are `rclone copy --progress {remote}:{bucket}\file C:\Dest` when copying data out of Backblaze.
 
 Copying from a plain text remote
