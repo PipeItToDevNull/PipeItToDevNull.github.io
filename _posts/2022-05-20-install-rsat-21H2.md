@@ -34,3 +34,12 @@ It is not recommended to attempt the removal of RSAT, in my testing it was often
 https://gist.github.com/PipeItToDevNull/9bd048c7028b26767fae3c115515ef29
 -->
 {% gist 9bd048c7028b26767fae3c115515ef29 Remove-Rsat.ps1 %}
+
+## References
+* https://social.technet.microsoft.com/Forums/windows/en-US/8cda1dfb-b3b0-47b9-ab24-b471295b297b/install-rsat-on-windows-1809-or-later-offline-with-no-wsus?forum=win10itprogeneral
+* https://docs.microsoft.com/en-us/powershell/module/dism/?view=windowsserver2022-ps
+* https://docs.microsoft.com/en-us/powershell/module/dism/add-windowscapability?view=windowsserver2022-ps
+* https://www.nico-maas.de/?p=2287
+* https://social.technet.microsoft.com/Forums/en-US/8481be7e-3c50-4c43-89ae-e32be326bec4/how-to-remove-rsat-from-windows-10-1809?forum=win10itprogeneral
+* https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities?view=windows-11
+* https://docs.microsoft.com/en-us/answers/questions/686942/windows-10-20h2-rsat-tools-are-failing-to-install.html
