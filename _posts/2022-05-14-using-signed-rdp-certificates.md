@@ -4,7 +4,7 @@ tags:
   - windows_server
   - windows_ca
   - powershell
-last_modified_at: '2022-05-16'
+last_modified_at: '2022-05-22'
 ---
 One of the most ubiquitous actions a sysadmin does is accepting the untrusted certificates we are presented with daily when opening RDP to a server. I believe training this behaviour is a horrible practice that Microsoft should discourage more forcefully. I decided to see what I could do about it in my lab.
 
@@ -139,8 +139,6 @@ The above needs to be fully clarified. You might be able to set a "Server Authen
 
 The command for this would be `wmic /namespace:\\root\CIMV2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
 `, the source above has a much messier implementation but according [this redddit post](https://www.reddit.com/r/sysadmin/comments/izoyyy/force_remote_desktop_to_use_an_established/) and a couple other sources I saw this command is all you need.
-
-To this alternate solution, I updated the validation function above to check for and alert on the use of Server Authentication certificates.
 
 ### Verifying Certificates in Use
 You can query a server with OpenSSL to see what cert is truly in use.
