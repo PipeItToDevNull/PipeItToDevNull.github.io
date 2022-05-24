@@ -2,7 +2,7 @@
 title: "Getting started with RHEL Kickstart files"
 tags:
   - RHEL
-last_modified_at: '2022-05-03'
+last_modified_at: '2022-05-24'
 ---
 RedHat and its derivatives can utilize special configuration files called "Kickstart files" to make installation automated and repeatable. I wanted to explore this for my [RHEL Migration]({% post_url 2022-04-30-rhel-migration%}) project where I am moving from CentOS 7 to RHEL 8.
 
@@ -64,6 +64,9 @@ network --hostname=rhel8.dev0.sh
 ```
 
 > 📝You can read more about network configurations [in the official docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#sect-kickstart-commands)
+
+### User Creation
+I created my users in the initial installation, but you can create them manually in the file as well. As far as passwords for the users go they can be encrypted or plain text, if you want to encrypt them in the file [the offcial doc](https://access.redhat.com/solutions/44662) as well as this non-official doc [this](https://www.golinuxhub.com/2018/01/how-to-create-user-normal-and-root/) seem to be good sources on using Python to do that.
 
 ### Register with RedHat automatically
 Setting up your subscription (necessary to pull updates from the RH repos) is done via a "post install script" and it placed in a `%post%` block. Your username and password are required, they are saved in plain text in this file.
