@@ -13,3 +13,9 @@ docs:
         url: /homelab/
       - title: "- Get-Specs"
         url: "https://github.com/PipeItToDevNull/Get-Specs"
+      - title: "- Get-Smart"
+        url: "https://github.com/PipeItToDevNull/Get-Smart"
+      - title: "- Get-Smartcard"
+        url: "https://github.com/PipeItToDevNull/Get-Smartcard"
+      - title: "- rTS_Debian"
+        url: "https://github.com/PipeItToDevNull/rTS_Debian"
