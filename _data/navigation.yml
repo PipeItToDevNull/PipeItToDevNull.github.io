@@ -11,6 +11,8 @@ docs:
     children: 
       - title: "- Homelab"
         url: /homelab/
+  - title: Major Repos
+    children:
       - title: "- Get-Specs"
         url: "https://github.com/PipeItToDevNull/Get-Specs"
       - title: "- Get-Smart"
