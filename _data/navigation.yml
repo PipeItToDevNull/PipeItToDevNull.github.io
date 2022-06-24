@@ -11,13 +11,15 @@ docs:
     children: 
       - title: "- Homelab"
         url: /homelab/
+      - title: "- Techsupport Wiki"
+        url: "https://rtech.support"
   - title: Major Repos
     children:
       - title: "- Get-Specs"
-        url: "https://github.com/PipeItToDevNull/Get-Specs"
+        url: "https://github.com/r-Techsupport/Get-Specs"
       - title: "- Get-Smart"
-        url: "https://github.com/PipeItToDevNull/Get-Smart"
+        url: "https://github.com/r-Techsupport/Get-Smart"
       - title: "- Get-Smartcard"
-        url: "https://github.com/PipeItToDevNull/Get-Smartcard"
+        url: "https://github.com/r-Techsupport/Get-Smartcard"
       - title: "- rTS_Debian"
-        url: "https://github.com/PipeItToDevNull/rTS_Debian"
+        url: "https://github.com/r-Techsupport/rTS_Debian"
