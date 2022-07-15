@@ -576,16 +576,20 @@ These are some minor colour edits to the Calendar plugin.
 This is a method to change the colour on inline code. `This kind of code`
 ```css
 /* This makes code blocks a better color, red is default */
-.cm-s-obsidian .HyperMD-codeblock  {
-    color: #8fbcbb;
+.cm-s-obsidian .HyperMD-codeblock {
+    color: #8FBCBB;
+    background-color: #2E3440;
+    padding: 3px;
 }
-
-.cm-s-obsidian span.cm-inline-code  {
-    color: #8fbcbb;
+.cm-s-obsidian span.cm-inline-code {
+    color: #8FBCBB;
+    background-color: #2E3440;
+    padding: 3px;
 }
-
 .markdown-preview-view code {
-    color: #8fbcbb;
+    color: #8FBCBB;
+    background-color: #2E3440;
+    padding: 3px;
 }
 ```
 
@@ -671,14 +675,75 @@ This, like the above, is for reference. It changes the colour of all pill tags.
 ```
 
 ### Embed Fixes
-Hides H1 headers in Embeds, something that bugs me when I embed notes.
+Hides H1 headers in Embeds, something that bugs me when I embed notes. This is copied from the link in the file then modified for myself.
 
 ```css
+/*
+    clean-embeds-all.css snippet                                                                                                                                                                                                                                                                                                                      Removes title, link, padding, margins from embeds,
+    so they really look like the same note.                                                                                                                                                                                                                                                                                                           This will not require a `cssclass` to be set but work for _all_ notes.
+    Derived from the `clean-embeds.css` snippet.                                                                                                                                                                                                                                                                                                      2021-08-24 Matthias C. Hormann (Moonbase59)
+    2022-07-14 PipeItToDevNull                                                                                                                                                                                                                                                                                                                        TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.                                                                                                                                                                                                                                                               Source: https://www.reddit.com/r/ObsidianMD/comments/rm3viu/can_someone_give_me_the_css_snippet_to_do_that/                                                                                                                                                                                                                                       Note: To make something appear in Live Preview add a ".cm-s-obsidian <tag>," section that matches the ".markdown-preview-view"                                                                                                                                                                                                                */                                                                                                                                                                                                                                                                                                                                                /* remove title and the table from the "Metatable" plugin */
+.cm-s-obsidian .markdown-embed-title,
+.markdown-preview-view .markdown-embed-title,
+.markdown-preview-view .obsidian-metatable {
+  display: none;
+}                                                                                                                                                                                                                                                                                                                                                 /* remove H1 from embed */
+.cm-s-obsidian .markdown-embed h1,
 .markdown-preview-view .markdown-embed h1 {
-        display: none;
+  display: none;
+}                                                                                                                                                                                                                                                                                                                                                 /* Hover to see a box and link to the embeded note */
+/* change background on hover, to exactly see whatâ?Ts embedded */
+.cm-s-obsidian .markdown-embed:hover,
+.cm-s-obsidian .file-embed:hover,
+.markdown-preview-view .markdown-embed:hover,
+.markdown-preview-view .file-embed:hover {
+  background-color: var(--background-secondary) !important;
 }
-.markdown-source-view.mod-cm6 .markdown-embed h1 {
+
+/* remove border and scroll */
+/* unfortunately needs !important for some themes */
+/* this makes the embed in-line but it won't work in full-preview =( , exports fine though*/
+/* the above is a Minimal specific issue, default works fine */
+.cm-s-obsidian .markdown-embed,
+.cm-s-obsidian .file-embed,
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* don't know what this does */
+.cm-s-obsidian .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: unset;
+  padding: 0 !important; /* !important for "Pisum" theme */
+  margin: 0;
+  border: 0;
+}
+
+/* remove <br> between internal embeds */
+.markdown-preview-section div > br {
+  display: none;
+}
+
+
+/* remove vertical space added by markdown-preview-sizer */
+ div.markdown-preview-sizer.markdown-preview-section {
+  min-height: unset !important;
+  padding-bottom: 0 !important;
+}
+
+/* special considerations for printing (PDF export) */
+@media print {
+
+  /* remove frontmatter box if "Show frontmatter" was enabled */
+  /* Also remove metadata table from "Metatable" plugin */
+  pre.frontmatter,
+  .obsidian-metatable {
     display: none;
+  }
 }
 ```
 
