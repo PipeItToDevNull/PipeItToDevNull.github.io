@@ -675,7 +675,7 @@ This, like the above, is for reference. It changes the colour of all pill tags.
 ```
 
 ### Embed Fixes
-Hides H1 headers in Embeds, something that bugs me when I embed notes. This is copied from the link in the file then modified for myself.
+Hides H1 headers in Embeds, something that bugs me when I embed notes. This is copied from the forums then modified for myself.
 
 ```css
 /*
