@@ -542,7 +542,7 @@ body:not(.links-ext-on) .cm-link .cm-underline, body:not(.links-ext-on) .cm-s-ob
 }
 
 /* preview */
-.links-int-on .cm-s-obsidian span.cm-hmd-internal-link, .links-int-on .is-live-preview .cm-hmd-internal-link, .links-int-on .markdown-preview-view .internal-link, .markdown-preview-view .internal-link {
+.markdown-preview-view .internal-link {
     text-decoration: none !important;
 } 
 
