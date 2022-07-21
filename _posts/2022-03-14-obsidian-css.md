@@ -533,15 +533,42 @@ I made this for someone else and kept it around for reference. It removes the co
 }
 ```
 
-### Do not underline internal links
-I like this, it removes underlining from internal links and leaves just the colour intact.
-
+### Minimal Links
+This is a larger edit, it makes unresolved links red, and removes the underline from internal links. The large block at the top is needed to add the line back in Minimal. Due to the way external links work you cannot add it to only external links.
 ```css
-.cm-hmd-internal-link .cm-underline {
-  text-decoration: none !important;  
+/* this sets underline, we over-ride to NONE as needed for internal links */
+body:not(.links-ext-on) .cm-link .cm-underline, body:not(.links-ext-on) .cm-s-obsidian span.cm-url, body:not(.links-ext-on) .external-link, body:not(.links-int-on) .cm-hmd-internal-link .cm-underline, body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover, body:not(.links-int-on) .markdown-preview-view .internal-link, body:not(.links-int-on) a.internal-link, body:not(.links-int-on) a[href*="obsidian://"] {
+    text-decoration: underline;
 }
-.markdown-preview-view .internal-link {
-  text-decoration: none !important;
+
+/* preview */
+.links-int-on .cm-s-obsidian span.cm-hmd-internal-link, .links-int-on .is-live-preview .cm-hmd-internal-link, .links-int-on .markdown-preview-view .internal-link, .markdown-preview-view .internal-link {
+    text-decoration: none !important;
+} 
+
+/* live preview */
+.cm-hmd-internal-link .cm-underline {
+    text-decoration: none !important;
+}
+
+/* remove the icon from external links */
+body .external-link {
+    background-image: none;
+    padding-right: 0px;
+}
+
+/* make unresolved links red */
+.cm-hmd-internal-link .is-unresolved .cm-underline {
+  color: #BF616A;
+  opacity: 100;
+}
+.is-unresolved .cm-hmd-internal-link .cm-underline {
+  color: #BF616A;
+  opacity: 100;
+}
+.markdown-preview-view .internal-link.is-unresolved {
+  color: #BF616A;
+  opacity: 100;
 }
 ```
 
@@ -576,11 +603,6 @@ These are some minor colour edits to the Calendar plugin.
 This is a method to change the colour on inline code. `This kind of code`
 ```css
 /* This makes code blocks a better color, red is default */
-.cm-s-obsidian .HyperMD-codeblock {
-    color: #8FBCBB;
-    background-color: #2E3440;
-    padding: 3px;
-}
 .cm-s-obsidian span.cm-inline-code {
     color: #8FBCBB;
     background-color: #2E3440;
@@ -591,18 +613,13 @@ This is a method to change the colour on inline code. `This kind of code`
     background-color: #2E3440;
     padding: 3px;
 }
-```
 
-### Red unresolved links
-I want every link I make to exist, so I make any that don't exist bright red.
-```css
-.is-unresolved .cm-hmd-internal-link .cm-underline {
-  color: FireBrick;
-  opacity: 100;
-}
-.markdown-preview-view .internal-link.is-unresolved {
-  color: FireBrick;
-  opacity: 100;
+/* This controls large blocks */
+/* Large blocks remove the background when you apply our specific BG... */
+/* preview and printing */
+.theme-dark code[class*="language-"], .theme-dark pre[class*="language-"] {
+    background-color: #2E3440;
+    color: #D8DEE9;
 }
 ```
 
