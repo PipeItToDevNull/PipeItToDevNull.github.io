@@ -599,7 +599,7 @@ These are some minor colour edits to the Calendar plugin.
 }
 ```
 
-### Nord inline code colour
+### Nord code colour
 This is a method to change the colour on inline code. `This kind of code`
 ```css
 /* This makes code blocks a better color, red is default */
