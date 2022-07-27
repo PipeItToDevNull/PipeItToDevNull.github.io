@@ -600,7 +600,7 @@ These are some minor colour edits to the Calendar plugin.
 ```
 
 ### Nord code colour
-This is a method to change the colour on inline code. `This kind of code`
+This is a method to change the colour on inline code and code blocks.
 ```css
 /* This makes code blocks a better color, red is default */
 .cm-s-obsidian span.cm-inline-code {
