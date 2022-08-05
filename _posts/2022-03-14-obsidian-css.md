@@ -696,20 +696,45 @@ Hides H1 headers in Embeds, something that bugs me when I embed notes. This is c
 
 ```css
 /*
-    clean-embeds-all.css snippet                                                                                                                                                                                                                                                                                                                      Removes title, link, padding, margins from embeds,
-    so they really look like the same note.                                                                                                                                                                                                                                                                                                           This will not require a `cssclass` to be set but work for _all_ notes.
-    Derived from the `clean-embeds.css` snippet.                                                                                                                                                                                                                                                                                                      2021-08-24 Matthias C. Hormann (Moonbase59)
-    2022-07-14 PipeItToDevNull                                                                                                                                                                                                                                                                                                                        TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.                                                                                                                                                                                                                                                               Source: https://www.reddit.com/r/ObsidianMD/comments/rm3viu/can_someone_give_me_the_css_snippet_to_do_that/                                                                                                                                                                                                                                       Note: To make something appear in Live Preview add a ".cm-s-obsidian <tag>," section that matches the ".markdown-preview-view"                                                                                                                                                                                                                */                                                                                                                                                                                                                                                                                                                                                /* remove title and the table from the "Metatable" plugin */
+    clean-embeds-all.css snippet
+
+    Removes title, link, padding, margins from embeds,
+    so they really look like the same note.
+
+    This will not require a `cssclass` to be set but work for _all_ notes.
+    Derived from the `clean-embeds.css` snippet.
+
+    2021-08-24 Matthias C. Hormann (Moonbase59)
+    2022-07-14 PipeItToDevNull
+
+    TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.
+
+    Source: https://www.reddit.com/r/ObsidianMD/comments/rm3viu/can_someone_give_me_the_css_snippet_to_do_that/
+
+        Additional source: https://github.com/Dmytro-Shulha/obsidian-css-snippets/blob/master/Snippets/Embeds.md
+
+    Note: To make something appear in Live Preview add a ".cm-s-obsidian <tag>," section that matches the ".markdown-preview-view"
+
+*/
+
+/* remove title and the table from the "Metatable" plugin */
 .cm-s-obsidian .markdown-embed-title,
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
   display: none;
-}                                                                                                                                                                                                                                                                                                                                                 /* remove H1 from embed */
-.cm-s-obsidian .markdown-embed h1,
-.markdown-preview-view .markdown-embed h1 {
-  display: none;
-}                                                                                                                                                                                                                                                                                                                                                 /* Hover to see a box and link to the embeded note */
+}
+
+/* only show text under a embed that */
+/* points to a specific header */
+.internal-embed .markdown-embed h1,
+.internal-embed .markdown-embed h2,
+.internal-embed .markdown-embed h3 {
+    display: none;
+}
+
+/* Hover to see a box and link to the embeded note */
 /* change background on hover, to exactly see whatâ?Ts embedded */
+/* this is a visual change on the notes page not a pop=up */
 .cm-s-obsidian .markdown-embed:hover,
 .cm-s-obsidian .file-embed:hover,
 .markdown-preview-view .markdown-embed:hover,
