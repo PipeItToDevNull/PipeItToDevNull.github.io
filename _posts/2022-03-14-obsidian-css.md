@@ -111,3 +111,8 @@ Hides H1,H2, and H3 headers in Embeds, something that bugs me when I embed notes
 ### Hide Comments in Live Preview
 
 {% gist 7b10691ec3da7fe2a1f1b2cfb6426763 comments.css %}
+
+### Red Pin for Pinned Tabs
+This changes the color of the Pin icon present when a page is pinned. 
+
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 red-pin.css %}
