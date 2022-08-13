@@ -2,7 +2,7 @@
 title: "Obsidian CSS Snippets"
 tags:
   - obsidian
-last_modified_at: '2022-03-21'
+last_modified_at: '2022-08-13'
 ---
 I have not written a full post on how I use [Obsidian](https://obsidian.md/) yet but I talked about it in the [first post]({% post_url 2021-12-29-publishing-pages-obsidian%}) here. I plan to write more in the future but for the mean time I just wanted to put my main edits online for others who may care enough to find them.
 
@@ -17,33 +17,18 @@ To use snippets in Obsidian write a file called `<name>.css` to `.obsidian/snipp
 This is an intensive but pretty edit. You need to make a section at the bottom for every folder by name. 
 
 ![folders.png](/assets/images/2022-03-14-obsidian-css/folders.png)
+
 {% gist 7b10691ec3da7fe2a1f1b2cfb6426763 folders.css %}
 
 ### Graph edits
 This is a method to change the colour of "attachments" in the graph view. You can investigate and find other node names to change as well.
-```css
-/* https://forum.obsidian.md/t/is-there-a-way-to-change-the-color-of-the-nodes-in-graph-view/8271 */
-.theme-dark .graph-view.color-fill-attachment {
-        color: #d8dee9;
-}
-```
+
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 graph.css %}
 
 ### Hide meta-data header in preview
 This hides the "Meta Data" header caused by FrontMatter when in the Reading view
-```css
-.frontmatter-container {
-    display: none;      
-}
-```
 
-### Hide URL Icon
-When using external links in Obsidian they have an arrow denoting such, this hides it.
-```css
-body .external-link {    
-  background-image: none;
-  padding-right: 0px;    
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 meta-data.css %}
 
 ### Highlighter 
 I expanded this [existing snippet](https://github.com/deathau/obsidian-snippets/blob/main/realistic-highlight.css) to add additional colours.
@@ -59,585 +44,70 @@ To use the highlighter functions see below:
 <mark class='red'>red</mark>
 ```
 
-```css
-body{
-  --fluro-yellow-rgb: 255, 255, 0;
-  --fluro-pink-rgb: 255, 0, 255;  
-  --fluro-blue-rgb: 0, 255, 255;
-  --fluro-green-rgb: 0, 255, 0;
-  --fluro-red-rgb: 255, 0, 0;
-  --text-highlight-rgb: var(--fluro-yellow-rgb);
-}
-
-mark.yellow{ --text-highlight-rgb: var(--fluro-yellow-rgb); }
-mark.pink{ --text-highlight-rgb: var(--fluro-pink-rgb); }
-mark.blue{ --text-highlight-rgb: var(--fluro-blue-rgb); }
-mark.green{ --text-highlight-rgb: var(--fluro-green-rgb); }
-mark.red{ --text-highlight-rgb: var(--fluro-red-rgb); }
-
-.markdown-preview-view mark {
-  margin: 0 -0.4em;
-  padding: 0.1em 0.4em;
-  border-radius: 0.8em 0.3em;
-  background: transparent;
-  background-image: linear-gradient(105deg,
-    transparent 0,
-    transparent 0.3em,
-    rgba(var(--text-highlight-rgb), 0.7) 0.5em,
-    rgba(var(--text-highlight-rgb), 0.4) 1.6em,
-    rgba(var(--text-highlight-rgb), 0.4) calc(100% - 1.4em),
-    rgba(var(--text-highlight-rgb), 0.7) calc(100% - 0.5em),
-    transparent calc(100% - 0.3em),
-    transparent 100%);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  text-shadow: 0 0 0.75em var(--background-primary-alt);
-}
-
-.cm-s-obsidian span.cm-highlight {
-  padding:0.1em 0;
-  background: rgba(var(--text-highlight-rgb), 0.4);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  text-shadow: 0 0 0.75em var(--background-primary-alt);
-}
-
-.cm-s-obsidian span.cm-formatting-highlight{
-  margin: 0 0 0 -0.4em;
-  padding: 0.1em 0 0.1em 0.4em;
-  border-radius: 0.8em 0 0 0.4em;
-  background: none;
-  background-image: linear-gradient(105deg,
-    transparent 0,
-    transparent 0.3em,
-    rgba(var(--text-highlight-rgb), 0.7) 0.5em,
-    rgba(var(--text-highlight-rgb), 0.4) 1.6em);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-.cm-s-obsidian .cm-highlight+span.cm-formatting-highlight {
-  margin: 0 -0.4em 0 0;
-  padding: 0.1em 0.4em 0.1em 0;
-  border-radius: 0 0.4em 0.8em 0;
-  background: none;
-  background-image: linear-gradient(105deg,
-    rgba(var(--text-highlight-rgb), 0.4) calc(100% - 1.4em),
-    rgba(var(--text-highlight-rgb), 0.7) calc(100% - 0.5em),
-    transparent calc(100% - 0.3em),
-    transparent 100%);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 highlighter.css %}
 
 ### Require hovering to see scrollbars
 I did not want to fully hide scrollbars with a plugin like [Hider](https://github.com/kepano/obsidian-hider) but I also didnt want to see them all the time. I found this snippet somewhere that makes them hide until you hover over them.
 
-```css
-::-webkit-scrollbar {
-    visibility: hidden;
-    background-color: transparent;
-    width: 10px;
-}
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 scrollbars.css %}
 
-::-webkit-scrollbar-thumb {
-    visibility: hidden;
-}
-
-::-webkit-scrollbar:hover {
-    visibility: initial;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    visibility: initial;
-}
-```
-
-### Minimal Checkboxes
+### More Checkboxes
 I wanted to have more than just checkmarks possible in my checkboxes and after much struggling I arrived at this nice solution that works for Live Preview and Read view in Minimal theme (only).
 
 Sadly with Minimal 5.1.8 Kepano added his own checkmarks that make these render incorrectly. These are now for historical reference and inspiration of other tweakers.
 
 ![checkboxes](/assets/images/2022-03-14-obsidian-css/checkboxes.png)
 
-```css
-/* nord colors from another snippet
-.theme-dark {
-    --f-f: #3b4252;
-    --f-r: #bf616a;
-    --f-o: #d08770;
-    --f-y: #ebcb8b;
-    --f-g: #a3be8c;
-    --f-p: #b48ead;
-    --f-sg: #8fbcbb;
-    --f-lb: #88c0d0;
-    --f-frst: #81a1c1;
-    --f-b: #5e81ac;
-}
-*/
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 checkboxes.css %}
 
-/* Checkbox things */
-/* bring back strikethrough for completed tasks */
-body:not(.minimal-strike-lists) .markdown-preview-view ul > li[data-task="x"].task-list-item.is-checked {
-    text-decoration: line-through;
-}
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] span {
-    text-decoration: line-through;
-}
+### Strike Through Checks
+A consolation script from the above, this brings back only strike throughs to Minimal now that I don't need the bulk of my new checkmarks.
 
-/*
-    ? mark boxes
-*/
-/* this only controls the text */
-.markdown-preview-view li[data-task='?'] > .task-list-item-checkbox:checked::before,
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"] span {
-    text-decoration: none;
-}
-/* this controls the checkbox image */
-input[data-task='?'].task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='?'] > .task-list-item-checkbox:checked::before {
-    border: var(--f-y);
-    background-color: var(--f-y) !important;
-    background-image: url('https://api.iconify.design/el/question.svg?color=white') !important;
-}
-/* preview */
-.markdown-preview-view li[data-task='?'] > input[type=checkbox]:checked {
-    border: var(--f-y);
-    background-color: var(--f-y) !important;
-    background-image: url('https://api.iconify.design/el/question.svg?color=white') !important;
-}
-
-/*
-    > mark boxes
-*/
-/* this only controls the text */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"] span {
-    text-decoration: none;
-}
-/* this controls the checkbox image */
-/* https://icon-sets.iconify.design/mdi/arrow-right-thick/ */
-input[data-task='>'].task-list-item-checkbox:checked,
-.makdown-preview-view li[data-task='>'] > .task-list-item-checkbox:checked::before {
-    border: var(--f-o);
-    background-color: var(--f-o) !important;
-    background-image: url('https://api.iconify.design/mdi/arrow-right-thick.svg?color=white') !important;
-}
-/* preview */
-.markdown-preview-view li[data-task='>'] > input[type=checkbox]:checked {
-    border: var(--f-o);
-    background-color: var(--f-o) !important;
-    background-image: url('https://api.iconify.design/mdi/arrow-right-thick.svg?color=white') !important;
-}
-
-/*
-    - mark boxes
-*/
-/* this only controls the text */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] span {
-    text-decoration: none;
-}
-/* this controls the checkbox image */
-/* https://icon-sets.iconify.design/mdi/close-thick/ */
-input[data-task='-'].task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='-'] > .task-list-item-checkbox:checked::before {
-    border: var(--f-r);
-    background-color: var(--f-r) !important;
-    background-image: url('https://api.iconify.design/mdi/close-thick.svg?color=white') !important;
-}
-/* preview */
-.markdown-preview-view li[data-task='-'] > input[type=checkbox]:checked {
-    border: var(--f-r);
-    background-color: var(--f-r) !important;
-    background-image: url('https://api.iconify.design/mdi/close-thick.svg?color=white') !important;
-}
-
-/*
-    ! mark boxes
-*/
-/* this only controls the text */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"] span {
-    text-decoration: none;
-}
-/* this controls the checkbox image */
-/* https://icon-sets.iconify.design/mdi/exclamation-thick/ */
-input[data-task='!'].task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='!'] > .task-list-item-checkbox:checked::before {
-    border: var(--f-lb);
-    background-color: var(--f-lb) !important;
-    background-image: url('https://api.iconify.design/mdi/exclamation-thick.svg?color=red') !important;
-}
-/* preview */
-.markdown-preview-view li[data-task='!'] > input[type=checkbox]:checked {
-    border: var(--f-lb);
-    background-color: var(--f-lb) !important;
-    background-image: url('https://api.iconify.design/mdi/exclamation-thick.svg?color=red') !important;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 strike-checks.css %}
 
 ### Minimal edits
 Kepano really wants you to use the [Minimal Settings](https://github.com/kepano/obsidian-minimal-settings) and [Style Settings](https://github.com/kepano/obsidian-style-settings) plugins for managing minimal, but I started out and continue to use CSS to get my changes made. This handles Headers, base color (makes it Nord) and minor edits to the Title of pages.
 
-```css
-:root {
-
-  /*----------------------------------------------------------------
-
-  Colors
-
-  Most colors in this theme are driven from the following values,
-  meaning that the backgrounds, borders, and various shades are
-  automatically generated for you.
-
-  - Base color is used for the backgrounds, text and borders.
-  - Accent color is used for links and some interactive elements.
-
-  The colors use HSL (hue, saturation, lightness)
-
-  - Hue (0-360 degrees):0 is red, 120 is green, and 240 is blue
-  - Saturation (0-100%):0% is desaturated, 100% is full saturation
-  - Lightness (0-100%):0% is black, 100% is white
-
-  */
-
-  --base-h:220;       /* Base hue */
-  --base-s:16%;      /* Base saturation */
-  --base-d:22%;   /* Base lightness Dark Mode  - 0 is black */
-  /* As of 4.4.8 you also need to define --base-l in .theme-dark below otherwise a 15% overwrites it */
-  --base-l:22%;     /* Base lightness Light Mode  - 100 is white */
-  --accent-h:210;   /* Accent hue */
-  --accent-s:34%;   /* Accent saturation */
-  --accent-d:63%;   /* Accent lightness Dark Mode */
-  --accent-l:63%;   /* Accent lightness Light Mode */
-
-  --h1:2.00em;
-  --h2:1.75em;
-  --h3:1.50em;
-  --h4:1.25em;
-  --h5:1.00em;
-  --h6:1.00em;
-
-  --h1-weight:600;
-  --h2-weight:600;
-  --h3-weight:500;
-  --h4-weight:500;
-  --h5-weight:500;
-  --h6-weight:400;
-
-  --h1-variant:normal;
-  --h2-variant:normal;
-  --h3-variant:normal;
-  --h4-variant:normal;
-  --h5-variant:small-caps;
-  --h6-variant:small-caps;
-
-  --h1-color:var(--text-normal);
-  --h2-color:var(--text-normal);
-  --h3-color:var(--text-normal);
-  --h4-color:var(--text-normal);
-  --h5-color:var(--text-normal);
-  --h6-color:var(--text-muted);
-
-  --font-normal:12px;
-  --font-small:10px;
-  --font-smaller:9px;
-  --font-smallest:8px;
-  --font-title:1em;
-
-  --font-monospace:"Hack Nerd Font";
-}
-
-.theme-dark {
-    --base-l:22%;
-}
-
-/* Title fix */
-.view-header-title {
-  color: var(--text-faint) !important;
-  font-weight: var(--weight-normal);
-}
-
-.view-header-title-container {
-  padding-left: 1em;
-  margin: 0;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 minimal-edits.css %}
 
 ### Do not colour internal links
 I made this for someone else and kept it around for reference. It removes the colour from (sets it to white) internal links. It also strips formatting from H1 where they were using internal links.
 
-```css
-.cm-hmd-internal-link .cm-underline {
-  color: white;
-  opacity: 100;
-}
-.markdown-preview-view .internal-link {
-  color: white;
-  opacity: 100;
-}
-:root {
-  h1:text-decoration: none;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 plain-links.css %}
 
-### Minimal Links
+### Lean Links
 This is a larger edit, it makes unresolved links red, and removes the underline from internal links. The large block at the top is needed to add the line back in Minimal. Due to the way external links work you cannot add it to only external links.
-```css
-/* this sets underline, we over-ride to NONE as needed for internal links */
-body:not(.links-ext-on) .cm-link .cm-underline, body:not(.links-ext-on) .cm-s-obsidian span.cm-url, body:not(.links-ext-on) .external-link, body:not(.links-int-on) .cm-hmd-internal-link .cm-underline, body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover, body:not(.links-int-on) .markdown-preview-view .internal-link, body:not(.links-int-on) a.internal-link, body:not(.links-int-on) a[href*="obsidian://"] {
-    text-decoration: underline;
-}
 
-/* preview */
-.markdown-preview-view .internal-link {
-    text-decoration: none !important;
-} 
+I also remove the hovering arrow icon from external links.
 
-/* live preview */
-.cm-hmd-internal-link .cm-underline {
-    text-decoration: none !important;
-}
-
-/* remove the icon from external links */
-body .external-link {
-    background-image: none;
-    padding-right: 0px;
-}
-
-/* make unresolved links red */
-.cm-hmd-internal-link .is-unresolved .cm-underline {
-  color: #BF616A;
-  opacity: 100;
-}
-.is-unresolved .cm-hmd-internal-link .cm-underline {
-  color: #BF616A;
-  opacity: 100;
-}
-.markdown-preview-view .internal-link.is-unresolved {
-  color: #BF616A;
-  opacity: 100;
-}
-```
-
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 links.css %}
 ### Nord calendar
 These are some minor colour edits to the Calendar plugin.
 
 ![calendar.png](/assets/images/2022-03-14-obsidian-css/calendar.png)
 
-```css
-/* obsidian-calendar-plugin */
-/* https://github.com/liamcain/obsidian-calendar-plugin */
-
-#calendar-container {
-  --color-background-heading: transparent;
-  --color-background-day: transparent;
-  --color-background-weeknum: transparent;
-  --color-background-weekend: transparent;
-
-  --color-dot: #81a1c1;
-  --color-arrow: var(--text-muted);
-  --color-button: var(--text-muted);
-
-  --color-text-title: var(--text-normal);
-  --color-text-heading: var(--text-normal);
-  --color-text-day: var(--text-normal);
-  --color-text-today: var(--interactive-accent);
-  --color-text-weeknum: #ebcb8b;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 nord-calendar.css %}
 
 ### Nord code colour
 This is a method to change the colour on inline code and code blocks.
-```css
-/* This makes code blocks a better color, red is default */
-.cm-s-obsidian span.cm-inline-code {
-    color: #8FBCBB;
-    background-color: #2E3440;
-    padding: 3px;
-}
-.markdown-preview-view code {
-    color: #8FBCBB;
-    background-color: #2E3440;
-    padding: 3px;
-}
 
-/* This controls large blocks */
-/* Large blocks remove the background when you apply our specific BG... */
-/* preview and printing */
-.theme-dark code[class*="language-"], .theme-dark pre[class*="language-"] {
-    background-color: #2E3440;
-    color: #D8DEE9;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 nord-code.css %}
 
 ### Tag multi colours
 I copied this for someone to make some minor edits and keep it for reference. It is a method to colour named tags to accomplish various things.
 
-```css
-/* Colour tag pills based on name in LP and Read modes */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13 */       
-/* There is extra code I removed from this snippet that is in the source */
-
-/* Obsidian */
-.tag[href^="#obsidian"] {
-  background-color: #4d3ca6;
-}
-.cm-s-obsidian span.cm-hashtag.cm-tag-obsidian {
-  background-color: #4d3ca6;
-}
-
-/* Important */
-.tag[href^="#important"] {
-  background-color: red;
-}
-.cm-s-obsidian span.cm-hashtag.cm-tag-important {
-  background-color: red;
-}
-
-/* Complete */
-.tag[href^="#complete"] {
-  background-color: green;
-}
-.cm-s-obsidian span.cm-hashtag.cm-tag-complete {
-  background-color: green;
-}
-
-/* InProgress */
-.markdown-preview-view .tag[href^="#inprogress"] {
-  background-color: orange;
-}
-.cm-s-obsidian span.cm-hashtag.cm-tag-inprogress {
-  background-color: orange;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 tag-colour-multi.css %}
 
 ### Tag same colour
 This, like the above, is for reference. It changes the colour of all pill tags.
 
-```css
-.cm-s-obsidian div:not(.cm-active) > .cm-hashtag {
-  background-color: #027aff;
-  color: #ffffff;
-  font-size: 14px;
-  text-align: center;
-}
-
-.tag:not(.token) {
-  background-color: #027aff;
-  border: none;
-  color: #ffffff;
-  font-size: 14px;
-  text-align: center;
-  display: inline-block;
-  margin: 0px 3px;
-  cursor: pointer;
-}
-.tag:not(.token):hover {
-  color: #ffffff;
-  background-color: #5E839A;
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 tag-colour-single.css %}
 
 ### Embed Fixes
-Hides H1 headers in Embeds, something that bugs me when I embed notes. This is copied from the forums then modified for myself.
+Hides H1,H2, and H3 headers in Embeds, something that bugs me when I embed notes. This is copied from the forums then modified for myself.
 
-```css
-/*
-    clean-embeds-all.css snippet
-
-    Removes title, link, padding, margins from embeds,
-    so they really look like the same note.
-
-    This will not require a `cssclass` to be set but work for _all_ notes.
-    Derived from the `clean-embeds.css` snippet.
-
-    2021-08-24 Matthias C. Hormann (Moonbase59)
-    2022-07-14 PipeItToDevNull
-
-    TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.
-
-    Source: https://www.reddit.com/r/ObsidianMD/comments/rm3viu/can_someone_give_me_the_css_snippet_to_do_that/
-
-        Additional source: https://github.com/Dmytro-Shulha/obsidian-css-snippets/blob/master/Snippets/Embeds.md
-
-    Note: To make something appear in Live Preview add a ".cm-s-obsidian <tag>," section that matches the ".markdown-preview-view"
-
-*/
-
-/* remove title and the table from the "Metatable" plugin */
-.cm-s-obsidian .markdown-embed-title,
-.markdown-preview-view .markdown-embed-title,
-.markdown-preview-view .obsidian-metatable {
-  display: none;
-}
-
-/* only show text under a embed that */
-/* points to a specific header */
-.internal-embed .markdown-embed h1,
-.internal-embed .markdown-embed h2,
-.internal-embed .markdown-embed h3 {
-    display: none;
-}
-
-/* Hover to see a box and link to the embeded note */
-/* change background on hover, to exactly see whatâ?Ts embedded */
-/* this is a visual change on the notes page not a pop=up */
-.cm-s-obsidian .markdown-embed:hover,
-.cm-s-obsidian .file-embed:hover,
-.markdown-preview-view .markdown-embed:hover,
-.markdown-preview-view .file-embed:hover {
-  background-color: var(--background-secondary) !important;
-}
-
-/* remove border and scroll */
-/* unfortunately needs !important for some themes */
-/* this makes the embed in-line but it won't work in full-preview =( , exports fine though*/
-/* the above is a Minimal specific issue, default works fine */
-.cm-s-obsidian .markdown-embed,
-.cm-s-obsidian .file-embed,
-.markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed {
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* don't know what this does */
-.cm-s-obsidian .markdown-embed-content,
-.markdown-preview-view .markdown-embed-content,
-.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height: unset;
-  padding: 0 !important; /* !important for "Pisum" theme */
-  margin: 0;
-  border: 0;
-}
-
-/* remove <br> between internal embeds */
-.markdown-preview-section div > br {
-  display: none;
-}
-
-
-/* remove vertical space added by markdown-preview-sizer */
- div.markdown-preview-sizer.markdown-preview-section {
-  min-height: unset !important;
-  padding-bottom: 0 !important;
-}
-
-/* special considerations for printing (PDF export) */
-@media print {
-
-  /* remove frontmatter box if "Show frontmatter" was enabled */
-  /* Also remove metadata table from "Metatable" plugin */
-  pre.frontmatter,
-  .obsidian-metatable {
-    display: none;
-  }
-}
-```
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 embeds.css %}
 
 ### Hide Comments in Live Preview
-```css
-.is-live-preview .cm-comment {
-    display: none;
-}
-```
+
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 comments.css %}
