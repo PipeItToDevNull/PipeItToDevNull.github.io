@@ -1,6 +1,6 @@
 ---
 title: "Basic Tools for This Sysadmin"
-last_modified_at: '2022-01-23'
+last_modified_at: '2022-08-15'
 ---
 Every techy you talk to will have their own list of "must-haves" and "best tools" to use, this is mine. You can replace half of these with something that does the job just as well, or maybe better, but for right now these work for me. I put a high value on solutions being cross-platform, I want to maintain one config to do the same task on every computer I interact with. All the solutions noted here are cross platform to Mac, Linux, and Windows except MRemoteNG and Scoop.
 
@@ -83,6 +83,6 @@ Text-Expanders, a concept I didn't know about a year ago but has forever changed
 #### Kate
 [Notepad++](https://notepad-plus-plus.org/) or any other real text editor works here, evolve beyond Notepad.exe. [Kate](https://kate-editor.org/) is cross-platform and developed by KDE, it has some basic IDE functions like Git support and of course syntax highlighting.
 
-### Hardware
-#### YubiKey
+## Hardware
+### YubiKey
 Hardware tokens are a pretty niche utility, but I think having a [YubiKey](https://www.yubico.com/) to at least play around with is a good idea. I have used mine to hole MFA tokens (TOTP Seeds read from an app), SmartCard certificates (for login to workstations/servers), but now I am only using it to hold my GPG keys for signing. Check out the [list of sites that work with Yubi](https://www.yubico.com/works-with-yubikey/catalog/?sort=popular) to know what you can add a Yubi to in order to further secure your logins.
