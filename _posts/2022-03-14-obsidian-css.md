@@ -2,7 +2,7 @@
 title: "Obsidian CSS Snippets"
 tags:
   - obsidian
-last_modified_at: '2022-08-13'
+last_modified_at: '2022-08-15'
 ---
 I have not written a full post on how I use [Obsidian](https://obsidian.md/) yet but I talked about it in the [first post]({% post_url 2021-12-29-publishing-pages-obsidian%}) here. I plan to write more in the future but for the mean time I just wanted to put my main edits online for others who may care enough to find them.
 
@@ -76,11 +76,19 @@ I made this for someone else and kept it around for reference. It removes the co
 {% gist 7b10691ec3da7fe2a1f1b2cfb6426763 plain-links.css %}
 
 ### Lean Links
-This is a larger edit, it makes unresolved links red, and removes the underline from internal links. The large block at the top is needed to add the line back in Minimal. Due to the way external links work you cannot add it to only external links.
-
-I also remove the hovering arrow icon from external links.
-
+This is a larger edit, it removes the underline from internal links as well as the hovering arrow from external links. The large block at the top is needed to add the line back in Minimal. Due to the way external links work you cannot add it to only external links.
+ 
 {% gist 7b10691ec3da7fe2a1f1b2cfb6426763 links.css %}
+
+### Unresolved Links
+I have two snippets to handle unresolved links. One will make them red while the other masks them to appear just like a resolved link.
+
+#### Red unresolved links
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 links-unresolved-red.css %}
+
+#### Masked unresolved links
+{% gist 7b10691ec3da7fe2a1f1b2cfb6426763 links-unresolved-masked.css %}
+
 ### Nord calendar
 These are some minor colour edits to the Calendar plugin.
 
