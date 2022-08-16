@@ -17,5 +17,5 @@ I wont expand on things too much here, but plan to make subsequent posts for the
 3. Ansible improvements
     1. Run ansible as its own user
     2. Utilize Ansible for all configurations
-        4. Leave [[SELinux Notes|SELinux]] on and learn it
+        4. Leave SELinux on and learn it
 5. Move docker into volumes and other best practices
