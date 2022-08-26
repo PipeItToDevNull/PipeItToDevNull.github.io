@@ -9,7 +9,9 @@ I have been using [Obsidian](https://obsidian.md) daily for almost 2 years now. 
 > 📝 Check out my [CSS snippets]({% post_url 2022-03-14-obsidian-css%}) as well.
 
 ## What I put in Obsidian
-Everything. Currently I have 5 sections, "META", "Life", "IT", "Hobbies" and "Objects". Some people would break this out into multiple vaults, but I am leveraging [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to break some things out for use in other places.
+Everything. Currently I have 5 sections, META, Life, IT, Hobbies, and Objects. Some people would break this out into multiple vaults, but I am leveraging [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to break some things out for use in other places.
+
+My work vault contains Meta, Documentation, IT, Projects, Tickets, and Issues.
 
 ### Meta
 My META section holds my "periodics" which would be Daily, Weekly, Monthly, etc notes, I really only do Daily though. I have a dream to use Weekly, Monthly, Quarterly, and Yearly notes more to summarize my life and work for reflection and personal improvement. I also keep my Templates and master Project files in META.
