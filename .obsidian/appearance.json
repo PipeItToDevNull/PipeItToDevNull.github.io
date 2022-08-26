@@ -2,7 +2,7 @@
   "baseFontSize": 12,
   "translucency": false,
   "cssTheme": "Minimal",
-  "theme": "obsidian",
+  "theme": "system",
   "enabledCssSnippets": [
     "minimalFixes",
     "codeLine",
@@ -13,8 +13,9 @@
     "nordCalendar",
     "minimalTitleFix",
     "redUnresolvedLinks",
-    "highlighter",
     "fadedEmojisInTasks",
-    "nordCode"
+    "nordCode",
+    "nord-code",
+    "minimal-edits"
   ]
 }

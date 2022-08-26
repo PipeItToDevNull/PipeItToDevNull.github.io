@@ -1,16 +1,13 @@
 [
   "url-into-selection",
   "cm-show-whitespace-obsidian",
-  "obsidian-minimal-settings",
   "nldates-obsidian",
   "table-editor-obsidian",
-  "file-explorer-note-count",
   "reveal-active-file-button",
   "copy-url-in-preview",
   "obsidian-hider",
   "emoji-shortcodes",
   "obsidian-tabs",
   "cm-editor-syntax-highlight-obsidian",
-  "wikilinks-to-mdlinks-obsidian",
   "obsidian-git"
 ]

@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2022-03-14-obsidian-css.md",
+            "file": "_posts/2022-08-25-update-on-obsidian.md",
             "mode": "source",
-            "backlinks": false,
+            "backlinks": true,
             "source": false
           }
         }
@@ -41,7 +41,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2022-03-14-obsidian-css.md",
+                "file": "_posts/2022-08-25-update-on-obsidian.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2022-03-14-obsidian-css.md",
+                "file": "_posts/2022-08-25-update-on-obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2022-03-14-obsidian-css.md"
+                "file": "_posts/2022-08-25-update-on-obsidian.md"
               }
             }
           }
@@ -127,19 +127,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 235.5
+    "width": 232.5
   },
   "active": "65764c0a813a7053",
   "lastOpenFiles": [
-    "_posts/2022-03-14-obsidian-css.md",
-    "_posts/RHEL Developer Setup.md",
     "_posts/2022-01-13-ad-backups-powershell.md",
-    "_posts/2022-01-21-sysadmin-tools.md",
-    "_posts/2022-01-28-rclone-backblaze.md",
-    "_posts/2022-01-30-wmp-xencenter.md",
+    "_posts/2022-01-07-windows-ca-backups-powershell.md",
     "_posts/2022-02-08-send-mail-2016.md",
+    "_posts/2022-08-25-update-on-obsidian.md",
+    "assets/images/Untitled.md",
+    "_posts/2022-01-21-sysadmin-tools.md",
+    "_pages/homelab.md",
     "_posts/2022-02-18-onedrive-monitoring.md",
     "_posts/2022-03-09-hard-link-azure-users.md",
-    "assets/images/2022-03-14-obsidian-css/highlighter.png"
+    "_posts/2022-03-14-obsidian-css.md"
   ]
 }
