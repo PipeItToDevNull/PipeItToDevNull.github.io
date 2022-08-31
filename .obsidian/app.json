@@ -26,5 +26,9 @@
   "livePreview": true,
   "useMarkdownLinks": true,
   "newLinkFormat": "absolute",
-  "readableLineLength": false
+  "readableLineLength": false,
+  "accentColor": "",
+  "communityThemeSortOrder": "download",
+  "showInlineTitle": false,
+  "showViewHeader": false
 }

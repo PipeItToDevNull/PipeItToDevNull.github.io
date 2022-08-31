@@ -1,7 +1,7 @@
 {
   "baseFontSize": 12,
   "translucency": false,
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "theme": "system",
   "enabledCssSnippets": [
     "minimalFixes",
@@ -16,6 +16,7 @@
     "fadedEmojisInTasks",
     "nordCode",
     "nord-code",
-    "minimal-edits"
+    "16-nord-main",
+    "scrollbars"
   ]
 }
