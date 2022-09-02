@@ -81,13 +81,6 @@ My complete Daily Note template:
 
 `## Linked Tasks` is my ingenious method of tracking future tasking in my vault. If I have a task in my Daily Note on Friday that says "Got UPS battery, change it on [[2022-08-30]]" I want to make sure I see it on the 30th. I could duplicate it to both days, or even split it, but those are just bad ideas. Instead I use a data view to scrape for any tasks with the present date. 
 
-I write every project's, ticket's, and issue's, daily logs into their respective files. To assimilate all of those into my Daily Note I embed the date header:
-
-```markdown
-### [[Project Name]]
-![[Project Name#2022-08-30]]
-```
-
 All together a formatted Daily Note can look like:
 
 ![dailt-note-example](/assets/images/2022-08-30-obsidian-method/daily-note-example.png)
