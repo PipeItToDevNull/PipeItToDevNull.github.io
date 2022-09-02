@@ -27,8 +27,6 @@
   "useMarkdownLinks": true,
   "newLinkFormat": "absolute",
   "readableLineLength": false,
-  "accentColor": "",
   "communityThemeSortOrder": "download",
-  "showInlineTitle": false,
-  "showViewHeader": false
+  "showInlineTitle": false
 }

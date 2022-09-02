@@ -18,5 +18,7 @@
     "nord-code",
     "16-nord-main",
     "scrollbars"
-  ]
+  ],
+  "accentColor": "",
+  "showViewHeader": false
 }
