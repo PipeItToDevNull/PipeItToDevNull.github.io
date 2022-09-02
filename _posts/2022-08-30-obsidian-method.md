@@ -2,7 +2,7 @@
 title: "My Obsidian Methods and Habits"
 tags:
   - obsidian
-last_modified_at: '2022-08-30'
+last_modified_at: '2022-09-01'
 ---
 In a [previous post]({% post_url 2022-08-25-update-on-obsidian%}) I talked about what I store in Obsidian and how I organize it, now I want to talk a little about how I work in Obsidian. I use Obsidian differently at work and home; work is a lot of tasking, projects, tickets, etc while at home Obsidian is much more for documentation. 
 
@@ -42,9 +42,11 @@ My longest used and most required tool in Obsidian has to be Daily Notes. My tem
 - [ ] Need to do thing
 ```
 
-Like Dataview sections, I embed this small log into my Daily note. I am able to look back on any day to see what occurred without separating tasking from the associated project.
+Using another Dataview query, I embed this small log into my Daily note. I am able to look back on any day to see what occurred without separating tasking from the associated project.
 
 My complete Daily Note template:
+
+{% raw %}
 
     # Daily
     ## Projects
@@ -58,17 +60,25 @@ My complete Daily Note template:
     ## Linked Tasks
     ```dataview
     task from ""
-    WHERE contains(text, "{{date:YYYY-MM-DD}}")
+    WHERE contains(text, "/{/{date:YYYY-MM-DD/}/}")
     GROUP by file.link
     ```
     
     ---
     ## Notes
-    - 
+    -  
+    
+    ```dataview
+    TASK FROM "30 Projects" OR "40 Tickets" OR "50 Issues"
+    WHERE contains(string(section), "{{date:YYYY-MM-DD}}")
+    Group by file.link
+    ``` 
     
     ---
     ## Evening Tasks
     - [ ] Timesheet
+
+{% endraw %}
 
 `## Linked Tasks` is my ingenious method of tracking future tasking in my vault. If I have a task in my Daily Note on Friday that says "Got UPS battery, change it on [[2022-08-30]]" I want to make sure I see it on the 30th. I could duplicate it to both days, or even split it, but those are just bad ideas. Instead I use a data view to scrape for any tasks with the present date. 
 
