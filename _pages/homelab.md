@@ -19,6 +19,7 @@ Homelabbing is what got me into the field and I encourage anyone who asks me abo
 | R220          | OPNSense    |
 | R320          | Backups NAS |
 | R620          | XCP-NG      |
+| R620          | XCP-NG      |
 | R510          | Media NAS   |
 | Catalyst-4948 |             |
 
