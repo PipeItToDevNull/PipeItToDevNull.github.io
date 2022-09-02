@@ -48,7 +48,6 @@ My complete Daily Note template:
 
 {% raw %}
 
-    # Daily
     ## Projects
     ![[Dashboard#Active Projects]]
     
