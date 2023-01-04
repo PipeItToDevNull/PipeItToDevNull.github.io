@@ -4,7 +4,7 @@ tags:
   - obsidian
   - git
   - github
-last_modified_at: '2022-09-04'
+last_modified_at: '2023-01-04'
 ---
 Using [GitHub](https://github/com) with [Obsidian](https://obsidian.md) is a free way to sync and version control your vault. I have used a personal git server and GitHub to manage/sync my vaults for their entire lifetime.
 
@@ -57,7 +57,7 @@ These GitHub docs are decent enough: [Creating a personal access token - GitHub 
 
 You should now be able to view your files online in your GitHub repo.
 
-## Obsidian git plugin setp
+## Obsidian git plugin setup
 1. From the plugins pane in Obsidian add the "Obsidian Git" plugin.
 2. Configure the various timers as you see fit to automatically sync and push your vault. My settings are below:
 
