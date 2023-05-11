@@ -30,17 +30,8 @@ Homelabbing is what got me into the field and I encourage anyone who asks me abo
 * Windows DHCP
 * Windows Enterprise CA
     * Testing ideas and the ability to sign local scripts
-* Nextcloud
-    * Docker
-* Gitea
-    * Docker
-* TheLounge
-    * Docker
 * HTTPD
     * Basic homepage for https://dev0.sh
-    * Docker
-* Linx
-    * For personal code sharing/file uploads
     * Docker
 * Ansible
     * CFM on Linux hosts mostly
